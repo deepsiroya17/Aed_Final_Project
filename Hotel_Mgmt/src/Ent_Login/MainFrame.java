@@ -26,33 +26,37 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
-        jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+
+        splitPane = new javax.swing.JSplitPane();
+        CatCompBtn = new javax.swing.JPanel();
+        CustRegBtn = new javax.swing.JButton();
+        HotelBtn = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        SupplierBtn = new javax.swing.JButton();
+        CorpBtn = new javax.swing.JButton();
+
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jSplitPane1.setDividerLocation(100);
-        jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel3.setBackground(new java.awt.Color(0, 153, 204));
+        splitPane.setDividerLocation(100);
+        splitPane.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jButton1.setText("Customer");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        CatCompBtn.setBackground(new java.awt.Color(0, 153, 204));
+
+        CustRegBtn.setText("Customer");
+        CustRegBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                CustRegBtnActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Hotel");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        HotelBtn.setText("Hotel");
+        HotelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                HotelBtnActionPerformed(evt);
+
             }
         });
 
@@ -63,51 +67,53 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Supplier");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+
+        SupplierBtn.setText("Supplier");
+        SupplierBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                SupplierBtnActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Corporation");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        CorpBtn.setText("Corporation");
+        CorpBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                CorpBtnActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout CatCompBtnLayout = new javax.swing.GroupLayout(CatCompBtn);
+        CatCompBtn.setLayout(CatCompBtnLayout);
+        CatCompBtnLayout.setHorizontalGroup(
+            CatCompBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CatCompBtnLayout.createSequentialGroup()
                 .addGap(114, 114, 114)
-                .addComponent(jButton1)
+                .addComponent(CustRegBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(HotelBtn)
                 .addGap(133, 133, 133)
                 .addComponent(jButton3)
                 .addGap(132, 132, 132)
-                .addComponent(jButton4)
+                .addComponent(SupplierBtn)
                 .addGap(124, 124, 124)
-                .addComponent(jButton5)
+                .addComponent(CorpBtn)
                 .addGap(118, 118, 118))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        CatCompBtnLayout.setVerticalGroup(
+            CatCompBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CatCompBtnLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
+                .addGroup(CatCompBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CustRegBtn)
+                    .addComponent(HotelBtn)
                     .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
+                    .addComponent(SupplierBtn)
+                    .addComponent(CorpBtn))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setTopComponent(jPanel3);
+        splitPane.setTopComponent(CatCompBtn);
+
 
         jPanel1.setBackground(new java.awt.Color(0, 218, 255));
 
@@ -122,51 +128,59 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 795, Short.MAX_VALUE)
         );
 
-        jSplitPane1.setRightComponent(jPanel1);
+
+        splitPane.setRightComponent(jPanel1);
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+
+            .addComponent(splitPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(splitPane)
+
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+    private void SupplierBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SupplierBtnActionPerformed
         // TODO add your handling code here:
         SupplierJPanel supplierPanel = new SupplierJPanel();
-        jSplitPane1.setRightComponent(supplierPanel);
-    }//GEN-LAST:event_jButton4ActionPerformed
+        splitPane.setRightComponent(supplierPanel);
+    }//GEN-LAST:event_SupplierBtnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void HotelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HotelBtnActionPerformed
         // TODO add your handling code here:
         HotelJPanel hotelPanel = new HotelJPanel();
-        jSplitPane1.setRightComponent(hotelPanel);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        splitPane.setRightComponent(hotelPanel);
+    }//GEN-LAST:event_HotelBtnActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void CustRegBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CustRegBtnActionPerformed
         // TODO add your handling code here:
-        CustomerJPanel customerPanel = new CustomerJPanel();
-        jSplitPane1.setRightComponent(customerPanel);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        CustomerJPanel customerPanel = new CustomerJPanel(splitPane);
+        splitPane.setRightComponent(customerPanel);
+    }//GEN-LAST:event_CustRegBtnActionPerformed
+
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         CatererJPanel catererPanel = new CatererJPanel();
-        jSplitPane1.setRightComponent(catererPanel);
+
+        splitPane.setRightComponent(catererPanel);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void CorpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CorpBtnActionPerformed
         // TODO add your handling code here:
         CorporationJPanel corporationPanel = new CorporationJPanel();
-        jSplitPane1.setRightComponent(corporationPanel);
-    }//GEN-LAST:event_jButton5ActionPerformed
+        splitPane.setRightComponent(corporationPanel);
+    }//GEN-LAST:event_CorpBtnActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -204,13 +218,15 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+
+    private javax.swing.JPanel CatCompBtn;
+    private javax.swing.JButton CorpBtn;
+    private javax.swing.JButton CustRegBtn;
+    private javax.swing.JButton HotelBtn;
+    private javax.swing.JButton SupplierBtn;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JSplitPane jSplitPane1;
+    private javax.swing.JSplitPane splitPane;
+
     // End of variables declaration//GEN-END:variables
 }
