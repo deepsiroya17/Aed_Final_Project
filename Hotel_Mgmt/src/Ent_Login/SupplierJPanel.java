@@ -28,12 +28,14 @@ public class SupplierJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+
         SupplierRoleBtn = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         SupplierUnameBtn = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         SupplierPassBtn = new javax.swing.JTextField();
         SupplierLoginBtn = new javax.swing.JButton();
+
 
         setBackground(new java.awt.Color(0, 218, 255));
 
@@ -44,7 +46,9 @@ public class SupplierJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel2.setText("Role:");
 
+
         SupplierRoleBtn.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sales Manager", "Accountant" }));
+
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel3.setText("Username:");
@@ -52,8 +56,10 @@ public class SupplierJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel4.setText("Password:");
 
+
         SupplierLoginBtn.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         SupplierLoginBtn.setText("Login");
+
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -66,19 +72,23 @@ public class SupplierJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(20, 20, 20)
+
                         .addComponent(SupplierPassBtn))
+
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+
                             .addComponent(SupplierUnameBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
                             .addComponent(SupplierRoleBtn, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(372, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(554, Short.MAX_VALUE)
                 .addComponent(SupplierLoginBtn)
+
                 .addGap(557, 557, 557))
         );
         layout.setVerticalGroup(
@@ -89,30 +99,37 @@ public class SupplierJPanel extends javax.swing.JPanel {
                 .addGap(170, 170, 170)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
+
                     .addComponent(SupplierRoleBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(SupplierUnameBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+
                     .addComponent(jLabel3))
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
+
                     .addComponent(SupplierPassBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(63, 63, 63)
                 .addComponent(SupplierLoginBtn)
+
                 .addContainerGap(272, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private javax.swing.JButton SupplierLoginBtn;
     private javax.swing.JTextField SupplierPassBtn;
     private javax.swing.JComboBox<String> SupplierRoleBtn;
     private javax.swing.JTextField SupplierUnameBtn;
+
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+
     // End of variables declaration//GEN-END:variables
 }

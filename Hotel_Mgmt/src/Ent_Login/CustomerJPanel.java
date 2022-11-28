@@ -4,24 +4,30 @@
  */
 package Ent_Login;
 
+
 import javax.swing.JSplitPane;
+
 
 /**
  *
  * @author animeshgiri
  */
 public class CustomerJPanel extends javax.swing.JPanel {
+
     
     
     JSplitPane splitPane;
 
+
     /**
      * Creates new form CustomerJPanel
      */
+
     public CustomerJPanel(JSplitPane splitPane) {
         initComponents();
         
         this.splitPane = splitPane;
+
     }
 
     /**
@@ -42,6 +48,7 @@ public class CustomerJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+
         CustEmail = new javax.swing.JTextField();
         CustName = new javax.swing.JTextField();
         CustPhone = new javax.swing.JTextField();
@@ -54,6 +61,7 @@ public class CustomerJPanel extends javax.swing.JPanel {
         LoginBtn = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         CustPassword = new javax.swing.JTextField();
+
 
         setBackground(new java.awt.Color(0, 218, 255));
         setAlignmentY(0.0F);
@@ -77,13 +85,16 @@ public class CustomerJPanel extends javax.swing.JPanel {
         jLabel6.setText("Phone:");
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+
         jLabel7.setText("Street");
+
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel8.setText("City:");
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel9.setText("Zip:");
+
 
         CustName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,17 +117,20 @@ public class CustomerJPanel extends javax.swing.JPanel {
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel11.setText("Password");
 
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1212, Short.MAX_VALUE)
+
             .addGroup(layout.createSequentialGroup()
                 .addGap(433, 433, 433)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+
                                 .addGap(80, 80, 80)
                                 .addComponent(jLabel10)
                                 .addGap(18, 18, 18)
@@ -149,6 +163,7 @@ public class CustomerJPanel extends javax.swing.JPanel {
                             .addComponent(CustName, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(CustEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,6 +173,7 @@ public class CustomerJPanel extends javax.swing.JPanel {
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
+
                     .addComponent(CustName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -227,6 +243,7 @@ public class CustomerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -235,5 +252,6 @@ public class CustomerJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+
     // End of variables declaration//GEN-END:variables
 }
