@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package HospitalManagement.Doctor;
+package HospitalManagement.Radiologist;
 
 import MainCentralisationSystem.UserAccount;
 
 /**
  *
- * @author animeshgiri
+ * @author sarth
  */
-public class Doctor {
+public class Radiologist {
     
 //    UserAccount userAccount;
-    String DoctorId;
-    String DoctorName;
+    String RadiologistId;
+    String RadiologistName;
     
-    public String getDoctorId() {
-        return DoctorId;
+    public String getRadiologistId() {
+        return RadiologistId;
     }
 
 //    public UserAccount getUserAccount() {
@@ -28,22 +28,22 @@ public class Doctor {
 //    public void setUserAccount(UserAccount userAccount) {
 //        this.userAccount = userAccount;
 //    }
-    public void setDoctorId(String DoctorId) {    
-        this.DoctorId = DoctorId;
+    public void setRadiologistId(String RadiologistId) {    
+        this.RadiologistId = RadiologistId;
     }
 
-    public String getDoctorName() {
-        return DoctorName;
+    public String getRadiologistName() {
+        return RadiologistName;
     }
 
-    public void setDoctorName(String DoctorName) {
-        this.DoctorName = DoctorName;
+    public void setRadiologistName(String RadiologistName) {
+        this.RadiologistName = RadiologistName;
     }
     
     
     @Override
     public String toString(){
-        return DoctorId;
+        return RadiologistId;
     }
 
     
