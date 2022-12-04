@@ -3,22 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package HospitalManagement.Doctor;
+package HospitalManagement.Nurse;
 
+import HospitalManagement.Doctor.*;
+import HospitalManagement.Nurse.*;
 import MainCentralisationSystem.UserAccount;
 
 /**
  *
- * @author animeshgiri
+ * @author sarth
  */
-public class Doctor {
+public class Nurse {
     
 //    UserAccount userAccount;
-    String DoctorId;
-    String DoctorName;
+    String NurseId;
+    String NurseName;
     
-    public String getDoctorId() {
-        return DoctorId;
+    public String getNurseId() {
+        return NurseId;
     }
 
 //    public UserAccount getUserAccount() {
@@ -28,22 +30,22 @@ public class Doctor {
 //    public void setUserAccount(UserAccount userAccount) {
 //        this.userAccount = userAccount;
 //    }
-    public void setDoctorId(String DoctorId) {    
-        this.DoctorId = DoctorId;
+    public void setNurseId(String NurseId) {    
+        this.NurseId = NurseId;
     }
 
-    public String getDoctorName() {
-        return DoctorName;
+    public String getNurseName() {
+        return NurseName;
     }
 
-    public void setDoctorName(String DoctorName) {
-        this.DoctorName = DoctorName;
+    public void setNurseName(String NurseName) {
+        this.NurseName = NurseName;
     }
     
     
     @Override
     public String toString(){
-        return DoctorId;
+        return NurseId;
     }
 
     
