@@ -86,6 +86,7 @@ public class AdministrativeAccountsPage extends javax.swing.JPanel {
         jLabelEmpID = new javax.swing.JLabel();
         jButtonDelete = new javax.swing.JButton();
         jLabelEmpName = new javax.swing.JLabel();
+        jButtonRefresh = new javax.swing.JButton();
         bgdimg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 70, 169));
@@ -193,12 +194,23 @@ public class AdministrativeAccountsPage extends javax.swing.JPanel {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, -1, -1));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 450, -1, -1));
 
         jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Employee Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, -1));
+
+        jButtonRefresh.setBackground(new java.awt.Color(22, 81, 129));
+        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRefresh.setText("REFRESH");
+        jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRefreshActionPerformed(evt);
+            }
+        });
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, -1, -1));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/AdminstrativeAccountsPage_new.jpg"))); // NOI18N
         add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -341,6 +353,13 @@ public class AdministrativeAccountsPage extends javax.swing.JPanel {
         jTextFieldPassword.setText(select_user_account_details.getPassword());
         
     }//GEN-LAST:event_jTableEmployeeMouseClicked
+
+    private void jButtonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshActionPerformed
+        jTextFieldEmpID.setEditable(true);
+        jButtonCreate.setEnabled(true);
+        jComboBoxRole.setEnabled(true);
+        clearFields();
+    }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
 //        userAccount.getEmployee().setEmployee_name(user_input.get(1));
@@ -391,6 +410,7 @@ public class AdministrativeAccountsPage extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCreate;
     private javax.swing.JButton jButtonDelete;
+    private javax.swing.JButton jButtonRefresh;
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JComboBox<String> jComboBoxRole;
     private javax.swing.JLabel jLabel1;

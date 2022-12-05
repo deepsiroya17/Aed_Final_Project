@@ -73,10 +73,11 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         jTextFieldHospPassword = new javax.swing.JTextField();
         jTextFieldHospID = new javax.swing.JTextField();
         jLabelEmpID = new javax.swing.JLabel();
-        jButtonDelete = new javax.swing.JButton();
+        jButtonRefresh = new javax.swing.JButton();
         jLabelEmpName = new javax.swing.JLabel();
         jLabelEmpName1 = new javax.swing.JLabel();
         jTextFieldHospPincode = new javax.swing.JTextField();
+        jButtonDelete1 = new javax.swing.JButton();
         bgdimg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 70, 169));
@@ -169,16 +170,16 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         jLabelEmpID.setText("Hospital ID:");
         add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 120, -1));
 
-        jButtonDelete.setBackground(new java.awt.Color(22, 81, 129));
-        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonDelete.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonDelete.setText("DELETE");
-        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRefresh.setBackground(new java.awt.Color(22, 81, 129));
+        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRefresh.setText("REFRESH");
+        jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeleteActionPerformed(evt);
+                jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 470, 100, 30));
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 470, 100, 30));
 
         jLabelEmpName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
@@ -193,9 +194,21 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         add(jLabelEmpName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 120, -1));
         add(jTextFieldHospPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 280, -1));
 
+        jButtonDelete1.setBackground(new java.awt.Color(22, 81, 129));
+        jButtonDelete1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonDelete1.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDelete1.setText("DELETE");
+        jButtonDelete1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDelete1ActionPerformed(evt);
+            }
+        });
+        add(jButtonDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 470, 100, 30));
+
+        bgdimg.setBackground(new java.awt.Color(255, 0, 0));
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/HospitalAccounts_latest.jpg"))); // NOI18N
         bgdimg.setToolTipText("");
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1920, 1220));
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1220));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -275,24 +288,11 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
-    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
-        int selected_row_ix = jTableEmployee.getSelectedRow();
-
-        if(selected_row_ix < 0){
-            JOptionPane.showMessageDialog(this, "Please select a row to delete.");
-            return;
-        }
-        DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
-        UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
-        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        Hospital hospital = select_user_account_details.getHospital();
-        hospitalDirectory.deleteHospital(hospital);
-        UserAccountDirectory.deleteAccount(select_user_account_details);
-//        ecosystem.setRestaurantDirectory(restaurantDirectory);
-        model.removeRow(selected_row_ix);
-        addrecordstotable();
+    private void jButtonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshActionPerformed
+        jButtonCreate.setEnabled(true);
+        jTextFieldHospID.setEditable(true);     
         clearFields();
-    }//GEN-LAST:event_jButtonDeleteActionPerformed
+    }//GEN-LAST:event_jButtonRefreshActionPerformed
 
     private void jTableEmployeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableEmployeeMouseClicked
         // TODO add your handling code here:
@@ -307,6 +307,10 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         jTextFieldHospPincode.setText(select_user_account_details.getHospital().getHospitalpincode());
         
     }//GEN-LAST:event_jTableEmployeeMouseClicked
+
+    private void jButtonDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDelete1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDelete1ActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getHospital().setHospitalName(user_input.get(1));
@@ -357,7 +361,8 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
     private javax.swing.JLabel bgdimg;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCreate;
-    private javax.swing.JButton jButtonDelete;
+    private javax.swing.JButton jButtonDelete1;
+    private javax.swing.JButton jButtonRefresh;
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelEmpID;
