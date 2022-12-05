@@ -74,6 +74,7 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         jLabelEmpID = new javax.swing.JLabel();
         jButtonDelete = new javax.swing.JButton();
         jLabelEmpName = new javax.swing.JLabel();
+        jButtonRefresh = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 70, 169));
@@ -179,12 +180,23 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 309, 140, 40));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 140, 40));
 
         jLabelEmpName.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
         jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName.setText("Delivery Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 140, -1));
+
+        jButtonRefresh.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRefresh.setText("REFRESH");
+        jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRefreshActionPerformed(evt);
+            }
+        });
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 310, 140, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/DeliveryAgencyAccountsPage_1920x1183.jpeg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1190));
@@ -297,6 +309,12 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         jTextFieldTeamPassword.setText(select_user_account_details.getPassword());
         
     }//GEN-LAST:event_jTableEmployeeMouseClicked
+
+    private void jButtonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshActionPerformed
+        jButtonCreate.setEnabled(true);
+        jTextFieldTeamID.setEditable(true);
+        clearFields();
+    }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getDeliveryAgency().setDeliveryAgencyName(user_input.get(1));
@@ -341,6 +359,7 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCreate;
     private javax.swing.JButton jButtonDelete;
+    private javax.swing.JButton jButtonRefresh;
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

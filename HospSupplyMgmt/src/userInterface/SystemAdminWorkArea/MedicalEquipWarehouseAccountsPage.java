@@ -75,6 +75,7 @@ public class MedicalEquipWarehouseAccountsPage extends javax.swing.JPanel {
         jLabelEmpID = new javax.swing.JLabel();
         jButtonDelete = new javax.swing.JButton();
         jLabelEmpName = new javax.swing.JLabel();
+        jButtonRefresh = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 70, 169));
@@ -86,7 +87,6 @@ public class MedicalEquipWarehouseAccountsPage extends javax.swing.JPanel {
         jLabel1.setText("Med Equip Warehouse");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 43, 832, -1));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -172,11 +172,20 @@ public class MedicalEquipWarehouseAccountsPage extends javax.swing.JPanel {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 309, 80, 40));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 310, 100, 40));
 
         jLabelEmpName.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
         jLabelEmpName.setText("Warehouse Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 180, -1));
+
+        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonRefresh.setText("REFRESH");
+        jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRefreshActionPerformed(evt);
+            }
+        });
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 309, 100, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/medequipmentwarehouse.jpg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 1920, 1190));
@@ -289,6 +298,12 @@ public class MedicalEquipWarehouseAccountsPage extends javax.swing.JPanel {
         jTextFieldTeamPassword.setText(select_user_account_details.getPassword());
         
     }//GEN-LAST:event_jTableEmployeeMouseClicked
+
+    private void jButtonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshActionPerformed
+        jButtonCreate.setEnabled(true);
+        jTextFieldTeamID.setEditable(true);
+        clearFields();
+    }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getMedSupWarehouse().setMedSupWarehouseName(user_input.get(1));
@@ -333,6 +348,7 @@ public class MedicalEquipWarehouseAccountsPage extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCreate;
     private javax.swing.JButton jButtonDelete;
+    private javax.swing.JButton jButtonRefresh;
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
