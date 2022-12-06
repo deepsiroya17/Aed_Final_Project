@@ -40,6 +40,7 @@ import userInterface.DeliveryAgency.DeliveryAgencyOrderDatabase;
 import userInterface.HospitalManagement.AdministrativeWorkArea.MedSuppEquipPatient;
 import userInterface.HospitalManagement.MedTechnicalWorkArea.MedTechnicalWorkAreaJPanel;
 import userInterface.HospitalManagement.MedicalSuppliesWorkArea.MedSupAdminWorkAreaJPanel;
+import userInterface.HospitalManagement.OperationalWorkArea.OperationalPatientEncounter;
 import userInterface.MedSupWarehouseAdminWorkArea.MedSupWarehouseAdminWorkAreaJPanel;
 import userInterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
 
@@ -283,6 +284,14 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                 Hospital hospital = userAccountLogin.getHospital();
                 MedSuppEquipPatient medSuppEquipPatient = new MedSuppEquipPatient(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
                 jPanelWorkArea.add("medSuppEquipPatient",medSuppEquipPatient);
+                CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
+                crdLyt.next(jPanelWorkArea);
+            }
+            else if(userAccountLogin.getRole().toString().equals("Doctor"))
+            {
+                Hospital hospital = userAccountLogin.getHospital();
+                OperationalPatientEncounter operationalPatinetEncounter = new OperationalPatientEncounter(jPanelWorkArea);
+                jPanelWorkArea.add("operationalPatinetEncounter",operationalPatinetEncounter);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
             }

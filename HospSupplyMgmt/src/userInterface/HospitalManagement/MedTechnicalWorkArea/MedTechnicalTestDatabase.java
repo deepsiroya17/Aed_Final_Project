@@ -78,7 +78,6 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         jLabelTitle.setText("All tests");
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 800, 706, -1));
 
-        jButtonHome.setBackground(new java.awt.Color(255, 255, 255));
         jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonHome.setText("HOME");
         jButtonHome.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +87,6 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         });
         add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 60, 130, 40));
 
-        jButtonCreate.setBackground(new java.awt.Color(255, 255, 255));
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -98,12 +96,10 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         });
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 720, -1, -1));
 
-        jButtonUpdate.setBackground(new java.awt.Color(255, 255, 255));
         jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonUpdate.setText("UPDATE");
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 720, -1, -1));
 
-        jButtonDelete.setBackground(new java.awt.Color(255, 255, 255));
         jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonDelete.setText("DELETE");
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 720, -1, -1));
@@ -112,12 +108,6 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientID.setText("Test Name");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 560, 104, -1));
-
-        jTextFieldTestName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTestNameActionPerformed(evt);
-            }
-        });
         add(jTextFieldTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 560, 280, 30));
 
         jLabelPatientName.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
@@ -129,12 +119,6 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Hospital Test Database");
         add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
-
-        jTextFieldTestPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTestPriceActionPerformed(evt);
-            }
-        });
         add(jTextFieldTestPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 620, 280, 30));
 
         jTableTestDB.setModel(new javax.swing.table.DefaultTableModel(
@@ -169,14 +153,6 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
             crdLyt.show(userProcessContainer,"Sysadmin");
     }//GEN-LAST:event_jButtonHomeActionPerformed
-
-    private void jTextFieldTestNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTestNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTestNameActionPerformed
-
-    private void jTextFieldTestPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTestPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTestPriceActionPerformed
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
