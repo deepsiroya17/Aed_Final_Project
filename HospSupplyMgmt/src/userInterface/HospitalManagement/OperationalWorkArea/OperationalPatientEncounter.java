@@ -18,18 +18,22 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author animeshgiri
  */
-public class OperationalPatinetEncounter extends javax.swing.JPanel {
+public class OperationalPatientEncounter extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
      */
     JPanel userProcessContainer;
+    public OperationalPatientEncounter(JPanel userProcessContainer) {
+        initComponents();
+        this.userProcessContainer = userProcessContainer;
+    }
     /*EcoSystem ecosystem;
     CustomerDirectory customerDirectory;
     UserAccount userAccount;
     Customer customer;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    public OperationalPatinetEncounter(JPanel userProcessContainer , EcoSystem ecosystem) {
+    public OperationalPatientEncounter(JPanel userProcessContainer , EcoSystem ecosystem) {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
 //        this.ecosystem = dB4OUtil.retrieveSystem();
@@ -99,22 +103,11 @@ public class OperationalPatinetEncounter extends javax.swing.JPanel {
         jButtonDownloadPrescription.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonDownloadPrescription.setForeground(new java.awt.Color(255, 255, 255));
         jButtonDownloadPrescription.setText("Email prescription");
-        jButtonDownloadPrescription.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDownloadPrescriptionActionPerformed(evt);
-            }
-        });
         add(jButtonDownloadPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 760, -1, -1));
 
         jButtonCreate.setText("SUBMIT");
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 910, 100, 30));
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 236, 140, -1));
-
-        jTextFieldPatientID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPatientIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 198, 140, -1));
 
         jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,12 +118,6 @@ public class OperationalPatinetEncounter extends javax.swing.JPanel {
         jLabelPatientName.setText("Patient Name:");
         add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 239, 80, -1));
         add(jTextFieldBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 140, -1));
-
-        jTextFieldAge.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldAgeActionPerformed(evt);
-            }
-        });
         add(jTextFieldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 140, -1));
 
         jLabelAge.setForeground(new java.awt.Color(255, 255, 255));
@@ -141,12 +128,6 @@ public class OperationalPatinetEncounter extends javax.swing.JPanel {
         jLabelBloodGroup.setText("Blood Group :");
         add(jLabelBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, 10));
         add(jTextFieldPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 140, -1));
-
-        jTextFieldBloodPressure.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldBloodPressureActionPerformed(evt);
-            }
-        });
         add(jTextFieldBloodPressure, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 140, -1));
 
         jLabelDiagnosisandPrescription.setForeground(new java.awt.Color(255, 255, 255));
@@ -157,12 +138,6 @@ public class OperationalPatinetEncounter extends javax.swing.JPanel {
         jLabelPulse.setText("Pulse :");
         add(jLabelPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, -1));
         add(jTextFieldPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 140, -1));
-
-        jTextFieldGender.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldGenderActionPerformed(evt);
-            }
-        });
         add(jTextFieldGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 200, 140, -1));
 
         jLabelGender.setForeground(new java.awt.Color(255, 255, 255));
@@ -173,12 +148,6 @@ public class OperationalPatinetEncounter extends javax.swing.JPanel {
         jLabelPhoneNumber.setText("Phone Number :");
         add(jLabelPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
         add(jTextFieldWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 330, 140, -1));
-
-        jTextFieldHeight.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldHeightActionPerformed(evt);
-            }
-        });
         add(jTextFieldHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 290, 140, -1));
 
         jLabelHeight.setForeground(new java.awt.Color(255, 255, 255));
@@ -189,12 +158,6 @@ public class OperationalPatinetEncounter extends javax.swing.JPanel {
         jLabelEmpName4.setText("Weight :");
         add(jLabelEmpName4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
         add(jTextFieldTemparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, 140, -1));
-
-        jTextFieldBMI.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldBMIActionPerformed(evt);
-            }
-        });
         add(jTextFieldBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 140, -1));
 
         jLabelBMI.setForeground(new java.awt.Color(255, 255, 255));
@@ -234,62 +197,14 @@ public class OperationalPatinetEncounter extends javax.swing.JPanel {
         jButtonHome1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonHome1.setForeground(new java.awt.Color(255, 255, 255));
         jButtonHome1.setText("HOME");
-        jButtonHome1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonHome1ActionPerformed(evt);
-            }
-        });
         add(jButtonHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(846, 62, -1, -1));
 
         jButtonDownloadPrescription1.setBackground(new java.awt.Color(0, 70, 169));
         jButtonDownloadPrescription1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonDownloadPrescription1.setForeground(new java.awt.Color(255, 255, 255));
         jButtonDownloadPrescription1.setText("Download prescription");
-        jButtonDownloadPrescription1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDownloadPrescription1ActionPerformed(evt);
-            }
-        });
         add(jButtonDownloadPrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 760, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonDownloadPrescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDownloadPrescriptionActionPerformed
-        // TODO add your handling code here:
-        CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"Sysadmin");
-    }//GEN-LAST:event_jButtonDownloadPrescriptionActionPerformed
-
-    private void jTextFieldPatientIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPatientIDActionPerformed
-
-    private void jTextFieldAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAgeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldAgeActionPerformed
-
-    private void jTextFieldBloodPressureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBloodPressureActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldBloodPressureActionPerformed
-
-    private void jTextFieldGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldGenderActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldGenderActionPerformed
-
-    private void jTextFieldHeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHeightActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldHeightActionPerformed
-
-    private void jTextFieldBMIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBMIActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldBMIActionPerformed
-
-    private void jButtonHome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHome1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonHome1ActionPerformed
-
-    private void jButtonDownloadPrescription1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDownloadPrescription1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonDownloadPrescription1ActionPerformed
     /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
         
         customer.getUserAccount().setPassword(user_input.get(1));
