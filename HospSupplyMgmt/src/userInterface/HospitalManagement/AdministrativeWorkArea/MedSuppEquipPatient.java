@@ -166,11 +166,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, -1, -1));
 
         jButtonView.setText("VIEW");
-        jButtonView.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonViewActionPerformed(evt);
-            }
-        });
         add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 260, -1, -1));
 
         jLabelTestName.setForeground(new java.awt.Color(255, 255, 255));
@@ -185,12 +180,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientID.setText("Patient ID:");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 104, -1));
-
-        jTextFieldPatientId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPatientIdActionPerformed(evt);
-            }
-        });
         add(jTextFieldPatientId, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 270, -1));
 
         jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
@@ -200,11 +189,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         add(jTextFieldOrderDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, 270, -1));
 
         jComboBoxEquipment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Blood Test", "Cholestrol", "CBP", "Urine test", "X-Ray", "C.T Scan", "M.R.I ", "Dental Scan", "Ultrasound", "ECG", "EEG", " " }));
-        jComboBoxEquipment.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxEquipmentActionPerformed(evt);
-            }
-        });
         add(jComboBoxEquipment, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 110, -1));
 
         jTableAllTests.setModel(new javax.swing.table.DefaultTableModel(
@@ -235,11 +219,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
                 jTableAllTestsMouseClicked(evt);
             }
         });
-        jTableAllTests.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTableAllTestsKeyPressed(evt);
-            }
-        });
         jScrollPane2.setViewportView(jTableAllTests);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 600, 540, 160));
@@ -249,12 +228,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         jLabelTitle3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle3.setText("New equipment requests");
         add(jLabelTitle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 660, -1));
-
-        jTextFieldPatientName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPatientNameActionPerformed(evt);
-            }
-        });
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 270, -1));
 
         jLabelTestDate1.setForeground(new java.awt.Color(255, 255, 255));
@@ -265,12 +238,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Patient Email :");
         add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 100, -1));
-
-        jTextFieldPatientEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPatientEmailActionPerformed(evt);
-            }
-        });
         add(jTextFieldPatientEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 270, -1));
 
         jLabelTestName1.setForeground(new java.awt.Color(255, 255, 255));
@@ -290,22 +257,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         add(jLabelTestName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 150, 20));
         add(jTextFieldMode, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, 270, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonViewActionPerformed
-
-    private void jTextFieldPatientIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPatientIdActionPerformed
-
-    private void jComboBoxEquipmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxEquipmentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxEquipmentActionPerformed
-
-    private void jTextFieldPatientNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPatientNameActionPerformed
 
     private void jTableNewTestsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableNewTestsMouseClicked
         // TODO add your handling code here:
@@ -381,11 +332,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         clearFields();
     }//GEN-LAST:event_jButtonCreateActionPerformed
 
-    private void jTableAllTestsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTableAllTestsKeyPressed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jTableAllTestsKeyPressed
-
     private void jTableAllTestsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableAllTestsMouseClicked
         // TODO add your handling code here:
         jButtonCreate.setEnabled(false);
@@ -419,10 +365,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         hospital.setPatientDirectory(patientDirectory);
         populateAllOrdersTable();
     }//GEN-LAST:event_jButtonUpdateActionPerformed
-
-    private void jTextFieldPatientEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPatientEmailActionPerformed
 
         private void clearFields(){
             jTextFieldPatientId.setText("");

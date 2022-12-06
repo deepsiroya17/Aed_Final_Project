@@ -255,17 +255,17 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
     private javax.swing.JTextField jTextFieldEmpName;
     // End of variables declaration//GEN-END:variables
 
-    /*private void addrecordstotable(int par) {
-        restaurantDirectory = ecosystem.getRestaurantDirectory();
-        DefaultTableModel model = (DefaultTableModel) RestaurantsTable.getModel();
-//        DefaultComboBo/xModel dc = new DefaultComboBoxModel();
-        model.setRowCount(0);
-        ArrayList<Restaurant> restaurants = restaurantDirectory.getRestaurantList();
-        for(Restaurant r: restaurants)
-        {
-            model.addRow(new Object[]{r,r.getName(),r.getContact_no(),r.getRest_pincode(),r.getUserAccount().getPassword()});
-        }
-        RestaurantsTable.setModel(model);
-        dB4OUtil.storeSystem(ecosystem);
-    }*/
+//    private void addrecordstotable(int par) {
+//        restaurantDirectory = ecosystem.getRestaurantDirectory();
+//        DefaultTableModel model = (DefaultTableModel) RestaurantsTable.getModel();
+////        DefaultComboBo/xModel dc = new DefaultComboBoxModel();
+//        model.setRowCount(0);
+//        ArrayList<Restaurant> restaurants = restaurantDirectory.getRestaurantList();
+//        for(Restaurant r: restaurants)
+//        {
+//            model.addRow(new Object[]{r,r.getName(),r.getContact_no(),r.getRest_pincode(),r.getUserAccount().getPassword()});
+//        }
+//        RestaurantsTable.setModel(model);
+//        dB4OUtil.storeSystem(ecosystem);
+//    }
 }
