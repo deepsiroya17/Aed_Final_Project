@@ -97,9 +97,10 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Customer Support Members");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 706, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1000, -1));
 
         jTableRequests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -127,113 +128,122 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableRequests);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 870, 870, 100));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 870, 100));
 
-        jButtonCreate.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCreate.setBackground(new java.awt.Color(0, 102, 102));
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCreate.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCreate.setForeground(new java.awt.Color(255, 255, 204));
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 430, 90, 40));
-        add(jTextFieldCustPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 460, 421, -1));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 90, 40));
+        add(jTextFieldCustPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 421, -1));
 
-        jButtonUpdate.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonUpdate.setBackground(new java.awt.Color(0, 102, 102));
         jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonUpdate.setForeground(new java.awt.Color(255, 255, 204));
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 510, 90, 40));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 520, 90, 40));
 
         jLabelPassword.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelPassword.setForeground(new java.awt.Color(0, 102, 102));
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Notes");
-        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 770, 88, -1));
+        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 550, 88, -1));
 
         jTextFieldNotes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldNotesActionPerformed(evt);
             }
         });
-        add(jTextFieldNotes, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 740, 403, 65));
+        add(jTextFieldNotes, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 403, 65));
 
         jTextFieldCustName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCustNameActionPerformed(evt);
             }
         });
-        add(jTextFieldCustName, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 410, 421, -1));
+        add(jTextFieldCustName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 421, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelEmpID.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Customer Name");
-        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 150, -1));
+        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 150, -1));
 
-        jButtonDelete.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonDelete.setBackground(new java.awt.Color(0, 102, 102));
         jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonDelete.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDelete.setForeground(new java.awt.Color(255, 255, 204));
         jButtonDelete.setText("DELETE");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(1400, 590, 90, 40));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 570, 90, 40));
 
         jLabelEmpName.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelEmpName.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Customer Phone");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 150, -1));
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 150, -1));
 
-        jRadioButtonMedTest.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jRadioButtonMedTest.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jRadioButtonMedTest.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButtonMedTest.setText("Medical Test");
         jRadioButtonMedTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonMedTestActionPerformed(evt);
             }
         });
-        add(jRadioButtonMedTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 610, -1, -1));
+        add(jRadioButtonMedTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, -1, -1));
 
-        jRadioButtonConsultation.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jRadioButtonConsultation.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jRadioButtonConsultation.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButtonConsultation.setText("Consulation");
         jRadioButtonConsultation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonConsultationActionPerformed(evt);
             }
         });
-        add(jRadioButtonConsultation, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 610, -1, -1));
+        add(jRadioButtonConsultation, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, -1, -1));
 
-        jRadioButtonMedEquipment.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jRadioButtonMedEquipment.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jRadioButtonMedEquipment.setForeground(new java.awt.Color(0, 102, 102));
         jRadioButtonMedEquipment.setText("Medical equipment");
         jRadioButtonMedEquipment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonMedEquipmentActionPerformed(evt);
             }
         });
-        add(jRadioButtonMedEquipment, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 610, -1, -1));
+        add(jRadioButtonMedEquipment, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 400, -1, -1));
 
         jLabelEmpName1.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelEmpName1.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName1.setText("Request Category");
-        add(jLabelEmpName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 610, 150, -1));
+        add(jLabelEmpName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, 150, -1));
 
         jLabelEmpName2.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelEmpName2.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName2.setText("Customer Email");
-        add(jLabelEmpName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, 150, -1));
-        add(jTextFieldCustEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, 421, -1));
+        add(jLabelEmpName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 150, -1));
+        add(jTextFieldCustEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 421, -1));
 
         jLabelEmpName3.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelEmpName3.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName3.setText("Customer Pincode");
-        add(jLabelEmpName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 150, -1));
+        add(jLabelEmpName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 150, -1));
 
         jTextFieldCustPincode.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,16 +255,17 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
                 jTextFieldCustPincodeKeyPressed(evt);
             }
         });
-        add(jTextFieldCustPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 560, 421, -1));
+        add(jTextFieldCustPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 421, -1));
 
         jLabelEmpName5.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelEmpName5.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName5.setText("Date ");
-        add(jLabelEmpName5, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 670, 150, -1));
-        add(jDateChooserTestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 670, 170, 30));
+        add(jLabelEmpName5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 150, 30));
+        add(jDateChooserTestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 170, 30));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustomerSupportMemberWorkAreaJPanel.png"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1180));
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 830));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldNotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNotesActionPerformed
