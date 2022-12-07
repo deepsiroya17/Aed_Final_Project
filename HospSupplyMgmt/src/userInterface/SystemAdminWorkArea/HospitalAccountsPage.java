@@ -85,21 +85,21 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Hospital Account");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 70, 169));
+        jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(0, 102, 102));
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 40, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 20, -1, -1));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -119,11 +119,11 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableEmployee);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 560, 787, 90));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 560, 787, 90));
 
-        jButtonCreate.setBackground(new java.awt.Color(22, 81, 129));
+        jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCreate.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCreate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,82 +133,82 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 100, 30));
         add(jTextFieldHospName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 280, -1));
 
-        jButtonUpdate.setBackground(new java.awt.Color(22, 81, 129));
+        jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
         jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 470, 100, 30));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 100, 30));
 
         jLabelPassword.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPassword.setForeground(new java.awt.Color(0, 102, 102));
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
-        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 120, -1));
+        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 120, 20));
 
         jTextFieldHospPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldHospPasswordActionPerformed(evt);
             }
         });
-        add(jTextFieldHospPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 280, 20));
+        add(jTextFieldHospPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 280, -1));
 
         jTextFieldHospID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldHospIDActionPerformed(evt);
             }
         });
-        add(jTextFieldHospID, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 198, 280, -1));
+        add(jTextFieldHospID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 280, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEmpID.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Hospital ID:");
-        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 120, -1));
+        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 120, -1));
 
-        jButtonRefresh.setBackground(new java.awt.Color(22, 81, 129));
+        jButtonRefresh.setBackground(new java.awt.Color(255, 255, 204));
         jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonRefresh.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRefresh.setForeground(new java.awt.Color(0, 102, 102));
         jButtonRefresh.setText("REFRESH");
         jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 470, 100, 30));
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 470, 100, 30));
 
         jLabelEmpName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEmpName.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Hospital Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 120, -1));
 
         jLabelEmpName1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpName1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEmpName1.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName1.setText("Pincode:");
         add(jLabelEmpName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 120, -1));
         add(jTextFieldHospPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 280, -1));
 
-        jButtonDelete1.setBackground(new java.awt.Color(22, 81, 129));
+        jButtonDelete1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonDelete1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonDelete1.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDelete1.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDelete1.setText("DELETE");
         jButtonDelete1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDelete1ActionPerformed(evt);
             }
         });
-        add(jButtonDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 470, 100, 30));
+        add(jButtonDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 100, 30));
 
         bgdimg.setBackground(new java.awt.Color(255, 0, 0));
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/HospitalAccounts_latest.jpg"))); // NOI18N
         bgdimg.setToolTipText("");
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1220));
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1900, 1160));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

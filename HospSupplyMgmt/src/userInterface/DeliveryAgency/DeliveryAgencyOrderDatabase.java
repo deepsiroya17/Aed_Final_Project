@@ -77,39 +77,42 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
         jTableNewOrders = new javax.swing.JTable();
         jLabelTitle1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(255, 255, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabelTitle.setForeground(new java.awt.Color(0, 102, 102));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("All Orders");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 706, -1));
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 1000, -1));
 
-        jButtonHome.setBackground(new java.awt.Color(0, 70, 169));
-        jButtonHome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonHome.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonHome.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonHome.setForeground(new java.awt.Color(255, 255, 204));
         jButtonHome.setText("HOME");
         jButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 60, -1, -1));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, -1, -1));
 
+        jButtonAssignDeliveryAgency.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonAssignDeliveryAgency.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonAssignDeliveryAgency.setForeground(new java.awt.Color(255, 255, 204));
         jButtonAssignDeliveryAgency.setText("ACCEPT");
         jButtonAssignDeliveryAgency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAssignDeliveryAgencyActionPerformed(evt);
             }
         });
-        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, -1, -1));
+        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 380, 90, 20));
 
-        jLabelTitle2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabelTitle2.setForeground(new java.awt.Color(0, 102, 102));
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Delivery Agency Order Database");
-        add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 940, -1));
+        add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1000, -1));
 
         jTableAllOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -129,15 +132,18 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableAllOrders);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 510, 680, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, 680, 150));
 
+        jButtonAssignDeliveryAgency1.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonAssignDeliveryAgency1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonAssignDeliveryAgency1.setForeground(new java.awt.Color(255, 255, 204));
         jButtonAssignDeliveryAgency1.setText("MARK DELIVERED");
         jButtonAssignDeliveryAgency1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAssignDeliveryAgency1ActionPerformed(evt);
             }
         });
-        add(jButtonAssignDeliveryAgency1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, -1, -1));
+        add(jButtonAssignDeliveryAgency1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 240, 20));
 
         jTableNewOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -157,13 +163,13 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTableNewOrders);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 680, 110));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 680, 140));
 
-        jLabelTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabelTitle1.setForeground(new java.awt.Color(0, 102, 102));
         jLabelTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle1.setText("New Orders");
-        add(jLabelTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 706, -1));
+        add(jLabelTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1000, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
