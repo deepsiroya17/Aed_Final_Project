@@ -195,7 +195,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         jPanelWorkArea.setPreferredSize(new java.awt.Dimension(1181, 1080));
         jPanelWorkArea.setLayout(new java.awt.CardLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/HospitalMainJFrame.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/SystemAdminWorkAreaJPanel.jpg"))); // NOI18N
         jLabel3.setMinimumSize(new java.awt.Dimension(1000, 800));
         jLabel3.setPreferredSize(new java.awt.Dimension(1000, 800));
         jPanelWorkArea.add(jLabel3, "card2");
