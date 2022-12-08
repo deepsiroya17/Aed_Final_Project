@@ -83,7 +83,7 @@ public class CustomerSupportTeamAdminWorkAreaJPanel extends javax.swing.JPanel {
         jButtonRefresh = new javax.swing.JButton();
         bgdimg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
@@ -201,7 +201,7 @@ public class CustomerSupportTeamAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, 100, 40));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustomerSupportAccountsPage1.jpg"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 700));
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -40, 970, 800));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

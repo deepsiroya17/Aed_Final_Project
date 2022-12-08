@@ -100,6 +100,12 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             }
         });
 
+        userNameJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userNameJTextFieldActionPerformed(evt);
+            }
+        });
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -370,11 +376,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                 }
                 
                 if(gtext.contains("02215")){
-                    String[] splitStr = gtext.split("\\s+");
-                    user_input.add(splitStr[0]);
-                    user_input.add(splitStr[1]);
-                    user_input.add(splitStr[2]);
-                    user_input.add(splitStr[3]);
+                    
                     bot("So how can I help you?",chatarea);
                 }
                 else if(gtext.contains("book") && gtext.contains("test")){
@@ -385,7 +387,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                     bot("Okay. Please tell me the test date.",chatarea);
                     req_cat = "MedicalEquipment";
                 }
-                else if(gtext.contains("2021")){
+                else if(gtext.contains("2022")){
 //                    SimpleDateFormat formatter = new SimpleDateFormat("MM.dd.yyyy", Locale.ENGLISH);
 //                    Date date = formatter.parse(gtext);
                     user_input.add(gtext);
@@ -420,6 +422,10 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         });
         
     }//GEN-LAST:event_loginJOpenChatWindowActionPerformed
+
+    private void userNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userNameJTextFieldActionPerformed
     private void bot(String bot_resp, JTextArea chatarea){
         chatarea.append("BOT ->"+bot_resp+"\n");
     }

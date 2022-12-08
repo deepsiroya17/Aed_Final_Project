@@ -51,6 +51,8 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
     CustomerSupportTeam customerSupportTeam;
     private String request_category;
     Request request;
+    private UserAccountDirectory UserAccountDirectory;
+    private HospitalDirectory hospitalDirectory;
     public CustomerSupportMemberWorkAreaJPanel(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem) {
         
         this.userProcessContainer = userProcessContainer;
@@ -140,6 +142,12 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 90, 40));
+
+        jTextFieldCustPhone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCustPhoneActionPerformed(evt);
+            }
+        });
         add(jTextFieldCustPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 421, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(0, 102, 102));
@@ -237,6 +245,12 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         jLabelEmpName2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName2.setText("Customer Email");
         add(jLabelEmpName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 150, -1));
+
+        jTextFieldCustEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCustEmailActionPerformed(evt);
+            }
+        });
         add(jTextFieldCustEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 421, -1));
 
         jLabelEmpName3.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
@@ -319,7 +333,7 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButtonCreateActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
-        int selected_row_ix = jTableRequests.getSelectedRow();
+       int selected_row_ix = jTableRequests.getSelectedRow();
 
         if(selected_row_ix < 0){
             JOptionPane.showMessageDialog(this, "Please select a row to update.");
@@ -327,9 +341,32 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         }
         
         DefaultTableModel model = (DefaultTableModel) jTableRequests.getModel();
-        UserAccount select_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);        
-//        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
+        UserAccount select_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);         
+        //UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
+        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
 //        ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
+         hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
+         ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
+         for(UserAccount userAccount: userAccountList)
+        {
+            if(userAccount.getUsername().equals(select_account_details.getUsername()))
+            {
+                Hospital hospital = userAccount.getHospital();
+                 ArrayList<String> user_input = check_empty_field();
+//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
+                model.setValueAt(user_input.get(1), selected_row_ix, 1);
+                model.setValueAt(user_input.get(2), selected_row_ix, 2);
+                model.setValueAt(user_input.get(3), selected_row_ix, 3);
+                hospitalDirectory.updateHospital(user_input, hospital);
+                UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
+                break;
+            }
+        }
+        
+//        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
+        JOptionPane.showMessageDialog(this, "Values updated");
+//        addrecordstotable();
+     
 //        for(UserAccount userAccount: userAccountList)
 //        {
 //            if(userAccount.getUsername().equals(select_account_details.getUsername()))
@@ -344,8 +381,11 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
 //        }   
         
 //        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
-        JOptionPane.showMessageDialog(this, "Values updated");
 //        addrecordstotable();
+    
+   
+
+    
         
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
@@ -372,9 +412,10 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         int selected_row_ix = jTableRequests.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) jTableRequests.getModel();
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
-        jTextFieldCustName.setEditable(false);
-        jTextFieldCustName.setText(select_user_account_details.getUsername());
         
+        jTextFieldCustName.setText(select_user_account_details.getUsername());
+        //jTextFieldCustPhone.setText(select_user_account_details.getPassword());
+      // jTextFieldCustPhone.setText(select_user_account_details.);
         Role role = select_user_account_details.getRole();
         System.out.println("role.toString(): "+role.toString());
         
@@ -428,6 +469,14 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jTextFieldCustPincodeKeyPressed
+
+    private void jTextFieldCustEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCustEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCustEmailActionPerformed
+
+    private void jTextFieldCustPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCustPhoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCustPhoneActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
 //        userAccount.getEmployee().setEmployee_name(user_input.get(1));
@@ -438,6 +487,8 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         jTextFieldCustName.setText("");
         jTextFieldCustPhone.setText("");
         jTextFieldNotes.setText("");
+        
+        
     }
     public ArrayList<String> check_empty_field(){
         ArrayList<String> user_input = new ArrayList<>();

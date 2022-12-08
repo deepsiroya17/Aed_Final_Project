@@ -131,6 +131,12 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
             }
         });
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 100, 30));
+
+        jTextFieldHospName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldHospNameActionPerformed(evt);
+            }
+        });
         add(jTextFieldHospName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 280, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
@@ -192,6 +198,12 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         jLabelEmpName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName1.setText("Pincode:");
         add(jLabelEmpName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 120, -1));
+
+        jTextFieldHospPincode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldHospPincodeActionPerformed(evt);
+            }
+        });
         add(jTextFieldHospPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 280, -1));
 
         jButtonDelete1.setBackground(new java.awt.Color(255, 255, 204));
@@ -311,6 +323,14 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
     private void jButtonDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDelete1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonDelete1ActionPerformed
+
+    private void jTextFieldHospPincodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHospPincodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldHospPincodeActionPerformed
+
+    private void jTextFieldHospNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHospNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldHospNameActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getHospital().setHospitalName(user_input.get(1));
