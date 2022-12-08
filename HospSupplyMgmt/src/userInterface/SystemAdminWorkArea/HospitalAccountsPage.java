@@ -85,7 +85,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Hospital Account");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
@@ -131,6 +131,12 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
             }
         });
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 100, 30));
+
+        jTextFieldHospName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldHospNameActionPerformed(evt);
+            }
+        });
         add(jTextFieldHospName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 280, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
@@ -145,7 +151,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 100, 30));
 
         jLabelPassword.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelPassword.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 120, 20));
@@ -165,7 +171,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         add(jTextFieldHospID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 280, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpID.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Hospital ID:");
         add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 120, -1));
@@ -182,16 +188,22 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 470, 100, 30));
 
         jLabelEmpName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpName.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Hospital Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 120, -1));
 
         jLabelEmpName1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpName1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName1.setText("Pincode:");
         add(jLabelEmpName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 120, -1));
+
+        jTextFieldHospPincode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldHospPincodeActionPerformed(evt);
+            }
+        });
         add(jTextFieldHospPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 280, -1));
 
         jButtonDelete1.setBackground(new java.awt.Color(255, 255, 204));
@@ -311,6 +323,14 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
     private void jButtonDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDelete1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonDelete1ActionPerformed
+
+    private void jTextFieldHospPincodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHospPincodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldHospPincodeActionPerformed
+
+    private void jTextFieldHospNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHospNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldHospNameActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getHospital().setHospitalName(user_input.get(1));

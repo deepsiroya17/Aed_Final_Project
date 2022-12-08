@@ -147,12 +147,12 @@
             <Component class="javax.swing.JLabel" name="bgdimg">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/userInterface/Images/SystemAdminWorkAreaJPanel.jpg"/>
+                  <Image iconType="3" name="/userInterface/Images/OperationalAccountsPage_latest.jpeg"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="0" width="1740" height="1080"/>
+                  <AbsoluteConstraints x="-10" y="-140" width="1740" height="1080"/>
                 </Constraint>
               </Constraints>
             </Component>

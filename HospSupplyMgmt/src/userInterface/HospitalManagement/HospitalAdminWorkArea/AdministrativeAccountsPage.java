@@ -107,7 +107,7 @@ public class AdministrativeAccountsPage extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1550, 110, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, -1));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
