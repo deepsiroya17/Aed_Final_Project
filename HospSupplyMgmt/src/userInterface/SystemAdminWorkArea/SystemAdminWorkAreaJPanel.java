@@ -111,8 +111,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(jButtonCreateCustomerSupport1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, 401, -1));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/SystemAdminWorkAreaJPanel.jpg"))); // NOI18N
-        jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1740, 1080));
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/OperationalAccountsPage_latest.jpeg"))); // NOI18N
+        jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -140, 1740, 1080));
 
         jSplitPane.setRightComponent(jPanel2);
 
