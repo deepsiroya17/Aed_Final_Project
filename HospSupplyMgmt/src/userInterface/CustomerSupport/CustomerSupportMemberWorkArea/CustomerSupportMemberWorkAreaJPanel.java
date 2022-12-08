@@ -264,7 +264,7 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabelEmpName5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 150, 30));
         add(jDateChooserTestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 170, 30));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustomerSupportMemberWorkAreaJPanel.png"))); // NOI18N
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustSuppMember.jpeg"))); // NOI18N
         add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 830));
     }// </editor-fold>//GEN-END:initComponents
 

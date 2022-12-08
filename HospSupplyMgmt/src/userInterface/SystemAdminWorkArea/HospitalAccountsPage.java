@@ -85,7 +85,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Hospital Account");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
@@ -145,7 +145,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 100, 30));
 
         jLabelPassword.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelPassword.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 120, 20));
@@ -165,7 +165,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         add(jTextFieldHospID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 280, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpID.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Hospital ID:");
         add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 120, -1));
@@ -182,13 +182,13 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 470, 100, 30));
 
         jLabelEmpName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpName.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Hospital Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 120, -1));
 
         jLabelEmpName1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabelEmpName1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName1.setText("Pincode:");
         add(jLabelEmpName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 120, -1));

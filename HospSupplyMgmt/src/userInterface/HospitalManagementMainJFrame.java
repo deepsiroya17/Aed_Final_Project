@@ -87,7 +87,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         jSplitPane1.setMinimumSize(new java.awt.Dimension(1200, 800));
         jSplitPane1.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jPanelLogin.setBackground(new java.awt.Color(116, 178, 189));
+        jPanelLogin.setBackground(new java.awt.Color(29, 140, 195));
         jPanelLogin.setPreferredSize(new java.awt.Dimension(200, 800));
 
         loginJButton.setBackground(new java.awt.Color(255, 255, 204));
