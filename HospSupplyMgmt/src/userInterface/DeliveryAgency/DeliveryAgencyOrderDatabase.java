@@ -67,7 +67,6 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabelTitle = new javax.swing.JLabel();
-        jButtonHome = new javax.swing.JButton();
         jButtonAssignDeliveryAgency = new javax.swing.JButton();
         jLabelTitle2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -85,17 +84,6 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("All Orders");
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 1000, -1));
-
-        jButtonHome.setBackground(new java.awt.Color(0, 102, 102));
-        jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonHome.setForeground(new java.awt.Color(255, 255, 204));
-        jButtonHome.setText("HOME");
-        jButtonHome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonHomeActionPerformed(evt);
-            }
-        });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, -1, -1));
 
         jButtonAssignDeliveryAgency.setBackground(new java.awt.Color(0, 102, 102));
         jButtonAssignDeliveryAgency.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -172,12 +160,6 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
         add(jLabelTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 1000, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
-        CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"Sysadmin");
-    }//GEN-LAST:event_jButtonHomeActionPerformed
-
     private void jButtonAssignDeliveryAgencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAssignDeliveryAgencyActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTableNewOrders.getModel();
@@ -232,7 +214,6 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAssignDeliveryAgency;
     private javax.swing.JButton jButtonAssignDeliveryAgency1;
-    private javax.swing.JButton jButtonHome;
     private javax.swing.JLabel jLabelTitle;
     private javax.swing.JLabel jLabelTitle1;
     private javax.swing.JLabel jLabelTitle2;

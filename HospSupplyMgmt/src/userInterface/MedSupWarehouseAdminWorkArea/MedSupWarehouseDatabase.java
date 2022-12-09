@@ -203,9 +203,10 @@ public class MedSupWarehouseDatabase extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
+        MedSupWarehouseAdminWorkAreaJPanel medSupWarehouseAdminWorkAreaJPanel = new MedSupWarehouseAdminWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, medSupWarehouseCurrent);
+        userProcessContainer.add("medSupWarehouseAdminWorkAreaJPanel",medSupWarehouseAdminWorkAreaJPanel);
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"Sysadmin");
+        crdLyt.show(userProcessContainer,"medSupWarehouseAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jTextFieldMedSupEquipNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMedSupEquipNameActionPerformed

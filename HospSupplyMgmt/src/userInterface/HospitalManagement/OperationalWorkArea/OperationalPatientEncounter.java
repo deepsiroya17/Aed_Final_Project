@@ -87,7 +87,6 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         jLabelReasonforVisit = new javax.swing.JLabel();
         jLabelAllergies = new javax.swing.JLabel();
         jTextFieldAllergies = new javax.swing.JTextField();
-        jButtonHome1 = new javax.swing.JButton();
         jButtonDownloadPrescription1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 204));
@@ -209,12 +208,6 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         add(jLabelAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 560, 100, 20));
         add(jTextFieldAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 560, 230, -1));
 
-        jButtonHome1.setBackground(new java.awt.Color(0, 102, 102));
-        jButtonHome1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonHome1.setForeground(new java.awt.Color(255, 255, 204));
-        jButtonHome1.setText("HOME");
-        add(jButtonHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, -1));
-
         jButtonDownloadPrescription1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonDownloadPrescription1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonDownloadPrescription1.setForeground(new java.awt.Color(0, 102, 102));
@@ -263,7 +256,6 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
     private javax.swing.JButton jButtonCreate;
     private javax.swing.JButton jButtonDownloadPrescription;
     private javax.swing.JButton jButtonDownloadPrescription1;
-    private javax.swing.JButton jButtonHome1;
     private javax.swing.JLabel jLabelAge;
     private javax.swing.JLabel jLabelAllergies;
     private javax.swing.JLabel jLabelBMI;
