@@ -330,9 +330,10 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
+        MedTechnicalWorkAreaJPanel medTechnicalWorkAreaJPanel = new MedTechnicalWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
+        userProcessContainer.add("medTechnicalWorkAreaJPanel",medTechnicalWorkAreaJPanel);
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"Sysadmin");
+        crdLyt.show(userProcessContainer,"medTechnicalWorkAreaJPanel");
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jButtonEmailReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmailReportActionPerformed
@@ -398,20 +399,20 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         hospital.setPatientDirectory(patientDirectory);
         String message = "\n\nHi " + user_input.get(1) +" your " + user_input.get(3) +" test for date " +user_input.get(4) + " in " + hospital.getHospitalName() +" has been booked";
         System.out.println("message: "+message);
-        sendMessageTwilio = new SendMessageTwilio();
-        sendMessageTwilio.sendMessage(message);
+//        sendMessageTwilio = new SendMessageTwilio();
+//        sendMessageTwilio.sendMessage(message);
         
         model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
         populateNewRequestsTable();
         populateAllTestsTable();
         
-        SendMail sendMail = new SendMail();
-        String subject = "Medical Test Booked";
-        try {
-            sendMail.sendEmail(message, subject, user_input.get(5));
-        } catch (IOException ex) {
-            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        SendMail sendMail = new SendMail();
+//        String subject = "Medical Test Booked";
+//        try {
+//            sendMail.sendEmail(message, subject, user_input.get(5));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         
         clearFields();
     }//GEN-LAST:event_jButtonCreateActionPerformed
