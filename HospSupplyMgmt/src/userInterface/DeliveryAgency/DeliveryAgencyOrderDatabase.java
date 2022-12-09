@@ -95,7 +95,7 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, -1, -1));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, -1, -1));
 
         jButtonAssignDeliveryAgency.setBackground(new java.awt.Color(0, 102, 102));
         jButtonAssignDeliveryAgency.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
