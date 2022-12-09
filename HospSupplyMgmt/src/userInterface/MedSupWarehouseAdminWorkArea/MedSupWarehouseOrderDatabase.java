@@ -80,46 +80,53 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
         jComboBoxDeliveryAgency = new javax.swing.JComboBox<>();
         jLabelPatientName2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle.setForeground(new java.awt.Color(255, 255, 204));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("New Orders");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 706, -1));
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 706, -1));
 
-        jButtonHome.setBackground(new java.awt.Color(0, 70, 169));
-        jButtonHome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonHome.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonHome.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonHome.setForeground(new java.awt.Color(0, 102, 102));
         jButtonHome.setText("HOME");
         jButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 60, -1, -1));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, -1, -1));
 
+        jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonUpdate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 220, -1, -1));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 230, -1, -1));
 
+        jButtonAssignDeliveryAgency.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonAssignDeliveryAgency.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jButtonAssignDeliveryAgency.setForeground(new java.awt.Color(0, 102, 102));
         jButtonAssignDeliveryAgency.setText("ASSIGN");
         jButtonAssignDeliveryAgency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAssignDeliveryAgencyActionPerformed(evt);
             }
         });
-        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 600, -1, -1));
+        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, -1, -1));
 
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientID.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 204));
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelPatientID.setText("Medical Equiment Name");
-        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 200, 120, -1));
+        jLabelPatientID.setText("Medical Equipment Name");
+        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 160, 20));
 
         jTextFieldMedSupEquipName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,16 +135,17 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
         });
         add(jTextFieldMedSupEquipName, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 200, 270, -1));
 
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientName.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 204));
         jLabelPatientName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName.setText("Medical Equipment Price");
-        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 130, -1));
+        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 170, 20));
 
         jLabelTitle2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle2.setForeground(new java.awt.Color(255, 255, 204));
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Medical Supplies Order Database");
-        add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 940, -1));
+        add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 920, -1));
 
         jTextFieldMedSupEquipPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,12 +175,13 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableNewOrders);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 680, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 800, 110));
 
-        jLabelPatientName1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientName1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientName1.setForeground(new java.awt.Color(255, 255, 204));
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Delivery Agency");
-        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 600, -1, -1));
+        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 600, 100, 20));
 
         jTextFieldMedSupEquipQuantity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,13 +190,14 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
         });
         add(jTextFieldMedSupEquipQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 270, -1));
 
-        jComboBoxDeliveryAgency.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(jComboBoxDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 600, -1, -1));
+        jComboBoxDeliveryAgency.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+        add(jComboBoxDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 600, 200, -1));
 
-        jLabelPatientName2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientName2.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientName2.setForeground(new java.awt.Color(255, 255, 204));
         jLabelPatientName2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName2.setText("Medical Equipment Quantity");
-        add(jLabelPatientName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 140, -1));
+        add(jLabelPatientName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 180, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
