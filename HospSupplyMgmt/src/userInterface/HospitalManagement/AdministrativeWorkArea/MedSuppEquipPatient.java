@@ -166,7 +166,7 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, -1, -1));
 
         jButtonView.setText("VIEW");
-        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 260, -1, -1));
+        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 80, -1));
 
         jLabelTestName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTestName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -315,7 +315,7 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         }
         System.out.println("message: "+message);
         sendMessageTwilio = new SendMessageTwilio();
-        sendMessageTwilio.sendMessage(message, user_input.get(0));
+        sendMessageTwilio.sendMessage(message);
         
         model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientOrder.getOrder_id(), patientOrder.getOrder_item(),patientOrder.getOrder_date()});
         populateNewRequestsTable();
