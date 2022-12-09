@@ -67,48 +67,52 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.setPreferredSize(new java.awt.Dimension(1720, 1080));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonCreateHospital.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonCreateHospital.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreateHospital.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonCreateHospital.setForeground(new java.awt.Color(0, 102, 102));
         jButtonCreateHospital.setText("Manage Hospitals");
         jButtonCreateHospital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateHospitalActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonCreateHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 630, 401, -1));
+        jPanel2.add(jButtonCreateHospital, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 401, -1));
 
-        jButtonCreateCustomerSupport.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonCreateCustomerSupport.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreateCustomerSupport.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonCreateCustomerSupport.setForeground(new java.awt.Color(0, 102, 102));
         jButtonCreateCustomerSupport.setText("Manage Customer Support");
         jButtonCreateCustomerSupport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateCustomerSupportActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonCreateCustomerSupport, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 800, 401, -1));
+        jPanel2.add(jButtonCreateCustomerSupport, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 401, -1));
 
-        jButtonCreateWarehouse.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonCreateWarehouse.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreateWarehouse.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonCreateWarehouse.setForeground(new java.awt.Color(0, 102, 102));
         jButtonCreateWarehouse.setText("Manage Warehouses");
         jButtonCreateWarehouse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateWarehouseActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonCreateWarehouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 710, 401, -1));
+        jPanel2.add(jButtonCreateWarehouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 401, -1));
 
-        jButtonCreateCustomerSupport1.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonCreateCustomerSupport1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreateCustomerSupport1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonCreateCustomerSupport1.setForeground(new java.awt.Color(0, 102, 102));
         jButtonCreateCustomerSupport1.setText("Manage Delivery Agency");
         jButtonCreateCustomerSupport1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateCustomerSupport1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonCreateCustomerSupport1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 890, 401, -1));
+        jPanel2.add(jButtonCreateCustomerSupport1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, 401, -1));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/SystemAdminWorkAreaJPanel.jpg"))); // NOI18N
-        jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1740, 1080));
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/OperationalAccountsPage_latest.jpeg"))); // NOI18N
+        jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -140, 1740, 1080));
 
         jSplitPane.setRightComponent(jPanel2);
 

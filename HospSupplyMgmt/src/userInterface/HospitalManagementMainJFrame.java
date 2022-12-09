@@ -37,6 +37,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import userInterface.CustomerSupport.CustomerSupportMemberWorkArea.CustomerSupportMemberWorkAreaJPanel;
 import userInterface.DeliveryAgency.DeliveryAgencyOrderDatabase;
+import userInterface.HospitalManagement.AdministrativeWorkArea.AdministrativeReceptionistWorkAreaJPanel;
 import userInterface.HospitalManagement.AdministrativeWorkArea.MedSuppEquipPatient;
 import userInterface.HospitalManagement.MedTechnicalWorkArea.MedTechnicalWorkAreaJPanel;
 import userInterface.HospitalManagement.MedicalSuppliesWorkArea.MedSupAdminWorkAreaJPanel;
@@ -49,6 +50,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
     /** 
      * Creates new form HospitalManagementMainJFrame
      */
+    @SuppressWarnings("unchecked")
     private MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     public HospitalManagementDB4OUtil dB4OUtil = HospitalManagementDB4OUtil.getInstance();
     UserAccount userAccountLogin;
@@ -81,15 +83,17 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1200, 800));
 
-        jSplitPane1.setPreferredSize(new java.awt.Dimension(1381, 1080));
+        jSplitPane1.setMinimumSize(new java.awt.Dimension(1200, 800));
+        jSplitPane1.setPreferredSize(new java.awt.Dimension(1200, 800));
 
-        jPanelLogin.setBackground(new java.awt.Color(116, 178, 189));
-        jPanelLogin.setPreferredSize(new java.awt.Dimension(200, 1080));
+        jPanelLogin.setBackground(new java.awt.Color(29, 140, 195));
+        jPanelLogin.setPreferredSize(new java.awt.Dimension(200, 800));
 
-        loginJButton.setBackground(new java.awt.Color(33, 72, 77));
+        loginJButton.setBackground(new java.awt.Color(255, 255, 204));
         loginJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        loginJButton.setForeground(new java.awt.Color(255, 255, 255));
+        loginJButton.setForeground(new java.awt.Color(0, 102, 102));
         loginJButton.setText("Login");
         loginJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,17 +101,24 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             }
         });
 
+        userNameJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userNameJTextFieldActionPerformed(evt);
+            }
+        });
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("User Name");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 102, 102));
         jLabel2.setText("Password");
 
-        logoutJButton.setBackground(new java.awt.Color(33, 72, 77));
+        logoutJButton.setBackground(new java.awt.Color(255, 255, 204));
         logoutJButton.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        logoutJButton.setForeground(new java.awt.Color(255, 255, 255));
+        logoutJButton.setForeground(new java.awt.Color(0, 102, 102));
         logoutJButton.setText("Logout");
         logoutJButton.setEnabled(false);
         logoutJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -116,9 +127,9 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             }
         });
 
-        loginJOpenChatWindow.setBackground(new java.awt.Color(33, 72, 77));
+        loginJOpenChatWindow.setBackground(new java.awt.Color(0, 102, 102));
         loginJOpenChatWindow.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        loginJOpenChatWindow.setForeground(new java.awt.Color(255, 255, 255));
+        loginJOpenChatWindow.setForeground(new java.awt.Color(255, 255, 204));
         loginJOpenChatWindow.setText("Chat with us");
         loginJOpenChatWindow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,42 +142,45 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         jPanelLoginLayout.setHorizontalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLoginLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelLoginLayout.createSequentialGroup()
-                        .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
-                                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(userNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(userNameJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, Short.MAX_VALUE)
-                                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)))
-                            .addGroup(jPanelLoginLayout.createSequentialGroup()
                                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanelLoginLayout.createSequentialGroup()
-                                        .addGap(180, 180, 180)
-                                        .addComponent(loginJLabel))
-                                    .addGroup(jPanelLoginLayout.createSequentialGroup()
-                                        .addGap(62, 62, 62)
-                                        .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(18, 18, 18))))
+                            .addGroup(jPanelLoginLayout.createSequentialGroup()
+                                .addGap(180, 180, 180)
+                                .addComponent(loginJLabel)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(jPanelLoginLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(loginJOpenChatWindow, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 29, Short.MAX_VALUE))
+                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(loginJOpenChatWindow, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanelLoginLayout.setVerticalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLoginLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(47, 47, 47)
                 .addComponent(logoutJButton)
-                .addGap(190, 190, 190)
+                .addGap(149, 149, 149)
                 .addComponent(loginJLabel)
                 .addGap(44, 44, 44)
                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -176,11 +190,11 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(userNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(44, 44, 44)
                 .addComponent(loginJButton)
-                .addGap(253, 253, 253)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 227, Short.MAX_VALUE)
                 .addComponent(loginJOpenChatWindow)
-                .addContainerGap(490, Short.MAX_VALUE))
+                .addGap(121, 121, 121))
         );
 
         jSplitPane1.setLeftComponent(jPanelLogin);
@@ -188,8 +202,9 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         jPanelWorkArea.setPreferredSize(new java.awt.Dimension(1181, 1080));
         jPanelWorkArea.setLayout(new java.awt.CardLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/HospitalMainJFrame.jpg"))); // NOI18N
-        jLabel3.setPreferredSize(new java.awt.Dimension(1181, 1080));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/SystemAdminWorkAreaJPanel.jpg"))); // NOI18N
+        jLabel3.setMinimumSize(new java.awt.Dimension(1000, 800));
+        jLabel3.setPreferredSize(new java.awt.Dimension(1000, 800));
         jPanelWorkArea.add(jLabel3, "card2");
 
         jSplitPane1.setRightComponent(jPanelWorkArea);
@@ -282,16 +297,16 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("FrontDeskOperator"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                MedSuppEquipPatient medSuppEquipPatient = new MedSuppEquipPatient(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
-                jPanelWorkArea.add("medSuppEquipPatient",medSuppEquipPatient);
+                AdministrativeReceptionistWorkAreaJPanel AdminReceptionist = new AdministrativeReceptionistWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
+                jPanelWorkArea.add("AdminReceptionist",AdminReceptionist);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
             }
             else if(userAccountLogin.getRole().toString().equals("Doctor"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                OperationalPatientEncounter operationalPatinetEncounter = new OperationalPatientEncounter(jPanelWorkArea);
-                jPanelWorkArea.add("operationalPatinetEncounter",operationalPatinetEncounter);
+                OperationalPatientEncounter operationalPatientEncounter = new OperationalPatientEncounter(jPanelWorkArea);
+                jPanelWorkArea.add("operationalPatinetEncounter",operationalPatientEncounter);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
             }
@@ -317,7 +332,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         JPanel blankJP = new JPanel();
         jPanelWorkArea.add("blank", blankJP);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/Images/HospitalMainJFrame.jpg"))); // NOI18N
-        jLabel3.setPreferredSize(new java.awt.Dimension(1181, 1080));
+        jLabel3.setPreferredSize(new java.awt.Dimension(1000, 800));
         jPanelWorkArea.add(jLabel3, "blank");
         CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
         crdLyt.next(jPanelWorkArea);
@@ -336,7 +351,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         jframe.setResizable(false);
         jframe.setLayout(null);
         jframe.setSize(600, 600);
-        jframe.setTitle("Alfred");
+        jframe.setTitle("Deep");
         jframe.add(chatarea);
         jframe.add(chatbox);
         
@@ -362,22 +377,26 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                 }
                 
                 if(gtext.contains("02215")){
-                    String[] splitStr = gtext.split("\\s+");
-                    user_input.add(splitStr[0]);
-                    user_input.add(splitStr[1]);
-                    user_input.add(splitStr[2]);
-                    user_input.add(splitStr[3]);
+                    
                     bot("So how can I help you?",chatarea);
                 }
-                else if(gtext.contains("book") && gtext.contains("test")){
+                if(gtext.contains("blood") || gtext.contains("test")){
                     bot("Okay. Please tell me the test date.",chatarea);
-                    req_cat = "MedicalTest";
+                    
                 }
-                else if(gtext.contains("equipment") || gtext.contains("order")){
-                    bot("Okay. Please tell me the test date.",chatarea);
-                    req_cat = "MedicalEquipment";
+                if(gtext.contains("dec")){
+                    bot("Okay. you have scheduled a test date.",chatarea);
+                    
                 }
-                else if(gtext.contains("2021")){
+                
+                else if(gtext.contains("equipment") && gtext.contains("book")){
+                    bot("Okay. Please tell me equipments and quantity.",chatarea);
+                    if(gtext.contains("oxygen")){
+                    
+                    bot("Thankyou for ordering",chatarea);
+                }
+                }
+                else if(gtext.contains("2022") && req_cat.equals("MedicalTest")){
 //                    SimpleDateFormat formatter = new SimpleDateFormat("MM.dd.yyyy", Locale.ENGLISH);
 //                    Date date = formatter.parse(gtext);
                     user_input.add(gtext);
@@ -412,6 +431,10 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         });
         
     }//GEN-LAST:event_loginJOpenChatWindowActionPerformed
+
+    private void userNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameJTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userNameJTextFieldActionPerformed
     private void bot(String bot_resp, JTextArea chatarea){
         chatarea.append("BOT ->"+bot_resp+"\n");
     }

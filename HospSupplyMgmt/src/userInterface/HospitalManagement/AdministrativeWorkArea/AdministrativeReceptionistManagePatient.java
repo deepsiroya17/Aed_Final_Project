@@ -297,27 +297,27 @@ public class AdministrativeReceptionistManagePatient extends javax.swing.JPanel 
     
     public ArrayList<String> check_empty_field(){
         ArrayList<String> user_input = new ArrayList<>();
-//        String user_deliveryName = DeliveryName.getText();
-//        String user_deliveryPass = DeliveryPasswd.getText();
-//        String user_deliverycontact = DeliveryContactNo.getText();
+        String user_Name = jTextFieldPatientName.getText();
+        String user_PhoneNumber = jTextFieldPPhoneNum.getText();
+        String user_Address = jTextFieldPAddress.getText();
 //        String user_deliveryUsername = DeliveryUName.getText();
  
-//        if(user_deliveryName.isEmpty()){
-//            JOptionPane.showMessageDialog(this, "Name can't be left empty");
-//        }
-//        else if(user_deliveryPass.isEmpty()){
-//            JOptionPane.showMessageDialog(this, "Please enter password");
-//        }
+        if(user_Name.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Name can't be left empty");
+       }
+        else if(user_PhoneNumber.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter password");
+        }
 //        
-//        else if(user_deliverycontact.isEmpty()){
-//            JOptionPane.showMessageDialog(this, "Contact No can't be left empty.");
-//        }
+        else if(user_Address.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Contact No can't be left empty.");
+        }
 //        else if(user_deliveryUsername.isEmpty()){
 //            JOptionPane.showMessageDialog(this, "Username can't be left empty.");
 //        }
-//        user_input.add(user_deliveryUsername);
-//        user_input.add(user_deliveryName);
-//        user_input.add(user_deliveryPass);
+        user_input.add(user_Name);
+        user_input.add(user_PhoneNumber);
+        user_input.add(user_Address);
 //        user_input.add(user_deliverycontact);
 //        
         return user_input;
