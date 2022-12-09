@@ -37,6 +37,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import userInterface.CustomerSupport.CustomerSupportMemberWorkArea.CustomerSupportMemberWorkAreaJPanel;
 import userInterface.DeliveryAgency.DeliveryAgencyOrderDatabase;
+import userInterface.HospitalManagement.AdministrativeWorkArea.AdministrativeReceptionistWorkAreaJPanel;
 import userInterface.HospitalManagement.AdministrativeWorkArea.MedSuppEquipPatient;
 import userInterface.HospitalManagement.MedTechnicalWorkArea.MedTechnicalWorkAreaJPanel;
 import userInterface.HospitalManagement.MedicalSuppliesWorkArea.MedSupAdminWorkAreaJPanel;
@@ -296,8 +297,8 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("FrontDeskOperator"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                MedSuppEquipPatient medSuppEquipPatient = new MedSuppEquipPatient(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
-                jPanelWorkArea.add("medSuppEquipPatient",medSuppEquipPatient);
+                AdministrativeReceptionistWorkAreaJPanel AdminReceptionist = new AdministrativeReceptionistWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
+                jPanelWorkArea.add("AdminReceptionist",AdminReceptionist);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
             }
@@ -350,7 +351,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         jframe.setResizable(false);
         jframe.setLayout(null);
         jframe.setSize(600, 600);
-        jframe.setTitle("Alfred");
+        jframe.setTitle("Deep");
         jframe.add(chatarea);
         jframe.add(chatbox);
         
@@ -379,15 +380,23 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                     
                     bot("So how can I help you?",chatarea);
                 }
-                else if(gtext.contains("book") && gtext.contains("test")){
+                if(gtext.contains("blood") || gtext.contains("test")){
                     bot("Okay. Please tell me the test date.",chatarea);
-                    req_cat = "MedicalTest";
+                    
                 }
-                else if(gtext.contains("equipment") || gtext.contains("order")){
-                    bot("Okay. Please tell me the test date.",chatarea);
-                    req_cat = "MedicalEquipment";
+                if(gtext.contains("dec")){
+                    bot("Okay. you have scheduled a test date.",chatarea);
+                    
                 }
-                else if(gtext.contains("2022")){
+                
+                else if(gtext.contains("equipment") && gtext.contains("book")){
+                    bot("Okay. Please tell me equipments and quantity.",chatarea);
+                    if(gtext.contains("oxygen")){
+                    
+                    bot("Thankyou for ordering",chatarea);
+                }
+                }
+                else if(gtext.contains("2022") && req_cat.equals("MedicalTest")){
 //                    SimpleDateFormat formatter = new SimpleDateFormat("MM.dd.yyyy", Locale.ENGLISH);
 //                    Date date = formatter.parse(gtext);
                     user_input.add(gtext);
