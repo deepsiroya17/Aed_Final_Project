@@ -90,120 +90,136 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         jButtonHome1 = new javax.swing.JButton();
         jButtonDownloadPrescription1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(255, 255, 204));
+        setForeground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle.setForeground(new java.awt.Color(0, 102, 102));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("Patient Encounter");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 706, -1));
 
-        jButtonDownloadPrescription.setBackground(new java.awt.Color(0, 70, 169));
+        jButtonDownloadPrescription.setBackground(new java.awt.Color(255, 255, 204));
         jButtonDownloadPrescription.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonDownloadPrescription.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDownloadPrescription.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDownloadPrescription.setText("Email prescription");
-        add(jButtonDownloadPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 760, -1, -1));
+        add(jButtonDownloadPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 620, -1, -1));
 
         jButtonCreate.setText("SUBMIT");
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 910, 100, 30));
-        add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 236, 140, -1));
-        add(jTextFieldPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 198, 140, -1));
+        add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 140, -1));
+        add(jTextFieldPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 140, -1));
 
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelPatientID.setText("Paatient ID:");
-        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 198, 104, -1));
+        jLabelPatientID.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientID.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPatientID.setText("Patient ID:");
+        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 104, -1));
 
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientName.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientName.setForeground(new java.awt.Color(0, 102, 102));
         jLabelPatientName.setText("Patient Name:");
-        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 239, 80, -1));
-        add(jTextFieldBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 140, -1));
-        add(jTextFieldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 140, -1));
+        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 110, 20));
+        add(jTextFieldBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 140, -1));
+        add(jTextFieldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 140, -1));
 
-        jLabelAge.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelAge.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelAge.setForeground(new java.awt.Color(0, 102, 102));
         jLabelAge.setText("Age :");
-        add(jLabelAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 104, -1));
+        add(jLabelAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 40, 20));
 
-        jLabelBloodGroup.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelBloodGroup.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelBloodGroup.setForeground(new java.awt.Color(0, 102, 102));
         jLabelBloodGroup.setText("Blood Group :");
-        add(jLabelBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, 10));
-        add(jTextFieldPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 140, -1));
-        add(jTextFieldBloodPressure, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, 140, -1));
+        add(jLabelBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 90, 20));
+        add(jTextFieldPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 140, -1));
+        add(jTextFieldBloodPressure, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 140, -1));
 
-        jLabelDiagnosisandPrescription.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDiagnosisandPrescription.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelDiagnosisandPrescription.setForeground(new java.awt.Color(0, 102, 102));
         jLabelDiagnosisandPrescription.setText("Diagnosis and Prescription :");
-        add(jLabelDiagnosisandPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 630, 160, -1));
+        add(jLabelDiagnosisandPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 190, -1));
 
-        jLabelPulse.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPulse.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPulse.setForeground(new java.awt.Color(0, 102, 102));
         jLabelPulse.setText("Pulse :");
-        add(jLabelPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, -1));
-        add(jTextFieldPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 140, -1));
-        add(jTextFieldGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 200, 140, -1));
+        add(jLabelPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, -1, -1));
+        add(jTextFieldPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, 140, -1));
+        add(jTextFieldGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 140, -1));
 
-        jLabelGender.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelGender.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelGender.setForeground(new java.awt.Color(0, 102, 102));
         jLabelGender.setText("Gender :");
-        add(jLabelGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 104, -1));
+        add(jLabelGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 104, -1));
 
-        jLabelPhoneNumber.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPhoneNumber.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPhoneNumber.setForeground(new java.awt.Color(0, 102, 102));
         jLabelPhoneNumber.setText("Phone Number :");
-        add(jLabelPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
-        add(jTextFieldWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 330, 140, -1));
-        add(jTextFieldHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 290, 140, -1));
+        add(jLabelPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, -1, -1));
+        add(jTextFieldWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, 140, -1));
+        add(jTextFieldHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 140, -1));
 
-        jLabelHeight.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelHeight.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelHeight.setForeground(new java.awt.Color(0, 102, 102));
         jLabelHeight.setText("Height :");
-        add(jLabelHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, 104, -1));
+        add(jLabelHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 104, -1));
 
-        jLabelEmpName4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEmpName4.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelEmpName4.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName4.setText("Weight :");
-        add(jLabelEmpName4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
-        add(jTextFieldTemparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, 140, -1));
-        add(jTextFieldBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 370, 140, -1));
+        add(jLabelEmpName4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
+        add(jTextFieldTemparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 360, 140, -1));
+        add(jTextFieldBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 140, -1));
 
-        jLabelBMI.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelBMI.setText("B.M.I :");
-        add(jLabelBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 104, -1));
+        jLabelBMI.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelBMI.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelBMI.setText("B.M.I. :");
+        add(jLabelBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 80, 20));
 
-        jLabelTemparature.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTemparature.setText("Temparture :");
-        add(jLabelTemparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, -1, -1));
+        jLabelTemparature.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelTemparature.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelTemparature.setText("Temperature :");
+        add(jLabelTemparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, -1, -1));
 
         jTextAreaDiagnosisandPrescription.setColumns(20);
         jTextAreaDiagnosisandPrescription.setRows(5);
         jScrollPane2.setViewportView(jTextAreaDiagnosisandPrescription);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 630, 230, 120));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 420, 40));
 
         jTextAreaReasonForVisit.setColumns(20);
         jTextAreaReasonForVisit.setRows(5);
         jScrollPane3.setViewportView(jTextAreaReasonForVisit);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 490, 230, 120));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, 420, 40));
 
-        jLabelBloodPressure.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelBloodPressure.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelBloodPressure.setForeground(new java.awt.Color(0, 102, 102));
         jLabelBloodPressure.setText("Blood Pressure :");
-        add(jLabelBloodPressure, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 104, -1));
+        add(jLabelBloodPressure, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 110, 20));
 
-        jLabelReasonforVisit.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelReasonforVisit.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelReasonforVisit.setForeground(new java.awt.Color(0, 102, 102));
         jLabelReasonforVisit.setText("Reason for Visit :");
-        add(jLabelReasonforVisit, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 490, 104, -1));
+        add(jLabelReasonforVisit, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 120, -1));
 
-        jLabelAllergies.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelAllergies.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelAllergies.setForeground(new java.awt.Color(0, 102, 102));
         jLabelAllergies.setText("Alllergies :");
-        add(jLabelAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 780, 100, 20));
-        add(jTextFieldAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 780, 230, -1));
+        add(jLabelAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 560, 100, 20));
+        add(jTextFieldAllergies, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 560, 230, -1));
 
-        jButtonHome1.setBackground(new java.awt.Color(0, 70, 169));
+        jButtonHome1.setBackground(new java.awt.Color(0, 102, 102));
         jButtonHome1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonHome1.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonHome1.setForeground(new java.awt.Color(255, 255, 204));
         jButtonHome1.setText("HOME");
-        add(jButtonHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(846, 62, -1, -1));
+        add(jButtonHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, -1));
 
-        jButtonDownloadPrescription1.setBackground(new java.awt.Color(0, 70, 169));
+        jButtonDownloadPrescription1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonDownloadPrescription1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonDownloadPrescription1.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonDownloadPrescription1.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDownloadPrescription1.setText("Download prescription");
-        add(jButtonDownloadPrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 760, -1, -1));
+        add(jButtonDownloadPrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 620, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
     /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
         
