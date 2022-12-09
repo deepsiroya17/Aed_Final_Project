@@ -5,6 +5,7 @@
  */
 package userInterface.HospitalManagement.AdministrativeWorkArea;
 
+import HospitalManagement.Hospital.Hospital;
 import userInterface.SystemAdminWorkArea.*;
 import MainCentralisationSystem.MedicalServiceCentralisationEcoSystem;
 import MainCentralisationSystem.HospitalManagementEnterprise;
@@ -26,7 +27,7 @@ public class AdministrativeReceptionistWorkAreaJPanel extends javax.swing.JPanel
      */
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem;
-    public AdministrativeReceptionistWorkAreaJPanel(JPanel userProcessContainer,MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem) {
+    public AdministrativeReceptionistWorkAreaJPanel(JPanel userProcessContainer, MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem, Hospital hospital) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.hospitalManagementEcoSystem = hospitalManagementEcoSystem;
@@ -112,10 +113,10 @@ public class AdministrativeReceptionistWorkAreaJPanel extends javax.swing.JPanel
 
     private void jButtonPatientManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPatientManagementActionPerformed
 
-//        ManageCustomersWorkArena mc = new ManageCustomersWorkArena(userProcessContainer,hospitalManagementEcoSystem);
-//        userProcessContainer.add("manageCustomers",mc);
-//        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-//        cardLayout.show(userProcessContainer,"manageCustomers");
+        AdministrativeReceptionistManagePatient mc = new AdministrativeReceptionistManagePatient();
+        userProcessContainer.add("AdministrativeReceptionistManagePatient",mc);
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        cardLayout.show(userProcessContainer,"AdministrativeReceptionistManagePatient");
     }//GEN-LAST:event_jButtonPatientManagementActionPerformed
 
 
