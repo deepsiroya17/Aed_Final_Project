@@ -85,10 +85,9 @@ public class SearchAccountsPage extends javax.swing.JPanel {
         jLabelEmpID = new javax.swing.JLabel();
         jLabelEmpName = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Search Accounts");
 
@@ -133,15 +132,12 @@ public class SearchAccountsPage extends javax.swing.JPanel {
             }
         });
 
-        jLabelRole.setForeground(new java.awt.Color(255, 255, 255));
         jLabelRole.setText("Role");
 
         jComboBoxRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor", "Nurse" }));
 
-        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpID.setText("Employee ID:");
 
-        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName.setText("Employee Name:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
