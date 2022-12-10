@@ -399,8 +399,8 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         hospital.setPatientDirectory(patientDirectory);
         String message = "\n\nHi " + user_input.get(1) +" your " + user_input.get(3) +" test for date " +user_input.get(4) + " in " + hospital.getHospitalName() +" has been booked";
         System.out.println("message: "+message);
-//        sendMessageTwilio = new SendMessageTwilio();
-//        sendMessageTwilio.sendMessage(message);
+        sendMessageTwilio = new SendMessageTwilio();
+        sendMessageTwilio.sendMessage(message);
         
         model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
         populateNewRequestsTable();
