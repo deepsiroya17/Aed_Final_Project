@@ -43,4 +43,8 @@ public class RequestDirectory {
         requestList.add(request);
     }
     
+    public void deleteReq(Request request){
+        requestList.remove(request);
+    }
+    
 }

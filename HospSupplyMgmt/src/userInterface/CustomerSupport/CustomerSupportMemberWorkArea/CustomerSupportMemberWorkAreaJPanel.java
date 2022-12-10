@@ -142,12 +142,6 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 460, 90, 40));
-
-        jTextFieldCustPhone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCustPhoneActionPerformed(evt);
-            }
-        });
         add(jTextFieldCustPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 421, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(0, 102, 102));
@@ -166,19 +160,7 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Notes");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 550, 88, -1));
-
-        jTextFieldNotes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNotesActionPerformed(evt);
-            }
-        });
         add(jTextFieldNotes, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 530, 403, 65));
-
-        jTextFieldCustName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCustNameActionPerformed(evt);
-            }
-        });
         add(jTextFieldCustName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, 421, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
@@ -245,12 +227,6 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         jLabelEmpName2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName2.setText("Customer Email");
         add(jLabelEmpName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 150, -1));
-
-        jTextFieldCustEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCustEmailActionPerformed(evt);
-            }
-        });
         add(jTextFieldCustEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 421, -1));
 
         jLabelEmpName3.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
@@ -258,17 +234,6 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         jLabelEmpName3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName3.setText("Customer Pincode");
         add(jLabelEmpName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 150, -1));
-
-        jTextFieldCustPincode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCustPincodeActionPerformed(evt);
-            }
-        });
-        jTextFieldCustPincode.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextFieldCustPincodeKeyPressed(evt);
-            }
-        });
         add(jTextFieldCustPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 421, -1));
 
         jLabelEmpName5.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
@@ -279,16 +244,8 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         add(jDateChooserTestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 170, 30));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustSuppMember.jpeg"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 830));
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1110, 830));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextFieldNotesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNotesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNotesActionPerformed
-
-    private void jTextFieldCustNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCustNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldCustNameActionPerformed
     public void raise_request(ArrayList<String> user_input){
         
         DefaultTableModel model = (DefaultTableModel) jTableRequests.getModel();
@@ -320,7 +277,16 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         requestList.setLast_case_id(last_case_id_new);
             
         JOptionPane.showMessageDialog(this, "New Request Information has been added.");
-        model.addRow(new Object[]{request,request.getCustomer_name(),request.getCustomer_phone(),request.getCustomer_email(),request.getCustomer_pincode(),request.getRequest_date(),request.getRequest_category(),request.getRequest_description(),current_timeStamp});
+        model.addRow(new Object[]{
+            request,
+            request.getCustomer_name(),
+            request.getCustomer_phone(),
+            request.getCustomer_email(),
+            request.getCustomer_pincode(),
+            request.getRequest_date(),
+            request.getRequest_category(),
+            request.getRequest_description(),
+            current_timeStamp});
         clearFields();
         
     }
@@ -340,34 +306,37 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
             return;
         }
         
+        RequestDirectory requestList = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         DefaultTableModel model = (DefaultTableModel) jTableRequests.getModel();
-        UserAccount select_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);         
-        //UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-//        ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
-         hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
-         ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
-         for(UserAccount userAccount: userAccountList)
-        {
-            if(userAccount.getUsername().equals(select_account_details.getUsername()))
-            {
-                Hospital hospital = userAccount.getHospital();
-                 ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
-                model.setValueAt(user_input.get(1), selected_row_ix, 1);
-                model.setValueAt(user_input.get(2), selected_row_ix, 2);
-                model.setValueAt(user_input.get(3), selected_row_ix, 3);
-                hospitalDirectory.updateHospital(user_input, hospital);
-                UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
-                break;
-            }
-        }
+        Request selectedReq = (Request) model.getValueAt(selected_row_ix, 0);
+        
+        
+//        UserAccount select_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0); 
+//        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
+////        ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
+//         hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
+//         ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
+//         for(UserAccount userAccount: userAccountList)
+//        {
+//            if(userAccount.getUsername().equals(select_account_details.getUsername()))
+//            {
+//                Hospital hospital = userAccount.getHospital();
+//                 ArrayList<String> user_input = check_empty_field();
+////                model.setValueAt(user_input.get(1), selected_row_ix, 0);
+//                model.setValueAt(user_input.get(1), selected_row_ix, 1);
+//                model.setValueAt(user_input.get(2), selected_row_ix, 2);
+//                model.setValueAt(user_input.get(3), selected_row_ix, 3);
+//                hospitalDirectory.updateHospital(user_input, hospital);
+//                UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
+//                break;
+//            }
+//        }
         
 //        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
         JOptionPane.showMessageDialog(this, "Values updated");
-//        addrecordstotable();
+        addrecordstotable();
      
-//        for(UserAccount userAccount: userAccountList)
+//        for(UclearserAccount userAccount: userAccountList)
 //        {
 //            if(userAccount.getUsername().equals(select_account_details.getUsername()))
 //            {
@@ -396,12 +365,17 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please select a row to delete.");
             return;
         }
+        RequestDirectory requestList = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         DefaultTableModel model = (DefaultTableModel) jTableRequests.getModel();
-        UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
-//        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-//        UserAccountDirectory.deleteAccount(select_user_account_details);
+        Request selectedReq = (Request) model.getValueAt(selected_row_ix, 0);
+//        UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
+////        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
+////        UserAccountDirectory.deleteAccount(select_user_account_details);
 ////        ecosystem.setRestaurantDirectory(restaurantDirectory);
-        model.removeRow(selected_row_ix);
+//        model.removeRow(selected_row_ix);
+
+        requestList.deleteReq(selectedReq);
+        JOptionPane.showMessageDialog(this, "Data Deleted.");
         addrecordstotable();
         clearFields();
     }//GEN-LAST:event_jButtonDeleteActionPerformed
@@ -409,26 +383,39 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
     private void jTableRequestsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableRequestsMouseClicked
         // TODO add your handling code here:
         jButtonCreate.setEnabled(false);
+          
         int selected_row_ix = jTableRequests.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) jTableRequests.getModel();
-        UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
         
-        jTextFieldCustName.setText(select_user_account_details.getUsername());
-        //jTextFieldCustPhone.setText(select_user_account_details.getPassword());
-      // jTextFieldCustPhone.setText(select_user_account_details.);
-        Role role = select_user_account_details.getRole();
-        System.out.println("role.toString(): "+role.toString());
+        Request selectedReq = (Request) model.getValueAt(selected_row_ix, 0);
         
         
-//        if(role.toString().equals("CustomerSupportMember")){
-//            CustomerSupportTeam customerSupportTeam = select_user_account_details.getCustomerSupportTeam();
-////            accountantDirectory = customerSupportTeam.getCustomerSupportMemberDirectory();
-////            HashMap<String, CustomerSupportMember> accountantList = accountantDirectory.getCustomerSupportMemberList();
-//            CustomerSupportMember accountant = accountantList.get(select_user_account_details.getUsername());
-//            jTextFieldCustPhone.setText(accountant.getCustomerSupportMemberName());
-//        }
+        jTextFieldCustName.setText(selectedReq.getCustomer_name());
+        jTextFieldCustPhone.setText(selectedReq.getCustomer_phone());
+        jTextFieldCustEmail.setText(selectedReq.getCustomer_email());
+        jTextFieldCustPincode.setText(selectedReq.getCustomer_pincode());
+        jTextFieldNotes.setText(selectedReq.getRequest_description());
         
-        jTextFieldNotes.setText(select_user_account_details.getPassword());
+        
+   
+//        UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
+//        
+//        jTextFieldCustName.setText(select_user_account_details.getUsername());
+//        //jTextFieldCustPhone.setText(select_user_account_details.getPassword());
+//      // jTextFieldCustPhone.setText(select_user_account_details.);
+//        Role role = select_user_account_details.getRole();
+//        System.out.println("role.toString(): "+role.toString());
+//        
+//        
+////        if(role.toString().equals("CustomerSupportMember")){
+////            CustomerSupportTeam customerSupportTeam = select_user_account_details.getCustomerSupportTeam();
+//////            accountantDirectory = customerSupportTeam.getCustomerSupportMemberDirectory();
+//////            HashMap<String, CustomerSupportMember> accountantList = accountantDirectory.getCustomerSupportMemberList();
+////            CustomerSupportMember accountant = accountantList.get(select_user_account_details.getUsername());
+////            jTextFieldCustPhone.setText(accountant.getCustomerSupportMemberName());
+////        }
+//        
+//        jTextFieldNotes.setText(select_user_account_details.getPassword());
         
     }//GEN-LAST:event_jTableRequestsMouseClicked
 
@@ -458,25 +445,6 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
             request_category = "MedicalEquipment";
         }
     }//GEN-LAST:event_jRadioButtonMedEquipmentActionPerformed
-
-    private void jTextFieldCustPincodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCustPincodeActionPerformed
-        // TODO add your handling code here:
-        
-        
-    }//GEN-LAST:event_jTextFieldCustPincodeActionPerformed
-
-    private void jTextFieldCustPincodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldCustPincodeKeyPressed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jTextFieldCustPincodeKeyPressed
-
-    private void jTextFieldCustEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCustEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldCustEmailActionPerformed
-
-    private void jTextFieldCustPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCustPhoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldCustPhoneActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
 //        userAccount.getEmployee().setEmployee_name(user_input.get(1));
@@ -487,7 +455,8 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         jTextFieldCustName.setText("");
         jTextFieldCustPhone.setText("");
         jTextFieldNotes.setText("");
-        
+        jTextFieldCustEmail.setText("");
+        jTextFieldCustPincode.setText("");
         
     }
     public ArrayList<String> check_empty_field(){
@@ -578,7 +547,16 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
             ArrayList<Request> requestList = requestDirectory.getRequestList();
             for(Request request: requestList)
             {   
-                model.addRow(new Object[]{request,request.getCustomer_name(),request.getCustomer_phone(),request.getCustomer_email(),request.getCustomer_pincode(),request.getRequest_date(),request.getRequest_category(),request.getRequest_description(), request.getModified_time()});
+                model.addRow(new Object[]{
+                    request,
+                    request.getCustomer_name(),
+                    request.getCustomer_phone(),
+                    request.getCustomer_email(),
+                    request.getCustomer_pincode(),
+                    request.getRequest_date(),
+                    request.getRequest_category(),
+                    request.getRequest_description(), 
+                    request.getModified_time()});
 
             }
 
