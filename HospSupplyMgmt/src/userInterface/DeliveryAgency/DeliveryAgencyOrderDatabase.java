@@ -76,7 +76,7 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
         jTableNewOrders = new javax.swing.JTable();
         jLabelTitle1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 204));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N

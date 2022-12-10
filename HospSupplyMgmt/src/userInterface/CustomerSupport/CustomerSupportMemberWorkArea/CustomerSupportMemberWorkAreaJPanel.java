@@ -243,8 +243,11 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabelEmpName5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 150, 30));
         add(jDateChooserTestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 460, 170, 30));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustSuppMember.jpeg"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1110, 830));
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/MedSupAdminAccountsPage_1920x1183.jpeg"))); // NOI18N
+        bgdimg.setMaximumSize(new java.awt.Dimension(8095, 5397));
+        bgdimg.setMinimumSize(new java.awt.Dimension(8095, 5397));
+        bgdimg.setPreferredSize(new java.awt.Dimension(8095, 5397));
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 1320, 1050));
     }// </editor-fold>//GEN-END:initComponents
     public void raise_request(ArrayList<String> user_input){
         

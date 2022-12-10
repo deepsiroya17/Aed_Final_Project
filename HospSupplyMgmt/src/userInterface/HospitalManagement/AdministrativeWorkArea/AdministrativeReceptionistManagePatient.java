@@ -89,7 +89,7 @@ public class AdministrativeReceptionistManagePatient extends javax.swing.JPanel 
         jLabelEmailID = new javax.swing.JLabel();
         jTextFieldEmailID = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(204, 204, 255));
         setForeground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

@@ -89,7 +89,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         jTextFieldAllergies = new javax.swing.JTextField();
         jButtonDownloadPrescription1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 204));
+        setBackground(new java.awt.Color(204, 204, 255));
         setForeground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

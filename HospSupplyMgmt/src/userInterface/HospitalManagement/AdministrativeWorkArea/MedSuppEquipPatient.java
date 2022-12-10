@@ -102,17 +102,15 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         jLabelTestName2 = new javax.swing.JLabel();
         jTextFieldMode = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("Equipment Order Request");
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
 
         jLabelTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle1.setText("All order");
         add(jLabelTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, 706, -1));
@@ -173,7 +171,6 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         });
         add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 80, -1));
 
-        jLabelTestName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTestName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelTestName.setText(" Equipment Quantity");
         add(jLabelTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 150, 20));
@@ -186,13 +183,11 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         });
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, -1, -1));
 
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientID.setText("Patient ID:");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 104, -1));
         add(jTextFieldPatientId, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 270, -1));
 
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPatientName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName.setText("Patient Name :");
         add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 100, -1));
@@ -234,34 +229,28 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 600, 540, 160));
 
         jLabelTitle3.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle3.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitle3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle3.setText("New equipment requests");
         add(jLabelTitle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 660, -1));
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 270, -1));
 
-        jLabelTestDate1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTestDate1.setText("Order Date:");
         add(jLabelTestDate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 104, -1));
 
-        jLabelPatientName1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Patient Email :");
         add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 100, -1));
         add(jTextFieldPatientEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 270, -1));
 
-        jLabelTestName1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTestName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelTestName1.setText(" Equipment");
         add(jLabelTestName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 80, 20));
         add(jTextFieldQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 270, -1));
 
-        jLabelTestDate2.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTestDate2.setText("Order ID:");
         add(jLabelTestDate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 104, -1));
         add(jTextFieldOrderID, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 270, -1));
 
-        jLabelTestName2.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTestName2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelTestName2.setText("Request Mode");
         add(jLabelTestName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 150, 20));

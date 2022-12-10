@@ -97,8 +97,8 @@ public class MedSupAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(jButtonPlaceOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 430, 70));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/MedSupAdminWorkAreaJPanel_1920x1183.jpeg"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1830, 1100));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/medicaltestwork1.jpg"))); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1140, -630, 2990, 1730));
 
         jSplitPane.setRightComponent(jPanel2);
 

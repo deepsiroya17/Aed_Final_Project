@@ -280,7 +280,7 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
         jLabelEmpName8.setText("TEST SEARCH RESULTS");
         add(jLabelEmpName8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, -1, -1));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustomerSupportMemberSearchMedicalTests.png"))); // NOI18N
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/labtesting1.jpg"))); // NOI18N
         add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 830));
     }// </editor-fold>//GEN-END:initComponents
 
