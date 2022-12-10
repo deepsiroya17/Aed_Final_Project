@@ -306,7 +306,15 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             {
                 Hospital hospital = userAccountLogin.getHospital();
                 OperationalPatientEncounter operationalPatientEncounter = new OperationalPatientEncounter(jPanelWorkArea);
-                jPanelWorkArea.add("operationalPatinetEncounter",operationalPatientEncounter);
+                jPanelWorkArea.add("operationalPatientEncounter",operationalPatientEncounter);
+                CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
+                crdLyt.next(jPanelWorkArea);
+            }
+            else if(userAccountLogin.getRole().toString().equals("Nurse"))
+            {
+                Hospital hospital = userAccountLogin.getHospital();
+                MedSuppEquipPatient medSuppEquipPatient = new MedSuppEquipPatient(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
+                jPanelWorkArea.add("EquipRequestPatient",medSuppEquipPatient);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
             }
