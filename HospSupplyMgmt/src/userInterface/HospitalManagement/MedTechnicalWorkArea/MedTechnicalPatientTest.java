@@ -337,15 +337,15 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jButtonEmailReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmailReportActionPerformed
-        try {
-            // TODO add your handling code here:
-            SendMail sendMail = new SendMail();
-            String message = "Please find your report attached with this email";
-            String subject = "Medical Test Report";
-            sendMail.sendEmailWithFile(message, subject, jTextFieldPatientEmail.getText(),report_path);
-        } catch (IOException ex) {
-            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try {
+//            // TODO add your handling code here:
+//            SendMail sendMail = new SendMail();
+//            String message = "Please find your report attached with this email";
+//            String subject = "Medical Test Report";
+//            sendMail.sendEmailWithFile(message, subject, jTextFieldPatientEmail.getText(),report_path);
+//        } catch (IOException ex) {
+//            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }//GEN-LAST:event_jButtonEmailReportActionPerformed
 
     private void jTableNewTestsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableNewTestsMouseClicked
@@ -403,7 +403,7 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
 //        sendMessageTwilio.sendMessage(message);
         
         model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
-        populateNewRequestsTable();
+//        populateNewRequestsTable();
         populateAllTestsTable();
         
 //        SendMail sendMail = new SendMail();
@@ -549,7 +549,7 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         RequestDirectory requestDirectory = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         ArrayList<Request> requestList = requestDirectory.getRequestList();
         for(Request request: requestList){
-            if(request.getRequest_status().equals("new") && request.getCustomer_pincode().equals(hospital.getHospitalpincode()) && request.getCase_id().equals(request_id)){
+            if(request.getRequest_status().equals("new") && request.getCase_id().equals(request_id)){
                 request.setRequest_status("Completed");
             }
         }
@@ -562,8 +562,14 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         RequestDirectory requestDirectory = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         ArrayList<Request> requestList = requestDirectory.getRequestList();
         for(Request request: requestList){
-            if(request.getRequest_status().equals("new") && request.getCustomer_pincode().equals(hospital.getHospitalpincode()) && request.getRequest_category().equals("MedicalTest")){
-                model.addRow(new Object []{request.getCustomer_name(),request.getCustomer_phone(),request.getCustomer_email(),request.getRequest_date(),request.getCase_id(),request.getRequest_description()});
+            if(request.getRequest_status().equals("new") && request.getRequest_category().equals("MedicalTest")){
+                model.addRow(new Object []{
+                    request.getCustomer_name(),
+                    request.getCustomer_phone(),
+                    request.getCustomer_email(),
+                    request.getRequest_date(),
+                    request.getCase_id(),
+                    request.getRequest_description()});
             }
         }
         jTableNewTests.setModel(model);
@@ -624,7 +630,15 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         for(Patient patient: patientList){
             ArrayList<PatientTest> patientTestList = patient.getPatientTestList();
             for(PatientTest patientTest: patientTestList){
-                model.addRow(new Object[]{patient,patient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
+                model.addRow(new Object[]{
+                    patient,
+                    patient.getPatient_name(),
+                    patientTest.getTest_id(), 
+                    patientTest.getLabTest().getTest_name(),
+                    patientTest.getTest_date(),
+                    patientTest.getReport_avalaible()
+                });
+                
             }   
         }
         jTableAllTests.setModel(model);
