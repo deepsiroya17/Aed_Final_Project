@@ -101,7 +101,7 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
         jButtonAddtoCart = new javax.swing.JButton();
         jButtonCheckout = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(204, 204, 255));
         setForeground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1181, 1080));
 
@@ -116,12 +116,11 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 89, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jLabelTitle.setBackground(new java.awt.Color(0, 70, 169));
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("ACCOUNTS MANAGEMENT");
 
@@ -141,10 +140,8 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPatientID.setText("Patient ID :");
 
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPatientName.setText("Patient Name:");
 
         jButtonDelete.setText("DELETE");
@@ -180,10 +177,8 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelPhoneNum.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPhoneNum.setText("Phone Number :");
 
-        jLabelInsuaranceNum.setForeground(new java.awt.Color(255, 255, 255));
         jLabelInsuaranceNum.setText("Insurance Number :");
 
         jTextFieldConsultationFee.addActionListener(new java.awt.event.ActionListener() {
@@ -192,10 +187,8 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelConsultationFee.setForeground(new java.awt.Color(255, 255, 255));
         jLabelConsultationFee.setText("Consultation Fee : ");
 
-        jLabelTestFee.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTestFee.setText("Test Fee :");
 
         jTextFieldAdmissionFee.addActionListener(new java.awt.event.ActionListener() {
@@ -204,10 +197,8 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelAdmissionFee.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAdmissionFee.setText("Admission Charges :");
 
-        jLabelAmbulanceFee.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAmbulanceFee.setText("Ambulance Fee :");
 
         jTextFielddDiscount.addActionListener(new java.awt.event.ActionListener() {
@@ -216,10 +207,8 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelDiscount.setForeground(new java.awt.Color(255, 255, 255));
         jLabelDiscount.setText("Discount Applied :");
 
-        jLabelAdvancePaid.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAdvancePaid.setText("Advance Paid :");
 
         jTextFieldAmountDue.addActionListener(new java.awt.event.ActionListener() {
@@ -228,10 +217,8 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelAmountDue.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAmountDue.setText("Amount Due :");
 
-        jLabelPharmacyBill.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPharmacyBill.setText("Pharmacy Bill :");
 
         jTextFieldICUServices.addActionListener(new java.awt.event.ActionListener() {
@@ -240,10 +227,8 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelICUServices.setForeground(new java.awt.Color(255, 255, 255));
         jLabelICUServices.setText("ICU Services :");
 
-        jLabelMedicalEquipment.setForeground(new java.awt.Color(255, 255, 255));
         jLabelMedicalEquipment.setText("Medical Equipment :");
 
         jTextFieldRoomRentServices.addActionListener(new java.awt.event.ActionListener() {
@@ -252,10 +237,8 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelRoomRentServices.setForeground(new java.awt.Color(255, 255, 255));
         jLabelRoomRentServices.setText("Room Rent Service :");
 
-        jLabelNursingCharges.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNursingCharges.setText("Nursing Charges :");
 
         jTextFieldEmpID8.addActionListener(new java.awt.event.ActionListener() {
@@ -264,14 +247,11 @@ public class AdminstrativeAccountManagement extends javax.swing.JPanel {
             }
         });
 
-        jLabelTAX.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTAX.setText("TAX :");
 
-        jLabelGrandTotal.setForeground(new java.awt.Color(255, 255, 255));
         jLabelGrandTotal.setText("Grand Total :");
 
         jLabelSubTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabelSubTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSubTitle.setText("FEE PARTICULARS");
 
         jButtonSearch.setText("SEARCH");

@@ -72,7 +72,7 @@ public class MedSuppliesDatabase extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableTestDB = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 255, 204));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonHome.setBackground(new java.awt.Color(0, 102, 102));

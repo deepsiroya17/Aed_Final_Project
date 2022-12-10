@@ -218,7 +218,7 @@ public class AdministrativeAccountsPage extends javax.swing.JPanel {
         });
         add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, -1, -1));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/AdminstrativeAccountsPage_new.jpg"))); // NOI18N
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/adminacc1.jpg"))); // NOI18N
         add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 

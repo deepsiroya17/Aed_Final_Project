@@ -3,7 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="a9" green="46" red="0" type="rgb"/>
+      <Color blue="ff" green="cc" red="cc" type="rgb"/>
     </Property>
     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -324,9 +324,6 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="48" style="1"/>
         </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="ACCOUNTS MANAGEMENT"/>
       </Properties>
@@ -355,17 +352,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelPatientID">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Patient ID :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelPatientName">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Patient Name:"/>
       </Properties>
     </Component>
@@ -473,17 +464,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelPhoneNum">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Phone Number :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelInsuaranceNum">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Insurance Number :"/>
       </Properties>
     </Component>
@@ -496,17 +481,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelConsultationFee">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Consultation Fee : "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelTestFee">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Test Fee :"/>
       </Properties>
     </Component>
@@ -519,17 +498,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelAdmissionFee">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Admission Charges :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelAmbulanceFee">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Ambulance Fee :"/>
       </Properties>
     </Component>
@@ -542,17 +515,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelDiscount">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Discount Applied :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelAdvancePaid">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Advance Paid :"/>
       </Properties>
     </Component>
@@ -565,17 +532,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelAmountDue">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Amount Due :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelPharmacyBill">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Pharmacy Bill :"/>
       </Properties>
     </Component>
@@ -588,17 +549,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelICUServices">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="ICU Services :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelMedicalEquipment">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Medical Equipment :"/>
       </Properties>
     </Component>
@@ -611,17 +566,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelRoomRentServices">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Room Rent Service :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelNursingCharges">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Nursing Charges :"/>
       </Properties>
     </Component>
@@ -634,17 +583,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelTAX">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="TAX :"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelGrandTotal">
       <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Grand Total :"/>
       </Properties>
     </Component>
@@ -654,9 +597,6 @@
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="1"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="FEE PARTICULARS"/>
       </Properties>

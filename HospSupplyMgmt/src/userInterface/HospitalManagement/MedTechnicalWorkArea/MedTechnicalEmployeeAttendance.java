@@ -92,7 +92,7 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Employee Attendance");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 891, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 200, 891, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -103,7 +103,7 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1720, 50, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,20 +115,20 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
                 jTextFieldEmpIDActionPerformed(evt);
             }
         });
-        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 300, 190, -1));
+        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 190, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
         jLabelEmpID.setText("Employee ID:");
-        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 100, -1));
+        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 100, -1));
 
         jLabelEmpName.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
         jLabelEmpName.setText("Employee Name:");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 360, 130, -1));
-        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 360, 190, -1));
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 130, -1));
+        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 190, -1));
 
         jLabelDept.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
         jLabelDept.setText("Role:");
-        add(jLabelDept, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 420, 100, -1));
+        add(jLabelDept, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 100, -1));
 
         jComboBoxDept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pathologist", "Radiologist", "Technician", " ", " " }));
         jComboBoxDept.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +136,7 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
                 jComboBoxDeptActionPerformed(evt);
             }
         });
-        add(jComboBoxDept, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 410, 170, 30));
+        add(jComboBoxDept, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, 170, 30));
 
         jButtonView.setBackground(new java.awt.Color(0, 0, 0));
         jButtonView.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -147,7 +147,7 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
                 jButtonViewActionPerformed(evt);
             }
         });
-        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 483, 100, 40));
+        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 100, 40));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,8 +165,8 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 520, 670, 110));
 
         bgdimg.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/MedTechnicalEmployeeAttendance.png"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1920, 1200));
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/custsupp1.jpg"))); // NOI18N
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-380, 0, 2300, 1710));
     }// </editor-fold>//GEN-END:initComponents
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

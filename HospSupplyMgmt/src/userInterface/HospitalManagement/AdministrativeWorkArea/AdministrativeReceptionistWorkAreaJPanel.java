@@ -96,7 +96,7 @@ public class AdministrativeReceptionistWorkAreaJPanel extends javax.swing.JPanel
         });
         jPanel2.add(jButtonAppointmentManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 401, -1));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/AdministrativeReceptionistWorkAreaJPanel_new.jpg"))); // NOI18N
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/admin1.jpg"))); // NOI18N
         jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jSplitPane.setRightComponent(jPanel2);
