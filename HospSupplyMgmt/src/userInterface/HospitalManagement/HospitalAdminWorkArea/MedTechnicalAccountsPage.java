@@ -104,7 +104,7 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(0, 102, 102));
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Lab Testing and Technician");
         add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 706, -1));
@@ -164,7 +164,7 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 100, 40));
 
         jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabelPassword.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 110, 30));
@@ -184,7 +184,7 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 290, 30));
 
         jLabelRole.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabelRole.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelRole.setForeground(new java.awt.Color(255, 255, 255));
         jLabelRole.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelRole.setText("Role:");
         add(jLabelRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 104, -1));
@@ -195,7 +195,7 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         add(jComboBoxRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, -1, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabelEmpID.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Employee ID:");
         add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 120, -1));
@@ -212,7 +212,7 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, 100, 40));
 
         jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabelEmpName.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Employee Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 140, 30));
@@ -228,8 +228,8 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         });
         add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 430, 100, 40));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/MedTechnicalAccounts_new.jpg"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1920, 1200));
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/medicaltesttech1.jpg"))); // NOI18N
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-430, -690, 2530, 1870));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

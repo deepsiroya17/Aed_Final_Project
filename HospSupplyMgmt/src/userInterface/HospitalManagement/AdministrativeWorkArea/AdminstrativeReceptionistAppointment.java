@@ -67,11 +67,10 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         jLabelDoctorName = new javax.swing.JLabel();
         jButtonSearch = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("APPOINTMENT MANAGMENT");
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
@@ -123,14 +122,12 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         });
         add(jTextFieldPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 198, 140, -1));
 
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPatientID.setText("Patient ID:");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 198, 104, -1));
 
         jButtonDelete.setText("DELETE");
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, -1, -1));
 
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPatientName.setText("Patient Name :");
         add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
 
@@ -141,18 +138,15 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         });
         add(jTextFieldDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 140, -1));
 
-        jLabelAppointmentTime.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAppointmentTime.setText("Appointment Time :");
         add(jLabelAppointmentTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 104, -1));
 
-        jLabelDepartment.setForeground(new java.awt.Color(255, 255, 255));
         jLabelDepartment.setText("Department :");
         add(jLabelDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 104, -1));
 
         jComboBoxDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiology", "Radiology", "Ayurvedic", "Dermetology", "Optometry", "Genral Surgery", "Plastic Surgeon ", "Obstetrics", "Orthopedics", "Psychiatry", "Neurosurgery", "Hematology", "Pedatrics", "Oncology", "Stomatology", "Opthalmology", "Virology", "Bio-Chemistry" }));
         add(jComboBoxDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, -1));
 
-        jLabelDoctorName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelDoctorName.setText("Doctor Name :");
         add(jLabelDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 104, -1));
 

@@ -59,7 +59,6 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jButtonTestDatabase = new javax.swing.JButton();
         jButtonPatientTest = new javax.swing.JButton();
-        bgdimg = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1720, 1080));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -70,7 +69,7 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jSplitPane.setLeftComponent(jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1183));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -96,11 +95,6 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(jButtonPatientTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 480, 590, 50));
 
-        bgdimg.setBackground(new java.awt.Color(255, 255, 255));
-        bgdimg.setForeground(new java.awt.Color(255, 255, 255));
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/MedTechnicalWorkAreaJPanel.png"))); // NOI18N
-        jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1920, 1190));
-
         jSplitPane.setRightComponent(jPanel2);
 
         add(jSplitPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1833, 1102));
@@ -124,7 +118,6 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel bgdimg;
     private javax.swing.JButton jButtonPatientTest;
     private javax.swing.JButton jButtonTestDatabase;
     private javax.swing.JPanel jPanel1;
