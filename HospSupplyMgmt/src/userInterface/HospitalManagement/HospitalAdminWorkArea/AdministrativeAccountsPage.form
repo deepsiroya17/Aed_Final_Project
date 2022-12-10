@@ -331,7 +331,7 @@
     <Component class="javax.swing.JLabel" name="bgdimg">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/userInterface/Images/AdminstrativeAccountsPage_new.jpg"/>
+          <Image iconType="3" name="/userInterface/Images/adminacc1.jpg"/>
         </Property>
       </Properties>
       <Constraints>

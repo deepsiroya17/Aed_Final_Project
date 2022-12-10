@@ -95,10 +95,9 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Operational");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 706, -1));
+        jLabel1.setText("Operational Accounts");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 706, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -155,7 +154,6 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 490, 110, 40));
 
         jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabelPassword.setForeground(new java.awt.Color(0, 102, 102));
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 140, -1));
@@ -175,7 +173,6 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 270, -1));
 
         jLabelRole.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabelRole.setForeground(new java.awt.Color(0, 102, 102));
         jLabelRole.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelRole.setText("Role:");
         add(jLabelRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 140, -1));
@@ -186,7 +183,6 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         add(jComboBoxRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 90, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabelEmpID.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Employee ID:");
         add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 140, -1));
@@ -203,7 +199,6 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 110, 40));
 
         jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jLabelEmpName.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Employee Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 140, -1));
@@ -219,8 +214,8 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         });
         add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 110, 40));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/OperationalAccountsPage_latest.jpeg"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/acc1.jpg"))); // NOI18N
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -270, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
