@@ -70,7 +70,7 @@ public class SendMail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            message.setSubject(email_subject);
 
             Multipart multipart = new MimeMultipart();
 
