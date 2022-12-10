@@ -79,12 +79,12 @@ public class MedSupWarehouseAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jSplitPane.setLeftComponent(jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(0, 70, 169));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
         jPanel2.setPreferredSize(new java.awt.Dimension(1720, 1080));
 
-        jButtonMedSupDatabase.setBackground(new java.awt.Color(0, 70, 169));
+        jButtonMedSupDatabase.setBackground(new java.awt.Color(0, 102, 102));
         jButtonMedSupDatabase.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonMedSupDatabase.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonMedSupDatabase.setForeground(new java.awt.Color(255, 255, 204));
         jButtonMedSupDatabase.setText("Medical Supplies Database");
         jButtonMedSupDatabase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,9 +92,9 @@ public class MedSupWarehouseAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButtonPlaceOrder.setBackground(new java.awt.Color(0, 70, 169));
+        jButtonPlaceOrder.setBackground(new java.awt.Color(0, 102, 102));
         jButtonPlaceOrder.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonPlaceOrder.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonPlaceOrder.setForeground(new java.awt.Color(255, 255, 204));
         jButtonPlaceOrder.setText("Manage Orders");
         jButtonPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,20 +107,20 @@ public class MedSupWarehouseAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(420, 420, 420)
+                .addGap(260, 260, 260)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonMedSupDatabase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonPlaceOrder, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE))
-                .addContainerGap(1005, Short.MAX_VALUE))
+                    .addComponent(jButtonPlaceOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1167, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(280, 280, 280)
+                .addGap(206, 206, 206)
                 .addComponent(jButtonMedSupDatabase)
                 .addGap(50, 50, 50)
                 .addComponent(jButtonPlaceOrder)
-                .addContainerGap(696, Short.MAX_VALUE))
+                .addContainerGap(776, Short.MAX_VALUE))
         );
 
         jSplitPane.setRightComponent(jPanel2);

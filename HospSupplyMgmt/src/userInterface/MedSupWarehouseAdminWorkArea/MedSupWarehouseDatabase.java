@@ -79,54 +79,65 @@ public class MedSupWarehouseDatabase extends javax.swing.JPanel {
         jLabelPatientName1 = new javax.swing.JLabel();
         jTextFieldMedSupEquipQuantity = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(0, 70, 169));
+        setBackground(new java.awt.Color(0, 102, 102));
+        setForeground(new java.awt.Color(255, 255, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabelTitle.setForeground(new java.awt.Color(255, 255, 204));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("All Equipment");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 706, -1));
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 706, -1));
 
-        jButtonHome.setBackground(new java.awt.Color(0, 70, 169));
-        jButtonHome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonHome.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonHome.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonHome.setForeground(new java.awt.Color(0, 102, 102));
         jButtonHome.setText("HOME");
         jButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 60, -1, -1));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, -1, -1));
 
+        jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonCreate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jButtonCreate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 219, -1, -1));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 200, -1, -1));
 
+        jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonUpdate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 220, -1, -1));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, -1, -1));
 
+        jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonDelete.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jButtonDelete.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDelete.setText("DELETE");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 290, -1, -1));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, 80, -1));
 
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientID.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 204));
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelPatientID.setText("Medical Equiment Name");
-        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 200, 120, -1));
+        jLabelPatientID.setText("Medical Equipment Name");
+        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 170, 20));
 
         jTextFieldMedSupEquipName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,16 +146,17 @@ public class MedSupWarehouseDatabase extends javax.swing.JPanel {
         });
         add(jTextFieldMedSupEquipName, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 200, 270, -1));
 
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientName.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 204));
         jLabelPatientName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName.setText("Medical Equipment Price");
-        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 130, -1));
+        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 237, 190, 30));
 
         jLabelTitle2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle2.setForeground(new java.awt.Color(255, 255, 204));
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Medical Supplies Equipment Database");
-        add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 940, -1));
+        add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 940, -1));
 
         jTextFieldMedSupEquipPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,12 +186,13 @@ public class MedSupWarehouseDatabase extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableMedSupEquipDB);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 430, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 530, 110));
 
-        jLabelPatientName1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientName1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jLabelPatientName1.setForeground(new java.awt.Color(255, 255, 204));
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Medical Equipment Quantity");
-        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 140, -1));
+        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 180, 20));
 
         jTextFieldMedSupEquipQuantity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,9 +203,10 @@ public class MedSupWarehouseDatabase extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
+        MedSupWarehouseAdminWorkAreaJPanel medSupWarehouseAdminWorkAreaJPanel = new MedSupWarehouseAdminWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, medSupWarehouseCurrent);
+        userProcessContainer.add("medSupWarehouseAdminWorkAreaJPanel",medSupWarehouseAdminWorkAreaJPanel);
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"Sysadmin");
+        crdLyt.show(userProcessContainer,"medSupWarehouseAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jTextFieldMedSupEquipNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMedSupEquipNameActionPerformed

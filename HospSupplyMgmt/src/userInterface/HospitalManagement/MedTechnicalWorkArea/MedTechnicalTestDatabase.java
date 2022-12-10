@@ -85,7 +85,7 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1680, 60, 130, 40));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 60, 130, 40));
 
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonCreate.setText("CREATE");
@@ -98,6 +98,11 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
 
         jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonUpdate.setText("UPDATE");
+        jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonUpdateActionPerformed(evt);
+            }
+        });
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 720, -1, -1));
 
         jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -149,9 +154,10 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
+        MedTechnicalWorkAreaJPanel medTechnicalWorkAreaJPanel = new MedTechnicalWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
+        userProcessContainer.add("medTechnicalWorkAreaJPanel",medTechnicalWorkAreaJPanel);
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"Sysadmin");
+        crdLyt.show(userProcessContainer,"medTechnicalWorkAreaJPanel");
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
@@ -169,6 +175,42 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         model.addRow(new Object[]{labTest,labTest.getTest_price()});
         clearFields();
     }//GEN-LAST:event_jButtonCreateActionPerformed
+
+    private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
+        int selected_row_ix = jTableTestDB.getSelectedRow();
+
+        if(selected_row_ix < 0){
+            JOptionPane.showMessageDialog(this, "Please select a row to update.");
+            return;
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) jTableTestDB.getModel();
+        LabTestDirectory select_account_details = (LabTestDirectory)model.getValueAt(selected_row_ix, 0);    
+        
+//        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
+//        hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
+//        ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
+//               UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
+//        hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
+//        A for(UserAccount userAccount: userAccountList)
+//        {
+//            if(userAccount.getUsername().equals(select_account_details.getUsername()))
+//            {
+//                Hospital hospital = userAccount.getHospital();
+//                ArrayList<String> user_input = check_empty_field();
+//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
+//                model.setValueAt(user_input.get(1), selected_row_ix, 1);
+//                model.setValueAt(user_input.get(2), selected_row_ix, 2);
+//                model.setValueAt(user_input.get(3), selected_row_ix, 3);
+//                hospitalDirectory.updateHospital(user_input, hospital);
+//                UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
+//                break;
+//            }
+//        }
+        
+        JOptionPane.showMessageDialog(this, "Values updated");
+
+    }//GEN-LAST:event_jButtonUpdateActionPerformed
     /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
         
         customer.getUserAccount().setPassword(user_input.get(1));

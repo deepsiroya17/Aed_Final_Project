@@ -108,7 +108,7 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         jLabelTitle.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("Patient Test");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 820, 100));
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 820, 100));
 
         jButtonHome.setBackground(new java.awt.Color(0, 0, 0));
         jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -119,13 +119,13 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1760, 60, -1, -1));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 40, -1, -1));
 
         jLabelTitle1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         jLabelTitle1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle1.setText("ALL TESTS");
-        add(jLabelTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 640, 706, -1));
+        add(jLabelTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 650, 706, -1));
 
         jTableNewTests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -157,7 +157,7 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableNewTests);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 730, 510, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 730, 510, 160));
 
         jButtonCreate.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -180,12 +180,6 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
             }
         });
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, 110, 30));
-
-        jTextFieldTestID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTestIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldTestID, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 260, -1));
 
         jLabelTestName.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -211,12 +205,6 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientID.setText("Patient ID:");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 170, 160, -1));
-
-        jTextFieldPatientId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPatientIdActionPerformed(evt);
-            }
-        });
         add(jTextFieldPatientId, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 270, -1));
 
         jLabelPatientName.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -227,22 +215,12 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         add(jTextFieldTestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 270, -1));
 
         jComboBoxTestName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Blood Test", "Cholestrol", "CBP", "Urine test", "X-Ray", "C.T Scan", "M.R.I ", "Dental Scan", "Ultrasound", "ECG", "EEG", " " }));
-        jComboBoxTestName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxTestNameActionPerformed(evt);
-            }
-        });
         add(jComboBoxTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 110, -1));
 
         jButtonSearch.setBackground(new java.awt.Color(0, 0, 0));
         jButtonSearch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonSearch.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSearch.setText("SEARCH");
-        jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSearchActionPerformed(evt);
-            }
-        });
         add(jButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 110, 30));
 
         jTableAllTests.setModel(new javax.swing.table.DefaultTableModel(
@@ -273,26 +251,15 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
                 jTableAllTestsMouseClicked(evt);
             }
         });
-        jTableAllTests.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTableAllTestsKeyPressed(evt);
-            }
-        });
         jScrollPane2.setViewportView(jTableAllTests);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 710, 540, 160));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 730, 540, 160));
 
         jLabelTitle3.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         jLabelTitle3.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitle3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle3.setText("NEW TEST REQUESTS");
-        add(jLabelTitle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 640, 706, -1));
-
-        jTextFieldPatientName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPatientNameActionPerformed(evt);
-            }
-        });
+        add(jLabelTitle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 640, 706, -1));
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 270, -1));
 
         jLabelReportAvailability.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -356,12 +323,6 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Patient Email :");
         add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 160, -1));
-
-        jTextFieldPatientEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPatientEmailActionPerformed(evt);
-            }
-        });
         add(jTextFieldPatientEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 270, -1));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/MedTechnicalPatientTest.png"))); // NOI18N
@@ -369,30 +330,11 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
-//        CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-//            crdLyt.show(userProcessContainer,"Sysadmin");
+        MedTechnicalWorkAreaJPanel medTechnicalWorkAreaJPanel = new MedTechnicalWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
+        userProcessContainer.add("medTechnicalWorkAreaJPanel",medTechnicalWorkAreaJPanel);
+        CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
+        crdLyt.show(userProcessContainer,"medTechnicalWorkAreaJPanel");
     }//GEN-LAST:event_jButtonHomeActionPerformed
-
-    private void jTextFieldTestIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTestIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTestIDActionPerformed
-
-    private void jTextFieldPatientIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPatientIdActionPerformed
-
-    private void jComboBoxTestNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTestNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxTestNameActionPerformed
-
-    private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonSearchActionPerformed
-
-    private void jTextFieldPatientNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPatientNameActionPerformed
 
     private void jButtonEmailReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmailReportActionPerformed
         try {
@@ -457,20 +399,20 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         hospital.setPatientDirectory(patientDirectory);
         String message = "\n\nHi " + user_input.get(1) +" your " + user_input.get(3) +" test for date " +user_input.get(4) + " in " + hospital.getHospitalName() +" has been booked";
         System.out.println("message: "+message);
-        sendMessageTwilio = new SendMessageTwilio();
-        sendMessageTwilio.sendMessage(message, user_input.get(0));
+//        sendMessageTwilio = new SendMessageTwilio();
+//        sendMessageTwilio.sendMessage(message);
         
         model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
         populateNewRequestsTable();
         populateAllTestsTable();
         
-        SendMail sendMail = new SendMail();
-        String subject = "Medical Test Booked";
-        try {
-            sendMail.sendEmail(message, subject, user_input.get(5));
-        } catch (IOException ex) {
-            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        SendMail sendMail = new SendMail();
+//        String subject = "Medical Test Booked";
+//        try {
+//            sendMail.sendEmail(message, subject, user_input.get(5));
+//        } catch (IOException ex) {
+//            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         
         clearFields();
     }//GEN-LAST:event_jButtonCreateActionPerformed
@@ -490,11 +432,6 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
             report_avalibility = "no";
         }
     }//GEN-LAST:event_jRadioButtonNoActionPerformed
-
-    private void jTableAllTestsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTableAllTestsKeyPressed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jTableAllTestsKeyPressed
 
     private void jTableAllTestsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableAllTestsMouseClicked
         // TODO add your handling code here:
@@ -563,10 +500,6 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
                     System.out.println(file);
             }
     }//GEN-LAST:event_jButtonDownloadReport1ActionPerformed
-
-    private void jTextFieldPatientEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPatientEmailActionPerformed
 
         private void clearFields(){
             jTextFieldPatientId.setText("");

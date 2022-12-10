@@ -50,7 +50,7 @@ public class SendMail {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication("bostonmedicalcentralservices@gmail.com", "pranshurocks");
+                return new PasswordAuthentication("animeshxyz6@gmail.com", "Northeastern@123");
 
             }
 
@@ -131,7 +131,7 @@ public class SendMail {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication("bostonmedicalcentralservices@gmail.com", "pranshurocks");
+                return new PasswordAuthentication("animeshxyz6@gmail.com", "Northeastern@123");
 
             }
 

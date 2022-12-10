@@ -58,7 +58,6 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jButtonTestDatabase = new javax.swing.JButton();
-        jButtonEmployeeAttendance = new javax.swing.JButton();
         jButtonPatientTest = new javax.swing.JButton();
         bgdimg = new javax.swing.JLabel();
 
@@ -86,17 +85,6 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(jButtonTestDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 360, 590, 50));
 
-        jButtonEmployeeAttendance.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonEmployeeAttendance.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonEmployeeAttendance.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonEmployeeAttendance.setText("Employee Attendance");
-        jButtonEmployeeAttendance.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEmployeeAttendanceActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButtonEmployeeAttendance, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 450, 590, 50));
-
         jButtonPatientTest.setBackground(new java.awt.Color(0, 0, 0));
         jButtonPatientTest.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonPatientTest.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,7 +94,7 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
                 jButtonPatientTestActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonPatientTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 540, 590, 50));
+        jPanel2.add(jButtonPatientTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 480, 590, 50));
 
         bgdimg.setBackground(new java.awt.Color(255, 255, 255));
         bgdimg.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,13 +105,6 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
 
         add(jSplitPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1833, 1102));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonEmployeeAttendanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmployeeAttendanceActionPerformed
-//        MedTechnicalEmployeeAttendance medTechnicalEmployeeAttendance = new MedTechnicalEmployeeAttendance(userProcessContainer,medicalServiceCentralisationEcoSystem);
-//        userProcessContainer.add("medTechnicalEmployeeAttendance",medTechnicalEmployeeAttendance);
-//        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-//        cardLayout.show(userProcessContainer,"medTechnicalEmployeeAttendance");
-    }//GEN-LAST:event_jButtonEmployeeAttendanceActionPerformed
 
     private void jButtonTestDatabaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTestDatabaseActionPerformed
 
@@ -144,7 +125,6 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgdimg;
-    private javax.swing.JButton jButtonEmployeeAttendance;
     private javax.swing.JButton jButtonPatientTest;
     private javax.swing.JButton jButtonTestDatabase;
     private javax.swing.JPanel jPanel1;
