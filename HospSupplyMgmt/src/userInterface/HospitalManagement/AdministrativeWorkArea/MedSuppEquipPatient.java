@@ -166,6 +166,11 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, -1, -1));
 
         jButtonView.setText("VIEW");
+        jButtonView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonViewActionPerformed(evt);
+            }
+        });
         add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 80, -1));
 
         jLabelTestName.setForeground(new java.awt.Color(255, 255, 255));
@@ -174,6 +179,11 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         add(jLabelTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 150, 20));
 
         jButtonDelete.setText("DELETE");
+        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeleteActionPerformed(evt);
+            }
+        });
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, -1, -1));
 
         jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
@@ -311,7 +321,7 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
             
         }
         else{
-            message = "\n\nHi " + user_input.get(1) +", this your bot Alfred. I wanted to let you know that your " + user_input.get(6) + " " +user_input.get(3) +" for date " +user_input.get(4) + " in " + hospital.getHospitalName() +" has been booked";
+            message = "\n\nHi " + user_input.get(1) +", this your bot Deep. I wanted to let you know that your " + user_input.get(6) + " " +user_input.get(3) +" for date " +user_input.get(4) + " in " + hospital.getHospitalName() +" has been booked.";
         }
         System.out.println("message: "+message);
         sendMessageTwilio = new SendMessageTwilio();
@@ -365,6 +375,14 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         hospital.setPatientDirectory(patientDirectory);
         populateAllOrdersTable();
     }//GEN-LAST:event_jButtonUpdateActionPerformed
+
+    private void jButtonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonViewActionPerformed
+
+    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDeleteActionPerformed
 
         private void clearFields(){
             jTextFieldPatientId.setText("");
