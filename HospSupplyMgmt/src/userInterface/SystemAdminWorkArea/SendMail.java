@@ -50,7 +50,7 @@ public class SendMail {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication("animeshxyz6@gmail.com", "Northeastern@123");
+                return new PasswordAuthentication("animeshxyz6@gmail.com", "cxqgzbqfarimjrgr");
 
             }
 
@@ -70,7 +70,7 @@ public class SendMail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
             // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            message.setSubject(email_subject);
 
             Multipart multipart = new MimeMultipart();
 
@@ -131,7 +131,7 @@ public class SendMail {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
-                return new PasswordAuthentication("animeshxyz6@gmail.com", "Northeastern@123");
+                return new PasswordAuthentication("animeshxyz6@gmail.com", "cxqgzbqfarimjrgr");
 
             }
 
