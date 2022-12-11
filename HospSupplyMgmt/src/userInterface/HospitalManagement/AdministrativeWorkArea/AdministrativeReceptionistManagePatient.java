@@ -98,7 +98,7 @@ public class AdministrativeReceptionistManagePatient extends javax.swing.JPanel 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Patient Management");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 58, 807, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 807, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 70, 169));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -109,7 +109,7 @@ public class AdministrativeReceptionistManagePatient extends javax.swing.JPanel 
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(808, 81, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, -1, -1));
 
         jTableManagePatient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -131,22 +131,22 @@ public class AdministrativeReceptionistManagePatient extends javax.swing.JPanel 
                 jTextFieldPatientNameActionPerformed(evt);
             }
         });
-        add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 194, 160, -1));
+        add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 160, -1));
 
         jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelPatientName.setText("Patient Name:");
-        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 194, -1, -1));
+        jLabelPatientName.setText("Patient Name :");
+        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 140, 90, 20));
 
         jButtonDelete.setText("DELETE");
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 290, 80, -1));
 
         jLabelPhoneNumber.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPhoneNumber.setText("Phone Number :");
-        add(jLabelPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(112, 235, -1, -1));
+        add(jLabelPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, 20));
 
         jButtonCreate.setText("CREATE");
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 190, 80, -1));
-        add(jTextFieldPPhoneNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(223, 232, 160, -1));
+        add(jTextFieldPPhoneNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 160, -1));
 
         jButtonUpdate.setText("UPDATE");
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 240, 80, -1));
@@ -156,113 +156,113 @@ public class AdministrativeReceptionistManagePatient extends javax.swing.JPanel 
 
         jLabelBloodGroup.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBloodGroup.setText("Blood Group :");
-        add(jLabelBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 104, -1));
+        add(jLabelBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 104, -1));
 
         jComboBoxBloodGroup.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "Rh_null", " " }));
-        add(jComboBoxBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 190, -1, -1));
+        add(jComboBoxBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, -1, -1));
 
         jTextFieldPAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPAddressActionPerformed(evt);
             }
         });
-        add(jTextFieldPAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 160, -1));
+        add(jTextFieldPAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 160, -1));
 
         jLabelAddress.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAddress.setText("Address :");
-        add(jLabelAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
+        add(jLabelAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 220, 60, 20));
 
         jLabelZipcode.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelZipcode.setText("Zipcode:");
-        add(jLabelZipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, -1, -1));
-        add(jTextFieldZipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 160, -1));
+        jLabelZipcode.setText("Zipcode :");
+        add(jLabelZipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 60, 20));
+        add(jTextFieldZipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 160, -1));
 
         jTextFieldAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAgeActionPerformed(evt);
             }
         });
-        add(jTextFieldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 160, -1));
+        add(jTextFieldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 160, -1));
 
         jLabelAge.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAge.setText("Age :");
-        add(jLabelAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, -1, -1));
+        add(jLabelAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, -1, -1));
 
         jLabelEmergencyContactName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmergencyContactName.setText("Emergency Contact Name :");
-        add(jLabelEmergencyContactName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
-        add(jTextFieldEmergencyContactName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 160, -1));
+        add(jLabelEmergencyContactName, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
+        add(jTextFieldEmergencyContactName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 160, -1));
 
         jTextFieldEPhoneNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldEPhoneNumActionPerformed(evt);
             }
         });
-        add(jTextFieldEPhoneNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 160, -1));
+        add(jTextFieldEPhoneNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 160, -1));
 
         jLabelPhoneNumEmergency.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPhoneNumEmergency.setText("Phone Number [E] :");
-        add(jLabelPhoneNumEmergency, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, -1, -1));
+        add(jLabelPhoneNumEmergency, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, -1, -1));
 
         jLabelERelationship.setForeground(new java.awt.Color(255, 255, 255));
         jLabelERelationship.setText("Relationship :");
-        add(jLabelERelationship, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, -1, -1));
-        add(jTextFieldRelationship, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 160, -1));
+        add(jLabelERelationship, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, -1));
+        add(jTextFieldRelationship, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 450, 160, -1));
 
         jTextFieldEAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldEAddressActionPerformed(evt);
             }
         });
-        add(jTextFieldEAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 550, 160, -1));
+        add(jTextFieldEAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 500, 160, -1));
 
         jLabelEAddress.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEAddress.setText("Address [E] :");
-        add(jLabelEAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, -1, -1));
+        add(jLabelEAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 500, -1, -1));
 
         jLabelConsultant.setForeground(new java.awt.Color(255, 255, 255));
         jLabelConsultant.setText("Consultant :");
-        add(jLabelConsultant, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 510, -1, -1));
-        add(jTextFieldConsultant, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 510, 160, -1));
+        add(jLabelConsultant, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, -1, -1));
+        add(jTextFieldConsultant, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 460, 160, -1));
 
         jComboBoxGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Prefer Not to Say", " ", " " }));
-        add(jComboBoxGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 240, -1, -1));
+        add(jComboBoxGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, -1, -1));
 
         jLabelGender.setForeground(new java.awt.Color(255, 255, 255));
         jLabelGender.setText("Gender : ");
-        add(jLabelGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, 104, -1));
+        add(jLabelGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 104, -1));
 
         jComboBoxRoleDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiology", "Radiology", "Ayurvedic", "Dermetology", "Optometry", "Genral Surgery", "Plastic Surgeon ", "Obstetrics", "Orthopedics", "Psychiatry", "Neurosurgery", "Hematology", "Pedatrics", "Oncology", "Stomatology", "Opthalmology", "Virology", "Bio-Chemistry" }));
-        add(jComboBoxRoleDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 460, -1, -1));
+        add(jComboBoxRoleDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 410, -1, -1));
 
         jLabelDepartment.setForeground(new java.awt.Color(255, 255, 255));
         jLabelDepartment.setText("Department :");
-        add(jLabelDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 460, 104, -1));
+        add(jLabelDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 104, -1));
 
         jTextFieldHeight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldHeightActionPerformed(evt);
             }
         });
-        add(jTextFieldHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 300, 160, -1));
+        add(jTextFieldHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 250, 160, -1));
 
         jLabelHeight.setForeground(new java.awt.Color(255, 255, 255));
         jLabelHeight.setText("Height :");
-        add(jLabelHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, -1, -1));
+        add(jLabelHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 250, -1, -1));
 
         jLabelWeight.setForeground(new java.awt.Color(255, 255, 255));
         jLabelWeight.setText("Weight :");
-        add(jLabelWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 350, -1, -1));
-        add(jTextFieldWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, 160, -1));
+        add(jLabelWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 300, -1, -1));
+        add(jTextFieldWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 290, 160, -1));
 
         jLabelDateofAdmission.setForeground(new java.awt.Color(255, 255, 255));
         jLabelDateofAdmission.setText("Date of Admission :");
-        add(jLabelDateofAdmission, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 120, -1));
+        add(jLabelDateofAdmission, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 120, -1));
 
         jLabelEmailID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmailID.setText("Email ID:");
-        add(jLabelEmailID, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 570, -1, -1));
-        add(jTextFieldEmailID, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 560, 160, -1));
+        add(jLabelEmailID, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, -1, -1));
+        add(jTextFieldEmailID, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 160, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
