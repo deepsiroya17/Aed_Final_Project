@@ -99,18 +99,17 @@ public class MedSupAdminAccountsPage extends javax.swing.JPanel {
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Medical Supplies");
-        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 706, -1));
+        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 706, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 204));
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 80, 110, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,7 +140,7 @@ public class MedSupAdminAccountsPage extends javax.swing.JPanel {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 110, 40));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 110, 60));
         add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 290, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
@@ -153,7 +152,7 @@ public class MedSupAdminAccountsPage extends javax.swing.JPanel {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 100, 40));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 110, 60));
 
         jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
@@ -190,7 +189,7 @@ public class MedSupAdminAccountsPage extends javax.swing.JPanel {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 100, 40));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 110, 60));
 
         jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
@@ -207,9 +206,9 @@ public class MedSupAdminAccountsPage extends javax.swing.JPanel {
                 jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 100, 40));
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 110, 60));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/AdministrativeReceptionistWorkAreaJPanel_new.jpg"))); // NOI18N
+        bgdimg.setBackground(new java.awt.Color(204, 204, 255));
         add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1920, 30, 2860, 1190));
     }// </editor-fold>//GEN-END:initComponents
 

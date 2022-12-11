@@ -79,65 +79,59 @@ public class MedSupWarehouseDatabase extends javax.swing.JPanel {
         jLabelPatientName1 = new javax.swing.JLabel();
         jTextFieldMedSupEquipQuantity = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(0, 102, 102));
+        setBackground(new java.awt.Color(204, 204, 255));
         setForeground(new java.awt.Color(255, 255, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 204));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("All Equipment");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 706, -1));
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 370, 706, -1));
 
         jButtonHome.setBackground(new java.awt.Color(255, 255, 204));
         jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonHome.setForeground(new java.awt.Color(0, 102, 102));
         jButtonHome.setText("HOME");
         jButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, -1, -1));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 90, 110, 60));
 
         jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonCreate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jButtonCreate.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 200, -1, -1));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, 110, 60));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonUpdate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, -1, -1));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 260, 110, 60));
 
         jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonDelete.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jButtonDelete.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonDelete.setText("DELETE");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, 80, -1));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 340, 110, 60));
 
-        jLabelPatientID.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 204));
+        jLabelPatientID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientID.setText("Medical Equipment Name");
-        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 170, 20));
+        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 250, 20));
 
         jTextFieldMedSupEquipName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,14 +140,12 @@ public class MedSupWarehouseDatabase extends javax.swing.JPanel {
         });
         add(jTextFieldMedSupEquipName, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 200, 270, -1));
 
-        jLabelPatientName.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 204));
+        jLabelPatientName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPatientName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName.setText("Medical Equipment Price");
-        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 237, 190, 30));
+        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 270, 30));
 
-        jLabelTitle2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle2.setForeground(new java.awt.Color(255, 255, 204));
+        jLabelTitle2.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Medical Supplies Equipment Database");
         add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 940, -1));
@@ -186,13 +178,12 @@ public class MedSupWarehouseDatabase extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableMedSupEquipDB);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 530, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 440, 530, 110));
 
-        jLabelPatientName1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientName1.setForeground(new java.awt.Color(255, 255, 204));
+        jLabelPatientName1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Medical Equipment Quantity");
-        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 180, 20));
+        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 260, 20));
 
         jTextFieldMedSupEquipQuantity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

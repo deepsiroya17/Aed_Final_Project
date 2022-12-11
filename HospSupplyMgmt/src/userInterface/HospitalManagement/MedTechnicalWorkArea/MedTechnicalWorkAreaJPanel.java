@@ -82,7 +82,7 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
                 jButtonTestDatabaseActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonTestDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 360, 590, 50));
+        jPanel2.add(jButtonTestDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 590, 50));
 
         jButtonPatientTest.setBackground(new java.awt.Color(0, 0, 0));
         jButtonPatientTest.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -93,7 +93,7 @@ public class MedTechnicalWorkAreaJPanel extends javax.swing.JPanel {
                 jButtonPatientTestActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonPatientTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 480, 590, 50));
+        jPanel2.add(jButtonPatientTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, 590, 50));
 
         jSplitPane.setRightComponent(jPanel2);
 

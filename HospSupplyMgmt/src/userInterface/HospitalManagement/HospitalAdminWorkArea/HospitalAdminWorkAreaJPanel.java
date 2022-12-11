@@ -70,51 +70,47 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.setPreferredSize(new java.awt.Dimension(1720, 1080));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonMedTechnicalAccountsPage.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonMedTechnicalAccountsPage.setBackground(new java.awt.Color(255, 255, 204));
         jButtonMedTechnicalAccountsPage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonMedTechnicalAccountsPage.setForeground(new java.awt.Color(255, 255, 204));
         jButtonMedTechnicalAccountsPage.setText("Technical & Lab Testing");
         jButtonMedTechnicalAccountsPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMedTechnicalAccountsPageActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonMedTechnicalAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 220, 30));
+        jPanel2.add(jButtonMedTechnicalAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 220, 60));
 
-        jButtonAdministrativeAccountsPage.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonAdministrativeAccountsPage.setBackground(new java.awt.Color(255, 255, 204));
         jButtonAdministrativeAccountsPage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonAdministrativeAccountsPage.setForeground(new java.awt.Color(255, 255, 204));
         jButtonAdministrativeAccountsPage.setText("Admin & Accounting ");
         jButtonAdministrativeAccountsPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAdministrativeAccountsPageActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonAdministrativeAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 220, 30));
+        jPanel2.add(jButtonAdministrativeAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 220, 60));
 
-        jButtonOperationalAccountsPage.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonOperationalAccountsPage.setBackground(new java.awt.Color(255, 255, 204));
         jButtonOperationalAccountsPage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonOperationalAccountsPage.setForeground(new java.awt.Color(255, 255, 204));
         jButtonOperationalAccountsPage.setText("Operational Team");
         jButtonOperationalAccountsPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonOperationalAccountsPageActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonOperationalAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 370, 220, 30));
+        jPanel2.add(jButtonOperationalAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 220, 60));
 
-        jButtonMedTechnicalAccountsPage1.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonMedTechnicalAccountsPage1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonMedTechnicalAccountsPage1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonMedTechnicalAccountsPage1.setForeground(new java.awt.Color(255, 255, 204));
         jButtonMedTechnicalAccountsPage1.setText("Medical Supplies Admin");
         jButtonMedTechnicalAccountsPage1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMedTechnicalAccountsPage1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonMedTechnicalAccountsPage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 490, 220, 30));
+        jPanel2.add(jButtonMedTechnicalAccountsPage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, 220, 60));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/HospitalAdminWorkArea.jpg"))); // NOI18N
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/OperationalAccountsPage_1920x1183.jpeg"))); // NOI18N
         jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1740, 1080));
 
         jSplitPane.setRightComponent(jPanel2);
