@@ -8,6 +8,7 @@ package HospitalManagement.Requests;
 
 import HospitalManagement.Technician.*;
 import HospitalManagement.Technician.*;
+import MainCentralisationSystem.UserAccount;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -45,6 +46,19 @@ public class RequestDirectory {
     
     public void deleteReq(Request request){
         requestList.remove(request);
+    }
+    
+    public void updateReq(Request updated_req) {
+        
+        for(Request request: requestList)
+        {
+            if(request.getCustomer_name().equals(updated_req.getCustomer_name()))
+            {   
+                int index = requestList.indexOf(request);
+                requestList.set(index, request);
+                break;
+            }
+        }
     }
     
 }

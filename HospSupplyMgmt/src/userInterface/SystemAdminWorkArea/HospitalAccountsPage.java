@@ -131,12 +131,6 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
             }
         });
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 100, 30));
-
-        jTextFieldHospName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldHospNameActionPerformed(evt);
-            }
-        });
         add(jTextFieldHospName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 280, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
@@ -198,12 +192,6 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         jLabelEmpName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName1.setText("Pincode:");
         add(jLabelEmpName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 120, -1));
-
-        jTextFieldHospPincode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldHospPincodeActionPerformed(evt);
-            }
-        });
         add(jTextFieldHospPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 280, -1));
 
         jButtonDelete1.setBackground(new java.awt.Color(255, 255, 204));
@@ -243,7 +231,8 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         ArrayList<String> user_input = check_empty_field();
         hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
         UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        if(usersList.checkIfUserIsUnique(user_input.get(0))){
+        if(!user_input.isEmpty()) {
+             if(usersList.checkIfUserIsUnique(user_input.get(0))){
             
 //            Employee employee = new Employee(user_input.get(0),user_input.get(1),new HospitalAdminRole());
             
@@ -259,10 +248,12 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "New Hospital Information has been added.");
             model.addRow(new Object[]{userAccount,user_input.get(1),user_input.get(2),user_input.get(3)});
             clearFields();
-        }
-        else{
-            JOptionPane.showMessageDialog(this, "This username is not available. Please select a new one.");
-        }
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "This username is not available. Please select a new one.");
+            }
+        } 
+       
     }//GEN-LAST:event_jButtonCreateActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
@@ -321,16 +312,23 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
     }//GEN-LAST:event_jTableEmployeeMouseClicked
 
     private void jButtonDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDelete1ActionPerformed
-        // TODO add your handling code here:
+        int selected_row_ix = jTableEmployee.getSelectedRow();
+
+        if(selected_row_ix < 0){
+            JOptionPane.showMessageDialog(this, "Please select a row to delete.");
+            return;
+        }
+        DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
+        UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
+        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
+        Hospital hospital = select_user_account_details.getHospital();
+        hospitalDirectory.deleteHospital(hospital);
+        UserAccountDirectory.deleteAccount(select_user_account_details);
+//        ecosystem.setRestaurantDirectory(restaurantDirectory);
+        model.removeRow(selected_row_ix);
+        addrecordstotable();
+        clearFields();
     }//GEN-LAST:event_jButtonDelete1ActionPerformed
-
-    private void jTextFieldHospPincodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHospPincodeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldHospPincodeActionPerformed
-
-    private void jTextFieldHospNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHospNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldHospNameActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getHospital().setHospitalName(user_input.get(1));
@@ -364,12 +362,15 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         }
         else if(user_pincode.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter the pincode.");
+        } 
+        else {
+            user_input.add(user_emp_id);
+            user_input.add(user_emp_name);
+            user_input.add(user_pincode);
+            user_input.add(user_password);
         }
         
-        user_input.add(user_emp_id);
-        user_input.add(user_emp_name);
-        user_input.add(user_pincode);
-        user_input.add(user_password);
+        
         
         return user_input;
         
