@@ -95,14 +95,12 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Lab Test Directory");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 800, 70));
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 204));
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,9 +141,8 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 340, 160));
 
-        jButtonSearch.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonSearch.setBackground(new java.awt.Color(255, 255, 204));
         jButtonSearch.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonSearch.setForeground(new java.awt.Color(255, 255, 204));
         jButtonSearch.setText("SEARCH");
         jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,13 +159,11 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
         add(jTextFieldTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 421, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelEmpID.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Test Name :");
         add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 120, -1));
 
         jLabelEmpID1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelEmpID1.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpID1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID1.setText("Pincode :");
         add(jLabelEmpID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 110, -1));
@@ -185,9 +180,8 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
         });
         add(jTextFieldPincode, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 421, -1));
 
-        jButtonRefresh.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonRefresh.setBackground(new java.awt.Color(255, 255, 204));
         jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonRefresh.setForeground(new java.awt.Color(255, 255, 204));
         jButtonRefresh.setText("REFRESH");
         jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,7 +194,6 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
         add(jComboBoxHospitalList, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 160, -1));
 
         jLabelEmpName6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelEmpName6.setForeground(new java.awt.Color(0, 102, 102));
         jLabelEmpName6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName6.setText("Hospital :");
         add(jLabelEmpName6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 100, -1));
@@ -248,9 +241,8 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 460, 291, 158));
 
-        jButtonSearch2.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonSearch2.setBackground(new java.awt.Color(255, 255, 204));
         jButtonSearch2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonSearch2.setForeground(new java.awt.Color(255, 255, 204));
         jButtonSearch2.setText("DELETE");
         jButtonSearch2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,9 +251,8 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
         });
         add(jButtonSearch2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 470, 120, 40));
 
-        jButtonSearch3.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonSearch3.setBackground(new java.awt.Color(255, 255, 204));
         jButtonSearch3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonSearch3.setForeground(new java.awt.Color(255, 255, 204));
         jButtonSearch3.setText("SUBMIT");
         jButtonSearch3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,17 +262,17 @@ public class CustomerSupportMemberSearchMedicalTests extends javax.swing.JPanel 
         add(jButtonSearch3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 540, 120, 40));
 
         jLabelEmpName7.setFont(new java.awt.Font("Dubai Medium", 1, 24)); // NOI18N
-        jLabelEmpName7.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName7.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName7.setText("CART");
         add(jLabelEmpName7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, -1, -1));
 
         jLabelEmpName8.setFont(new java.awt.Font("Dubai Medium", 1, 24)); // NOI18N
-        jLabelEmpName8.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName8.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName8.setText("TEST SEARCH RESULTS");
         add(jLabelEmpName8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, -1, -1));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/labtesting1.jpg"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 830));
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 830));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

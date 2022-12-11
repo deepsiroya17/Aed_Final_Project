@@ -73,39 +73,35 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
         jLabelPatientName1 = new javax.swing.JLabel();
         jComboBoxDeliveryAgency = new javax.swing.JComboBox<>();
 
-        setBackground(new java.awt.Color(0, 102, 102));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(255, 255, 204));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("New Orders");
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 706, -1));
 
         jButtonHome.setBackground(new java.awt.Color(255, 255, 204));
         jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonHome.setForeground(new java.awt.Color(0, 102, 102));
         jButtonHome.setText("HOME");
         jButtonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, -1, -1));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 70, 110, 60));
 
         jButtonAssignDeliveryAgency.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonAssignDeliveryAgency.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jButtonAssignDeliveryAgency.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonAssignDeliveryAgency.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonAssignDeliveryAgency.setText("ASSIGN");
         jButtonAssignDeliveryAgency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAssignDeliveryAgencyActionPerformed(evt);
             }
         });
-        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 380, -1, -1));
+        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 380, 110, 60));
 
-        jLabelTitle2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle2.setForeground(new java.awt.Color(255, 255, 204));
+        jLabelTitle2.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Medical Supplies Order Database");
         add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 920, -1));
@@ -133,11 +129,10 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 810, 110));
 
-        jLabelPatientName1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientName1.setForeground(new java.awt.Color(255, 255, 204));
+        jLabelPatientName1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Delivery Agency");
-        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 100, 20));
+        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 378, 160, -1));
 
         jComboBoxDeliveryAgency.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         add(jComboBoxDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, 220, -1));

@@ -89,21 +89,20 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1245, 0, 0, 89));
 
         jLabel1.setBackground(new java.awt.Color(0, 70, 169));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Employee Attendance");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 200, 891, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 30, 891, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
+        jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 280, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 40, 110, 60));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,20 +114,20 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
                 jTextFieldEmpIDActionPerformed(evt);
             }
         });
-        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 190, -1));
+        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 190, -1));
 
-        jLabelEmpID.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpID.setText("Employee ID:");
-        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 100, -1));
+        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 140, 20));
 
-        jLabelEmpName.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpName.setText("Employee Name:");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 130, -1));
-        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, 190, -1));
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 232, 170, 20));
+        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 190, -1));
 
-        jLabelDept.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
+        jLabelDept.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelDept.setText("Role:");
-        add(jLabelDept, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 100, -1));
+        add(jLabelDept, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 140, 20));
 
         jComboBoxDept.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pathologist", "Radiologist", "Technician", " ", " " }));
         jComboBoxDept.addActionListener(new java.awt.event.ActionListener() {
@@ -136,18 +135,17 @@ public class MedTechnicalEmployeeAttendance extends javax.swing.JPanel {
                 jComboBoxDeptActionPerformed(evt);
             }
         });
-        add(jComboBoxDept, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 390, 170, 30));
+        add(jComboBoxDept, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 170, 30));
 
-        jButtonView.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonView.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonView.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonView.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonView.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonView.setText("Search");
         jButtonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonViewActionPerformed(evt);
             }
         });
-        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 100, 40));
+        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 360, 100, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

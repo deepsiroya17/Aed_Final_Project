@@ -169,12 +169,13 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
+        /*
         DefaultTableModel model = (DefaultTableModel) jTableAppointment.getModel();
         model.setRowCount(0);
         ArrayList<String> user_input = check_empty_field();
         PatientAppointmentDirectory patientAppointmentDirectory = medicalServiceCentralisationEcoSystem.getPatientAppointmentDirectory();
         ArrayList<PatientAppointment> patientAppointmentList = patientAppointmentDirectory.getPatientAppointmentList();
-        
+
         Patient newPatient = new Patient();
         for(Patient patient: patientList){
             if(patient.getPatient_id().equals(user_input.get(0))){
@@ -182,7 +183,7 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
                 break;
             }
         }
-//        String current_timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        //        String current_timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 
         newPatient.setPatient_id(user_input.get(0));
         newPatient.setPatient_name(user_input.get(1));
@@ -192,25 +193,23 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         patientTest.setReport_avalaible(report_avalibility);
         patientTest.setTest_id(user_input.get(2));
         patientTest.setLabTest(labTestDirectory.findLabTestByName(user_input.get(3)));
-        
+
         ArrayList<PatientTest> patientTestList = newPatient.getPatientTestList();
-//        HashMap<String, LabTest> patientLabTest = patientTest.getPatient_test_list();
-//        
-//        patientLabTest.put(user_input.get(2), labTestDirectory.findLabTestByName(user_input.get(3)));
+        //        HashMap<String, LabTest> patientLabTest = patientTest.getPatient_test_list();
+        //
+        //        patientLabTest.put(user_input.get(2), labTestDirectory.findLabTestByName(user_input.get(3)));
         patientTestList.add(patientTest);
         newPatient.setPatientTestList(patientTestList);
         patientList.add(newPatient);
         patientDirectory.setPatientList(patientList);
         hospital.setPatientDirectory(patientDirectory);
-        
-        
+
         model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
-//        populateNewRequestsTable();
+        //        populateNewRequestsTable();
         populateTable();
-        
-        
+
         clearFields();
-        
+
     }//GEN-LAST:event_jButtonCreateActionPerformed
     /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
         
@@ -245,10 +244,10 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         user_input.add(user_contact);
         
         return user_input;
-        
+     */   
     }
     
-    */
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCreate;
