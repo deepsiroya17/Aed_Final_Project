@@ -174,7 +174,7 @@ public class AdministrativeReceptionistManagePatient extends javax.swing.JPanel 
 
         jLabelZipcode.setForeground(new java.awt.Color(255, 255, 255));
         jLabelZipcode.setText("Zipcode :");
-        add(jLabelZipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 60, 20));
+        add(jLabelZipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 260, -1, 20));
         add(jTextFieldZipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 160, -1));
 
         jTextFieldAge.addActionListener(new java.awt.event.ActionListener() {
@@ -182,16 +182,16 @@ public class AdministrativeReceptionistManagePatient extends javax.swing.JPanel 
                 jTextFieldAgeActionPerformed(evt);
             }
         });
-        add(jTextFieldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 160, -1));
+        add(jTextFieldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 160, -1));
 
         jLabelAge.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAge.setText("Age :");
-        add(jLabelAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, -1, -1));
+        add(jLabelAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 30, 20));
 
         jLabelEmergencyContactName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmergencyContactName.setText("Emergency Contact Name :");
-        add(jLabelEmergencyContactName, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
-        add(jTextFieldEmergencyContactName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 160, -1));
+        add(jLabelEmergencyContactName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, 20));
+        add(jTextFieldEmergencyContactName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 160, -1));
 
         jTextFieldEPhoneNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

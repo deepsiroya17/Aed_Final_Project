@@ -8,6 +8,7 @@ package MainCentralisationSystem;
 import CustomerSupportTeam.CustomerSupportTeamDirectory;
 import DeliveryAgency.DeliveryAgencyDirectory;
 import HospitalManagement.Hospital.HospitalDirectory;
+import HospitalManagement.Patient.PatientAppointmentDirectory;
 import HospitalManagement.Requests.RequestDirectory;
 
 import MainCentralisationSystem.Role.Role;
@@ -25,6 +26,7 @@ public class MedicalServiceCentralisationEcoSystem extends HospitalManagementEnt
     private DeliveryAgencyDirectory deliveryAgencyDirectory;
     private UserAccountDirectory userAccountDirectory;
     private RequestDirectory requestDirectory;
+    private PatientAppointmentDirectory patientAppointmentDirectory;
     
     public MedicalServiceCentralisationEcoSystem(){
         userAccountDirectory = new UserAccountDirectory();
@@ -33,6 +35,7 @@ public class MedicalServiceCentralisationEcoSystem extends HospitalManagementEnt
         customerSupportTeamDirectory = new CustomerSupportTeamDirectory();
         medSupWarehouseDirectory =  new MedSupWarehouseDirectory();
         deliveryAgencyDirectory = new DeliveryAgencyDirectory();
+        patientAppointmentDirectory = new PatientAppointmentDirectory();
     }
 
     public HospitalDirectory getHospitalDirectory() {
@@ -81,6 +84,14 @@ public class MedicalServiceCentralisationEcoSystem extends HospitalManagementEnt
 
     public void setDeliveryAgencyDirectory(DeliveryAgencyDirectory deliveryAgencyDirectory) {
         this.deliveryAgencyDirectory = deliveryAgencyDirectory;
+    }
+
+    public PatientAppointmentDirectory getPatientAppointmentDirectory() {
+        return patientAppointmentDirectory;
+    }
+
+    public void setPatientAppointmentDirectory(PatientAppointmentDirectory patientAppointmentDirectory) {
+        this.patientAppointmentDirectory = patientAppointmentDirectory;
     }
     
     
