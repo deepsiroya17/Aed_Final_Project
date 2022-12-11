@@ -140,47 +140,44 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLoginLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelLoginLayout.createSequentialGroup()
-                        .addComponent(loginJOpenChatWindow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(29, 29, 29))
-                    .addGroup(jPanelLoginLayout.createSequentialGroup()
-                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(37, 37, 37)
-                                .addComponent(loginJLabel)
-                                .addGap(5, 5, 5))
-                            .addGroup(jPanelLoginLayout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(loginJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(42, 42, 42))
-                    .addGroup(jPanelLoginLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(108, 108, 108))))
+                .addComponent(loginJOpenChatWindow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(29, 29, 29))
             .addGroup(jPanelLoginLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(passwordField)
-                    .addComponent(userNameJTextField))
-                .addGap(18, 18, 18))
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
+                        .addGap(0, 161, Short.MAX_VALUE)
+                        .addComponent(loginJLabel)
+                        .addGap(47, 47, 47))
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 54, Short.MAX_VALUE))
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(passwordField)
+                            .addComponent(userNameJTextField)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18))))
         );
+
+        jPanelLoginLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {loginJButton, logoutJButton});
+
         jPanelLoginLayout.setVerticalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLoginLayout.createSequentialGroup()
                 .addGap(101, 101, 101)
                 .addComponent(loginJOpenChatWindow, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelLoginLayout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(loginJLabel)
-                        .addGap(24, 24, 24))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(84, 84, 84)
+                .addComponent(loginJLabel)
+                .addGap(8, 8, 8)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(userNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
                 .addComponent(jLabel2)
@@ -190,8 +187,10 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                 .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(logoutJButton)
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addContainerGap(290, Short.MAX_VALUE))
         );
+
+        jPanelLoginLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {loginJButton, logoutJButton});
 
         jSplitPane1.setLeftComponent(jPanelLogin);
 
@@ -224,8 +223,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             userNameJTextField.setEnabled(false);
             passwordField.setEnabled(false);
             loginJButton.setEnabled(false);
-//            System.out.println("userAccountLogin.getEmployee().getRole().toString(): "+userAccountLogin.getEmployee().getRole().toString());
-//            if(userAccountLogin.getEmployee().getRole().toString().equals("HospitalManagement.Role.SystemAdminRole"))
+//            
             System.out.println("userAccount.getRole().toString(): "+userAccountLogin.getRole().toString());
             if(userAccountLogin.getRole().toString().equals("SystemAdmin"))
             {
@@ -350,7 +348,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         JTextArea chatarea = new JTextArea();
         JTextField chatbox = new JTextField();
         JFrame jframe = new JFrame();
-        jframe.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        jframe.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         jframe.setVisible(true);
         jframe.setResizable(false);
         jframe.setLayout(null);

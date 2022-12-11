@@ -79,12 +79,11 @@ public class MedSupWarehouseAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jSplitPane.setLeftComponent(jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(1720, 1080));
 
-        jButtonMedSupDatabase.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonMedSupDatabase.setBackground(new java.awt.Color(255, 255, 204));
         jButtonMedSupDatabase.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonMedSupDatabase.setForeground(new java.awt.Color(255, 255, 204));
         jButtonMedSupDatabase.setText("Medical Supplies Database");
         jButtonMedSupDatabase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,9 +91,8 @@ public class MedSupWarehouseAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        jButtonPlaceOrder.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonPlaceOrder.setBackground(new java.awt.Color(255, 255, 204));
         jButtonPlaceOrder.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonPlaceOrder.setForeground(new java.awt.Color(255, 255, 204));
         jButtonPlaceOrder.setText("Manage Orders");
         jButtonPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
