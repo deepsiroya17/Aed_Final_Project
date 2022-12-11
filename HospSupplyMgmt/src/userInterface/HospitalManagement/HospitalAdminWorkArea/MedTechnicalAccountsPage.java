@@ -251,7 +251,8 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         ArrayList<String> user_input = check_empty_field();
         UserAccountDirectory usersList = hospitalManagementEcoSystem.getUserAccountDirectory();
-        if(usersList.checkIfUserIsUnique(user_input.get(0))){
+        if(!user_input.isEmpty()) {
+            if(usersList.checkIfUserIsUnique(user_input.get(0))){
             
             
             if(user_input.get(2) == "Pathologist"){
@@ -291,10 +292,12 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "New Employee Information has been added.");
             model.addRow(new Object[]{userAccount,user_input.get(1),user_input.get(2),user_input.get(3)});
             clearFields();
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "This username is not available. Please select a new one.");
+            }
         }
-        else{
-            JOptionPane.showMessageDialog(this, "This username is not available. Please select a new one.");
-        }
+        
     }//GEN-LAST:event_jButtonCreateActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
@@ -427,12 +430,15 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         }
         else if(user_role.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please select a Role.");
+        } 
+        else {
+            user_input.add(user_emp_id);
+            user_input.add(user_emp_name);
+            user_input.add(user_role);
+            user_input.add(user_password);
         }
         
-        user_input.add(user_emp_id);
-        user_input.add(user_emp_name);
-        user_input.add(user_role);
-        user_input.add(user_password);
+        
         
         return user_input;
         
