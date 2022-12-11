@@ -84,22 +84,21 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1920, 1183));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Hospital Account");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 100, 706, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 102, 102));
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 20, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, 110, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -123,28 +122,31 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
 
         jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCreate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonCreate.setText("CREATE");
+        jButtonCreate.setMaximumSize(new java.awt.Dimension(100, 24));
+        jButtonCreate.setMinimumSize(new java.awt.Dimension(100, 24));
+        jButtonCreate.setPreferredSize(new java.awt.Dimension(100, 24));
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 100, 30));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 470, 110, 60));
         add(jTextFieldHospName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 280, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
         jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonUpdate.setText("UPDATE");
+        jButtonUpdate.setMaximumSize(new java.awt.Dimension(100, 24));
+        jButtonUpdate.setMinimumSize(new java.awt.Dimension(100, 24));
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 100, 30));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 110, 60));
 
-        jLabelPassword.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
@@ -164,7 +166,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         });
         add(jTextFieldHospID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 280, -1));
 
-        jLabelEmpID.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Hospital ID:");
@@ -172,22 +174,23 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
 
         jButtonRefresh.setBackground(new java.awt.Color(255, 255, 204));
         jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonRefresh.setForeground(new java.awt.Color(0, 102, 102));
         jButtonRefresh.setText("REFRESH");
+        jButtonRefresh.setMaximumSize(new java.awt.Dimension(100, 24));
+        jButtonRefresh.setMinimumSize(new java.awt.Dimension(100, 24));
         jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 470, 100, 30));
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 470, 110, 60));
 
-        jLabelEmpName.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Hospital Name:");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 120, -1));
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 252, 140, 30));
 
-        jLabelEmpName1.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabelEmpName1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpName1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName1.setText("Pincode:");
@@ -196,14 +199,15 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
 
         jButtonDelete1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonDelete1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonDelete1.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDelete1.setText("DELETE");
+        jButtonDelete1.setMaximumSize(new java.awt.Dimension(100, 24));
+        jButtonDelete1.setMinimumSize(new java.awt.Dimension(100, 24));
         jButtonDelete1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDelete1ActionPerformed(evt);
             }
         });
-        add(jButtonDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 100, 30));
+        add(jButtonDelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, 110, 60));
 
         bgdimg.setBackground(new java.awt.Color(255, 0, 0));
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/HospitalAccounts_latest.jpg"))); // NOI18N

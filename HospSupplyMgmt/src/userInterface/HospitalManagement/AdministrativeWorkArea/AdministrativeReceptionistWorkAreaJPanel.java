@@ -74,27 +74,25 @@ public class AdministrativeReceptionistWorkAreaJPanel extends javax.swing.JPanel
         jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1183));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonPatientManagement.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonPatientManagement.setFont(new java.awt.Font("Dubai Medium", 1, 24)); // NOI18N
-        jButtonPatientManagement.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonPatientManagement.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonPatientManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonPatientManagement.setText("Patient Management");
         jButtonPatientManagement.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPatientManagementActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonPatientManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 401, -1));
+        jPanel2.add(jButtonPatientManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 290, 60));
 
-        jButtonAppointmentManagement.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonAppointmentManagement.setFont(new java.awt.Font("Dubai Medium", 1, 24)); // NOI18N
-        jButtonAppointmentManagement.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonAppointmentManagement.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonAppointmentManagement.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonAppointmentManagement.setText("Appointment Management");
         jButtonAppointmentManagement.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAppointmentManagementActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonAppointmentManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 401, -1));
+        jPanel2.add(jButtonAppointmentManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 420, 290, 60));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/admin1.jpg"))); // NOI18N
         jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

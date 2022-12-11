@@ -78,6 +78,7 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         jLabelTitle.setText("All tests");
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 780, 706, -1));
 
+        jButtonHome.setBackground(new java.awt.Color(255, 255, 204));
         jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonHome.setText("HOME");
         jButtonHome.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +86,7 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 130, 130, 40));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 50, 110, 60));
 
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButtonCreate.setText("CREATE");
@@ -109,25 +110,22 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
         jButtonDelete.setText("DELETE");
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 720, -1, -1));
 
-        jLabelPatientID.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelPatientID.setText("Test Name");
-        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 104, -1));
-        add(jTextFieldTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, 280, 30));
+        jLabelPatientID.setText("Test Name:");
+        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 104, -1));
+        add(jTextFieldTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 280, 30));
 
-        jLabelPatientName.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPatientName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPatientName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelPatientName.setText("Test Price");
-        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 100, -1));
+        jLabelPatientName.setText("Test Price:");
+        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 100, -1));
 
-        jLabelTitle2.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabelTitle2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitle2.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Hospital Test Database");
-        add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 706, -1));
-        add(jTextFieldTestPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 280, 30));
+        add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 706, -1));
+        add(jTextFieldTestPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 230, 280, 30));
 
         jTableTestDB.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

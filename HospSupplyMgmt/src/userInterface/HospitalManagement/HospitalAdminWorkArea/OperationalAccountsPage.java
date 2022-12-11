@@ -97,18 +97,17 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Operational Accounts");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 706, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 706, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 204));
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 20, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 80, 110, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -128,91 +127,87 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableEmployee);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 610, 580, 120));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 580, 120));
 
         jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCreate.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 110, 40));
-        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 270, -1));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, 120, 60));
+        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 270, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 490, 110, 40));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 120, 60));
 
-        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
-        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 140, -1));
+        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, 170, -1));
 
         jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPasswordActionPerformed(evt);
             }
         });
-        add(jTextFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 270, -1));
+        add(jTextFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 320, 270, -1));
 
         jTextFieldEmpID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldEmpIDActionPerformed(evt);
             }
         });
-        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 270, -1));
+        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 270, -1));
 
-        jLabelRole.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabelRole.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelRole.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelRole.setText("Role:");
-        add(jLabelRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 140, -1));
+        add(jLabelRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 170, -1));
 
         jComboBoxRole.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jComboBoxRole.setForeground(new java.awt.Color(0, 102, 102));
         jComboBoxRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor", "Nurse" }));
-        add(jComboBoxRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 90, -1));
+        add(jComboBoxRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, 90, -1));
 
-        jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Employee ID:");
-        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 140, -1));
+        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 170, -1));
 
         jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonDelete.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonDelete.setText("DELETE");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 110, 40));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 440, 120, 60));
 
-        jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Employee Name:");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 140, -1));
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 170, -1));
 
         jButtonRefresh.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonRefresh.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonRefresh.setText("REFRESH");
         jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 110, 40));
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 440, 120, 60));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/acc1.jpg"))); // NOI18N
         add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -270, -1, -1));

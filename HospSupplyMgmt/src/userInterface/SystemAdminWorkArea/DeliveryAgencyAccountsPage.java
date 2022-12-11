@@ -81,21 +81,20 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Delivery Accounts");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 810, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 120, 810, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 102, 102));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 110, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -123,35 +122,33 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableEmployee);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 500, 760, 170));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 760, 170));
 
         jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonCreate.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 140, 40));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 120, 60));
         add(jTextFieldTeamName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 351, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 140, 40));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 120, 60));
 
-        jLabelPassword.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
-        jLabelPassword.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPassword.setText("Password:");
-        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 130, -1));
+        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 130, -1));
 
         jTextFieldTeamPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,37 +164,35 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         });
         add(jTextFieldTeamID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 351, -1));
 
-        jLabelEmpID.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
-        jLabelEmpID.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpID.setText("Delivery ID:");
         add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 130, -1));
 
         jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonDelete.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonDelete.setText("DELETE");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 140, 40));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 120, 60));
 
-        jLabelEmpName.setFont(new java.awt.Font("Dubai Medium", 1, 16)); // NOI18N
-        jLabelEmpName.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName.setText("Delivery Name:");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 140, -1));
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 140, -1));
 
         jButtonRefresh.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonRefresh.setForeground(new java.awt.Color(0, 102, 102));
+        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonRefresh.setText("REFRESH");
         jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 140, 40));
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 120, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/DeliveryAgencyAccountsPage_1920x1183.jpeg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1920, 1200));
