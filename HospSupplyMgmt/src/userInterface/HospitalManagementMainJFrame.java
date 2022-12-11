@@ -22,6 +22,7 @@ import HospitalManagement.Hospital.HospitalDirectory;
 import MedicalEquipmentWarehouse.MedSupWarehouse;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -38,6 +39,7 @@ import javax.swing.JTextField;
 import userInterface.CustomerSupport.CustomerSupportMemberWorkArea.CustomerSupportMemberWorkAreaJPanel;
 import userInterface.DeliveryAgency.DeliveryAgencyOrderDatabase;
 import userInterface.HospitalManagement.AdministrativeWorkArea.AdministrativeReceptionistWorkAreaJPanel;
+import userInterface.HospitalManagement.AdministrativeWorkArea.AdminstrativeReceptionistAppointment;
 import userInterface.HospitalManagement.AdministrativeWorkArea.MedSuppEquipPatient;
 import userInterface.HospitalManagement.MedTechnicalWorkArea.MedTechnicalWorkAreaJPanel;
 import userInterface.HospitalManagement.MedicalSuppliesWorkArea.MedSupAdminWorkAreaJPanel;
@@ -291,8 +293,8 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("FrontDeskOperator"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                AdministrativeReceptionistWorkAreaJPanel AdminReceptionist = new AdministrativeReceptionistWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
-                jPanelWorkArea.add("AdminReceptionist",AdminReceptionist);
+                AdminstrativeReceptionistAppointment adminstrativeReceptionistAppointment = new AdminstrativeReceptionistAppointment(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
+                jPanelWorkArea.add("AdminstrativeReceptionistAppointment",adminstrativeReceptionistAppointment);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
             }
@@ -344,6 +346,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
 
     private void loginJOpenChatWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJOpenChatWindowActionPerformed
         // TODO add your handling code here:
+        
         ArrayList<String> user_input = new ArrayList<String>();
         JTextArea chatarea = new JTextArea();
         JTextField chatbox = new JTextField();
@@ -360,11 +363,12 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         //For chat area
         chatarea.setSize(500, 400);
         chatarea.setLocation(2,2);
+        chatarea.setTabSize(12);
+        //chatarea.setBackground(Color.);
         
         // for input area
         chatbox.setSize(540,30);
         chatbox.setLocation(2,500);
-        
         chatbox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
