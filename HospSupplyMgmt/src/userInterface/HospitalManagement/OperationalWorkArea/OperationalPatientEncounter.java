@@ -238,35 +238,35 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonDownloadPrescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDownloadPrescriptionActionPerformed
-       Document document = new Document();
-       ArrayList<String> user_input = check_empty_field();
-      try
-      {
-         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("D:\\PatientEncounter\\Patients.pdf"));
-         document.open();
-         document.add(new Paragraph("\n\nName : " + user_input.get(1)));
-         document.add(new Paragraph("\n\nEmail : " + user_input.get(2)));
-         document.add(new Paragraph("\n\nPhone no : " +user_input.get(4)));
-         document.add(new Paragraph("\n\nGender : " +user_input.get(3)));
-         document.add(new Paragraph("\n\nAge : " +user_input.get(5)));
-         document.add(new Paragraph("\n\nHeight : " +user_input.get(6)));
-         document.add(new Paragraph("\n\nWeight : " +user_input.get(7)));
-         document.add(new Paragraph("\n\nBMI : " +user_input.get(8)));
-         document.add(new Paragraph("\n\nTemperature : " +user_input.get(9)));
-         document.add(new Paragraph("\n\nBlood Group : " +user_input.get(10)));
-         document.add(new Paragraph("\n\nBlood Pressure : " +user_input.get(11)));
-         document.add(new Paragraph("\n\nPulse : " +user_input.get(12)));
-         document.add(new Paragraph("\n\nReason for Visit : " +user_input.get(13)));
-         document.add(new Paragraph("\n\nDiagnosis and Prescription : : " +user_input.get(14)));
-         document.close();
-         writer.close();
-      } catch (DocumentException e2)
-      {
-         e2.printStackTrace();
-      } catch (FileNotFoundException e1)
-      {
-         e1.printStackTrace();
-      }
+//       Document document = new Document();
+//       ArrayList<String> user_input = check_empty_field();
+//      try
+//      {
+//         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("D:\\PatientEncounter\\Patients.pdf"));
+//         document.open();
+//         document.add(new Paragraph("\n\nName : " + user_input.get(1)));
+//         document.add(new Paragraph("\n\nEmail : " + user_input.get(2)));
+//         document.add(new Paragraph("\n\nPhone no : " +user_input.get(4)));
+//         document.add(new Paragraph("\n\nGender : " +user_input.get(3)));
+//         document.add(new Paragraph("\n\nAge : " +user_input.get(5)));
+//         document.add(new Paragraph("\n\nHeight : " +user_input.get(6)));
+//         document.add(new Paragraph("\n\nWeight : " +user_input.get(7)));
+//         document.add(new Paragraph("\n\nBMI : " +user_input.get(8)));
+//         document.add(new Paragraph("\n\nTemperature : " +user_input.get(9)));
+//         document.add(new Paragraph("\n\nBlood Group : " +user_input.get(10)));
+//         document.add(new Paragraph("\n\nBlood Pressure : " +user_input.get(11)));
+//         document.add(new Paragraph("\n\nPulse : " +user_input.get(12)));
+//         document.add(new Paragraph("\n\nReason for Visit : " +user_input.get(13)));
+//         document.add(new Paragraph("\n\nDiagnosis and Prescription : : " +user_input.get(14)));
+//         document.close();
+//         writer.close();
+//      } catch (DocumentException e2)
+//      {
+//         e2.printStackTrace();
+//      } catch (FileNotFoundException e1)
+//      {
+//         e1.printStackTrace();
+//      }
     }//GEN-LAST:event_jButtonDownloadPrescriptionActionPerformed
 
     private void jButtonEmailPrescription1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmailPrescription1ActionPerformed
