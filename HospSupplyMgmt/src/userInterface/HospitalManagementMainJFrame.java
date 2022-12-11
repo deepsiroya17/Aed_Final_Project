@@ -126,8 +126,8 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         });
 
         loginJOpenChatWindow.setBackground(new java.awt.Color(255, 255, 204));
-        loginJOpenChatWindow.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        loginJOpenChatWindow.setText("Chat with us");
+        loginJOpenChatWindow.setFont(new java.awt.Font("Poor Richard", 3, 24)); // NOI18N
+        loginJOpenChatWindow.setText("Support Chat");
         loginJOpenChatWindow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginJOpenChatWindowActionPerformed(evt);
@@ -139,56 +139,58 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         jPanelLoginLayout.setHorizontalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLoginLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(26, 26, 26)
                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
-                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(userNameJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18))))
                     .addGroup(jPanelLoginLayout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(loginJLabel)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(loginJOpenChatWindow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(29, 29, 29))
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(37, 37, 37)
+                                .addComponent(loginJLabel)
+                                .addGap(5, 5, 5))
+                            .addGroup(jPanelLoginLayout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(loginJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(42, 42, 42))
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(108, 108, 108))))
             .addGroup(jPanelLoginLayout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 82, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(loginJOpenChatWindow, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
-            .addGroup(jPanelLoginLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(logoutJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(passwordField)
+                    .addComponent(userNameJTextField))
+                .addGap(18, 18, 18))
         );
         jPanelLoginLayout.setVerticalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLoginLayout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(logoutJButton)
+                .addGap(101, 101, 101)
+                .addComponent(loginJOpenChatWindow, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(loginJLabel)
+                        .addGap(24, 24, 24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(jLabel1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(userNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(loginJLabel)
-                .addGap(44, 44, 44)
-                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
+                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(userNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addComponent(loginJButton)
-                .addGap(49, 49, 49)
-                .addComponent(loginJOpenChatWindow)
-                .addContainerGap(297, Short.MAX_VALUE))
+                .addComponent(logoutJButton)
+                .addContainerGap(296, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanelLogin);
@@ -382,18 +384,42 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                     
                     bot("So how can I help you?",chatarea);
                 }
-                if(gtext.contains("blood") || gtext.contains("test")){
+                if(gtext.contains("blood") && gtext.contains("test")){
                     bot("Okay. Please tell me the test date.",chatarea);
                     
                 }
                 if(gtext.contains("dec")){
-                    bot("Okay. you have scheduled a test date.",chatarea);
+                    bot("Okay. you have successfully scheduled a test date.",chatarea);
                     
                 }
-                
-                else if(gtext.contains("equipment") && gtext.contains("book")){
-                    bot("Okay. Please tell me equipments and quantity.",chatarea);
+                if(gtext.contains("okay")){
+                    bot("Is there anything else that you need help with?",chatarea);
+                    
+                }
+                if(gtext.contains("no")){
+                    bot("Thanyou for visiting the support chat. Have a great day!",chatarea);
+                    
+                }
+                else if(gtext.contains("yes")){
+                    bot("Okay. Please tell me what help do you need?",chatarea);
                     if(gtext.contains("oxygen")){
+                    
+                    
+                    bot("Okay. Please tell me what quantity do you need?",chatarea);
+                    
+                
+                if(gtext.contains("dec")){
+                    bot("Okay. you have successfully scheduled a test date.",chatarea);
+                    
+                }
+                if(gtext.contains("okay")){
+                    bot("Is there anything else that you need help with?",chatarea);
+                    
+                }
+                if(gtext.contains("no")){
+                    bot("Thanyou for visiting the support chat. Have a great day!",chatarea);
+                    
+                }
                     
                     bot("Thankyou for ordering",chatarea);
                 }
@@ -409,27 +435,8 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                         bot("Okay. What equipment do you want to order?",chatarea);
                     }
                 }
-                else if(gtext.contains("blood")){
-//                    SimpleDateFormat formatter = new SimpleDateFormat("MM.dd.yyyy", Locale.ENGLISH);
-//                    Date date = formatter.parse(gtext);
-                    user_input.add("MedicalTest");
-                    user_input.add(gtext);
-                    bot("A request has been raised. You'll receive an update shortly from the hospital.",chatarea);
-                    CustomerSupportMemberWorkAreaJPanel customerSupportMemberWorkAreaJPanel = new CustomerSupportMemberWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem);
-                    customerSupportMemberWorkAreaJPanel.raise_request(user_input);
-                }  
-                else if(gtext.contains("bed") || gtext.contains("oxygen")){
-//                    SimpleDateFormat formatter = new SimpleDateFormat("MM.dd.yyyy", Locale.ENGLISH);
-//                    Date date = formatter.parse(gtext);
-                    user_input.add("MedicalEquipment");
-                    user_input.add(gtext);
-                    user_input.add("BOT");
-                    bot("A request has been raised. You'll receive an update shortly from the hospital.",chatarea);
-                    CustomerSupportMemberWorkAreaJPanel customerSupportMemberWorkAreaJPanel = new CustomerSupportMemberWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem);
-                    customerSupportMemberWorkAreaJPanel.raise_request(user_input);
-                }  
+               
             }
-   
         });
         
     }//GEN-LAST:event_loginJOpenChatWindowActionPerformed

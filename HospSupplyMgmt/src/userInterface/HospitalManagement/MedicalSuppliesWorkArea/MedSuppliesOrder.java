@@ -259,12 +259,15 @@ public class MedSuppliesOrder extends javax.swing.JPanel {
 
         for(MedSupWarehouse medSupWarehouse: medSupWarehouseList){
             MedSupEquipDirectory medSupEquipDirectory = medSupWarehouse.getMedSupEquipDirectory();
-            ArrayList<MedSupEquip> medSupEquipList = medSupEquipDirectory.getMedSupEquipList();
-            for(MedSupEquip medSupEquip: medSupEquipList){
-                if(medSupEquip.getMedSupEquip_name().contains(medSupEquip_name)){
-                    model.addRow(new Object[]{medSupEquip,medSupEquip.getMedSupEquip_price(),medSupEquip.getMedSupEquip_quantity(),medSupEquip.getMedSupWarehouseId()});
+            if(medSupEquipDirectory!= null){
+                ArrayList<MedSupEquip> medSupEquipList = medSupEquipDirectory.getMedSupEquipList();
+                for(MedSupEquip medSupEquip: medSupEquipList){
+                    if(medSupEquip.getMedSupEquip_name().contains(medSupEquip_name)){
+                        model.addRow(new Object[]{medSupEquip,medSupEquip.getMedSupEquip_price(),medSupEquip.getMedSupEquip_quantity(),medSupEquip.getMedSupWarehouseId()});
+                    }
                 }
             }
+            
         }
         
         clearFields();
