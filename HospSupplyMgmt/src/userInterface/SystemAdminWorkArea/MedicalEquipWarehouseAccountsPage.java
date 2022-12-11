@@ -345,12 +345,12 @@ public class MedicalEquipWarehouseAccountsPage extends javax.swing.JPanel {
         else if(user_password.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter a Password.");
         }
-        
+        else {
         
         user_input.add(user_emp_id);
         user_input.add(user_emp_name);
         user_input.add(user_password);
-        
+        }
         return user_input;
         
     }
@@ -398,20 +398,22 @@ public class MedicalEquipWarehouseAccountsPage extends javax.swing.JPanel {
     private void addDefaultvalues() {
         
         UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        userAccount = new UserAccount("warehouse121", "pass",new MedSupWarehouseAdminRole());
-        MedSupWarehouse medSupWarehouse = new MedSupWarehouse("warehouse121","warehouse1");
-        medSupWarehouseDirectory = medicalServiceCentralisationEcoSystem.getMedSupWarehouseDirectory();
-        medSupWarehouseDirectory.addMedSupWarehouse(medSupWarehouse);
-        userAccount.setMedSupWarehouse(medSupWarehouse);
+        
         if(usersList.checkIfUserIsUnique("warehouse121")){
+            userAccount = new UserAccount("warehouse121", "pass",new MedSupWarehouseAdminRole());
+            MedSupWarehouse medSupWarehouse = new MedSupWarehouse("warehouse121","warehouse1");
+            medSupWarehouseDirectory = medicalServiceCentralisationEcoSystem.getMedSupWarehouseDirectory();
+            medSupWarehouseDirectory.addMedSupWarehouse(medSupWarehouse);
+            userAccount.setMedSupWarehouse(medSupWarehouse);
             usersList.addUserAccount(userAccount);
         }
         
-        userAccount = new UserAccount("warehouse122", "pass",new MedSupWarehouseAdminRole());
-        medSupWarehouse = new MedSupWarehouse("warehouse122","warehouse2");
-        medSupWarehouseDirectory.addMedSupWarehouse(medSupWarehouse);
-        userAccount.setMedSupWarehouse(medSupWarehouse);
+        
         if(usersList.checkIfUserIsUnique("warehouse122")){
+            userAccount = new UserAccount("warehouse122", "pass",new MedSupWarehouseAdminRole());
+            MedSupWarehouse medSupWarehouse = new MedSupWarehouse("warehouse122","warehouse2");
+            medSupWarehouseDirectory.addMedSupWarehouse(medSupWarehouse);
+            userAccount.setMedSupWarehouse(medSupWarehouse);
             usersList.addUserAccount(userAccount);
         }    
     }
