@@ -6,9 +6,16 @@
 package userInterface.HospitalManagement.AdministrativeWorkArea;
 
 
+import HospitalManagement.Hospital.Hospital;
+import HospitalManagement.Patient.PatientAppointment;
+import HospitalManagement.Patient.PatientAppointmentDirectory;
+import MainCentralisationSystem.MedicalServiceCentralisationEcoSystem;
+import MainCentralisationSystem.UserAccount;
 import userInterface.SystemAdminWorkArea.*;
 import java.awt.CardLayout;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -23,22 +30,23 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
     /**
      * Creates new form OperationalAccountsPage
      */
-    /*JPanel userProcessContainer;
-    EcoSystem ecosystem;
-    CustomerDirectory customerDirectory;
+    JPanel userProcessContainer;
+    MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
+    PatientAppointment patientAppointment;
+    PatientAppointmentDirectory patientAppointmentDirectory;
     UserAccount userAccount;
-    Customer customer;
-    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    public AdminstrativeReceptionistAppointment(JPanel userProcessContainer , EcoSystem ecosystem) {
+    Hospital hospital;
+    
+    public AdminstrativeReceptionistAppointment(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
         this.userProcessContainer = userProcessContainer;
-        this.ecosystem = ecosystem;
-//        this.ecosystem = dB4OUtil.retrieveSystem();
-        if(ecosystem.getCustomerDirectory() == null)
-           ecosystem.setCustomerDirectory(new CustomerDirectory());
+        this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;     
+        this.hospital = hospital;
+        if(medicalServiceCentralisationEcoSystem.getPatientAppointmentDirectory() == null)
+           medicalServiceCentralisationEcoSystem.setPatientAppointmentDirectory(new PatientAppointmentDirectory());
         initComponents();
         populateTable();
     }
-*/
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,7 +57,6 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabelTitle = new javax.swing.JLabel();
-        jButtonHome = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableAppointment = new javax.swing.JTable();
         jButtonCreate = new javax.swing.JButton();
@@ -65,26 +72,17 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         jLabelDepartment = new javax.swing.JLabel();
         jComboBoxDepartment = new javax.swing.JComboBox<>();
         jLabelDoctorName = new javax.swing.JLabel();
-        jButtonSearch = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jDateAppointmentDate = new com.toedter.calendar.JDateChooser();
+        jTextFieldAppointmentTime = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitle.setText("APPOINTMENT MANAGMENT");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
-
-        jButtonHome.setBackground(new java.awt.Color(0, 70, 169));
-        jButtonHome.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButtonHome.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonHome.setText("HOME");
-        jButtonHome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonHomeActionPerformed(evt);
-            }
-        });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1045, 52, -1, -1));
+        jLabelTitle.setText("APPOINTMENT MANAGEMENT");
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 50, 760, -1));
 
         jTableAppointment.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -98,22 +96,27 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "Patient Name", "Doctor", "Department", "Appoitment Date", "Appointment Time"
+                "Patient ID", "Patient Name", "Doctor", "Department", "Appointment Date", "Appointment Time"
             }
         ));
         jScrollPane1.setViewportView(jTableAppointment);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 680, 787, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, 787, 160));
 
         jButtonCreate.setText("CREATE");
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, -1, -1));
+        jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCreateActionPerformed(evt);
+            }
+        });
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, -1, -1));
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 140, -1));
 
         jButtonUpdate.setText("UPDATE");
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 480, -1, -1));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, -1, -1));
 
         jButtonView.setText("VIEW");
-        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 560, 70, -1));
+        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 470, 70, -1));
 
         jTextFieldPatientID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,14 +125,14 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         });
         add(jTextFieldPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 198, 140, -1));
 
-        jLabelPatientID.setText("Patient ID:");
-        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 198, 104, -1));
+        jLabelPatientID.setText("Patient ID :");
+        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 70, 20));
 
         jButtonDelete.setText("DELETE");
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, -1, -1));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, -1, -1));
 
         jLabelPatientName.setText("Patient Name :");
-        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
+        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, 20));
 
         jTextFieldDoctorName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,27 +141,23 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         });
         add(jTextFieldDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 140, -1));
 
-        jLabelAppointmentTime.setText("Appointment Time :");
-        add(jLabelAppointmentTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 104, -1));
+        jLabelAppointmentTime.setText("Appointment Date :");
+        add(jLabelAppointmentTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 367, 120, 20));
 
         jLabelDepartment.setText("Department :");
-        add(jLabelDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 104, -1));
+        add(jLabelDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 104, 20));
 
         jComboBoxDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiology", "Radiology", "Ayurvedic", "Dermetology", "Optometry", "Genral Surgery", "Plastic Surgeon ", "Obstetrics", "Orthopedics", "Psychiatry", "Neurosurgery", "Hematology", "Pedatrics", "Oncology", "Stomatology", "Opthalmology", "Virology", "Bio-Chemistry" }));
-        add(jComboBoxDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, -1, -1));
+        add(jComboBoxDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 140, -1));
 
         jLabelDoctorName.setText("Doctor Name :");
-        add(jLabelDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 104, -1));
+        add(jLabelDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 104, 20));
 
-        jButtonSearch.setText("SEARCH");
-        add(jButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, -1, -1));
+        jLabel1.setText("Appointment Time :");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 130, 20));
+        add(jDateAppointmentDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 170, 30));
+        add(jTextFieldAppointmentTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 140, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
-//        CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-//            crdLyt.show(userProcessContainer,"Sysadmin");
-    }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jTextFieldPatientIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientIDActionPerformed
         // TODO add your handling code here:
@@ -167,6 +166,52 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
     private void jTextFieldDoctorNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDoctorNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDoctorNameActionPerformed
+
+    private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) jTableAppointment.getModel();
+        model.setRowCount(0);
+        ArrayList<String> user_input = check_empty_field();
+        PatientAppointmentDirectory patientAppointmentDirectory = medicalServiceCentralisationEcoSystem.getPatientAppointmentDirectory();
+        ArrayList<PatientAppointment> patientAppointmentList = patientAppointmentDirectory.getPatientAppointmentList();
+        
+        Patient newPatient = new Patient();
+        for(Patient patient: patientList){
+            if(patient.getPatient_id().equals(user_input.get(0))){
+                newPatient = patient;
+                break;
+            }
+        }
+//        String current_timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+
+        newPatient.setPatient_id(user_input.get(0));
+        newPatient.setPatient_name(user_input.get(1));
+        newPatient.setPatient_email(user_input.get(5));
+        PatientTest patientTest = new PatientTest();
+        patientTest.setTest_date(user_input.get(4));
+        patientTest.setReport_avalaible(report_avalibility);
+        patientTest.setTest_id(user_input.get(2));
+        patientTest.setLabTest(labTestDirectory.findLabTestByName(user_input.get(3)));
+        
+        ArrayList<PatientTest> patientTestList = newPatient.getPatientTestList();
+//        HashMap<String, LabTest> patientLabTest = patientTest.getPatient_test_list();
+//        
+//        patientLabTest.put(user_input.get(2), labTestDirectory.findLabTestByName(user_input.get(3)));
+        patientTestList.add(patientTest);
+        newPatient.setPatientTestList(patientTestList);
+        patientList.add(newPatient);
+        patientDirectory.setPatientList(patientList);
+        hospital.setPatientDirectory(patientDirectory);
+        
+        
+        model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
+//        populateNewRequestsTable();
+        populateTable();
+        
+        
+        clearFields();
+        
+    }//GEN-LAST:event_jButtonCreateActionPerformed
     /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
         
         customer.getUserAccount().setPassword(user_input.get(1));
@@ -208,11 +253,11 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCreate;
     private javax.swing.JButton jButtonDelete;
-    private javax.swing.JButton jButtonHome;
-    private javax.swing.JButton jButtonSearch;
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JButton jButtonView;
     private javax.swing.JComboBox<String> jComboBoxDepartment;
+    private com.toedter.calendar.JDateChooser jDateAppointmentDate;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAppointmentTime;
     private javax.swing.JLabel jLabelDepartment;
     private javax.swing.JLabel jLabelDoctorName;
@@ -221,26 +266,75 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
     private javax.swing.JLabel jLabelTitle;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableAppointment;
+    private javax.swing.JTextField jTextFieldAppointmentTime;
     private javax.swing.JTextField jTextFieldDoctorName;
     private javax.swing.JTextField jTextFieldPatientID;
     private javax.swing.JTextField jTextFieldPatientName;
     // End of variables declaration//GEN-END:variables
-/*
+
+    private void clearFields(){
+            jTextFieldPatientID.setText("");
+            jTextFieldPatientName.setText("");
+            jTextFieldDoctorName.setText("");
+            jComboBoxDepartment.setSelectedItem("");
+            jTextFieldAppointmentTime.setText("");            
+        }
+    
+    private ArrayList<String> check_empty_field() {
+        
+        ArrayList<String> user_input = new ArrayList<>();
+        String user_patient_id = jTextFieldPatientID.getText();
+        String user_patient_name = jTextFieldPatientName.getText();
+        String user_patient_doctor = jTextFieldDoctorName.getText();
+        String user_patient_department = (String) jComboBoxDepartment.getSelectedItem();
+        Date date = jDateAppointmentDate.getDate();
+        String user_patient_date = new SimpleDateFormat("MM.dd.yyyy").format(date);
+        String user_patient_time = jTextFieldAppointmentTime.getText();
+        
+        if(user_patient_id.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Patient ID can't be left empty.");
+        }
+        else if(user_patient_name.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Patient Name can't be left empty.");
+        }
+        else if(user_patient_doctor.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Doctor Name can't be left empty");
+        }
+
+        else if(user_patient_department.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please choose a department.");
+        }
+        else if(user_patient_date.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter a test date.");
+        }
+        else if(user_patient_time.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please enter a test time.");
+        }
+        
+        
+        user_input.add(user_patient_id);
+        user_input.add(user_patient_name);
+        user_input.add(user_patient_doctor);
+        user_input.add(user_patient_department);
+        user_input.add(user_patient_date);
+        user_input.add(user_patient_time);
+        
+        
+        return user_input;
+    }
+    
     private void populateTable() {
         
-        customerDirectory = ecosystem.getCustomerDirectory();
-        ArrayList<Customer> customers = customerDirectory.getCustomerList();
-        DefaultTableModel model = (DefaultTableModel) customersTable.getModel();
+        patientAppointmentDirectory = medicalServiceCentralisationEcoSystem.getPatientAppointmentDirectory();
+        ArrayList<PatientAppointment> appointments = patientAppointmentDirectory.getPatientAppointmentList();
+        DefaultTableModel model = (DefaultTableModel) jTableAppointment.getModel();
         model.setRowCount(0);
-//        DefaultComboBoxModel dc = new DefaultComboBoxModel();
         
-        for(Customer c: customers)
+        for(PatientAppointment a: appointments)
         {
-            model.addRow(new Object[]{c,c.getUserAccount().getPassword(), c.getCustomerPhone()});
-//            dc.addElement(c.getCustomerName());
+            model.addRow(new Object[]{a,a.getPatient_id(), a.getPatient_name(), a.getDoctor_name(), a.getDepartment(), a.getAppointmentDate(), a.getAppointmentTime()});
         }
-        customersTable.setModel(model);
-//        listCustomers.setModel(dc);
-        dB4OUtil.storeSystem(ecosystem);
-    }*/
+        jTableAppointment.setModel(model);
+
+    }
 }
