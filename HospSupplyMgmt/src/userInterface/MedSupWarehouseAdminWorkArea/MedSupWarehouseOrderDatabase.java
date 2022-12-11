@@ -66,28 +66,21 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
 
         jLabelTitle = new javax.swing.JLabel();
         jButtonHome = new javax.swing.JButton();
-        jButtonUpdate = new javax.swing.JButton();
         jButtonAssignDeliveryAgency = new javax.swing.JButton();
-        jLabelPatientID = new javax.swing.JLabel();
-        jTextFieldMedSupEquipName = new javax.swing.JTextField();
-        jLabelPatientName = new javax.swing.JLabel();
         jLabelTitle2 = new javax.swing.JLabel();
-        jTextFieldMedSupEquipPrice = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableNewOrders = new javax.swing.JTable();
         jLabelPatientName1 = new javax.swing.JLabel();
-        jTextFieldMedSupEquipQuantity = new javax.swing.JTextField();
         jComboBoxDeliveryAgency = new javax.swing.JComboBox<>();
-        jLabelPatientName2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabelTitle.setForeground(new java.awt.Color(255, 255, 204));
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("New Orders");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 706, -1));
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 706, -1));
 
         jButtonHome.setBackground(new java.awt.Color(255, 255, 204));
         jButtonHome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -100,17 +93,6 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
         });
         add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, -1, -1));
 
-        jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonUpdate.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
-        jButtonUpdate.setText("UPDATE");
-        jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonUpdateActionPerformed(evt);
-            }
-        });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 230, -1, -1));
-
         jButtonAssignDeliveryAgency.setBackground(new java.awt.Color(255, 255, 204));
         jButtonAssignDeliveryAgency.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         jButtonAssignDeliveryAgency.setForeground(new java.awt.Color(0, 102, 102));
@@ -120,39 +102,13 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
                 jButtonAssignDeliveryAgencyActionPerformed(evt);
             }
         });
-        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 600, -1, -1));
-
-        jLabelPatientID.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientID.setForeground(new java.awt.Color(255, 255, 204));
-        jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelPatientID.setText("Medical Equipment Name");
-        add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 160, 20));
-
-        jTextFieldMedSupEquipName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMedSupEquipNameActionPerformed(evt);
-            }
-        });
-        add(jTextFieldMedSupEquipName, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 200, 270, -1));
-
-        jLabelPatientName.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientName.setForeground(new java.awt.Color(255, 255, 204));
-        jLabelPatientName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelPatientName.setText("Medical Equipment Price");
-        add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 170, 20));
+        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 380, -1, -1));
 
         jLabelTitle2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabelTitle2.setForeground(new java.awt.Color(255, 255, 204));
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Medical Supplies Order Database");
         add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 920, -1));
-
-        jTextFieldMedSupEquipPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMedSupEquipPriceActionPerformed(evt);
-            }
-        });
-        add(jTextFieldMedSupEquipPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 270, -1));
 
         jTableNewOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -175,29 +131,16 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableNewOrders);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 800, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 810, 110));
 
         jLabelPatientName1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         jLabelPatientName1.setForeground(new java.awt.Color(255, 255, 204));
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Delivery Agency");
-        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 600, 100, 20));
-
-        jTextFieldMedSupEquipQuantity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMedSupEquipQuantityActionPerformed(evt);
-            }
-        });
-        add(jTextFieldMedSupEquipQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 270, -1));
+        add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 100, 20));
 
         jComboBoxDeliveryAgency.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        add(jComboBoxDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 600, 200, -1));
-
-        jLabelPatientName2.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientName2.setForeground(new java.awt.Color(255, 255, 204));
-        jLabelPatientName2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelPatientName2.setText("Medical Equipment Quantity");
-        add(jLabelPatientName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 180, 20));
+        add(jComboBoxDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, 220, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
@@ -206,22 +149,6 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
         crdLyt.show(userProcessContainer,"medSupWarehouseAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButtonHomeActionPerformed
-
-    private void jTextFieldMedSupEquipNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMedSupEquipNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMedSupEquipNameActionPerformed
-
-    private void jTextFieldMedSupEquipPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMedSupEquipPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMedSupEquipPriceActionPerformed
-
-    private void jTextFieldMedSupEquipQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMedSupEquipQuantityActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMedSupEquipQuantityActionPerformed
-
-    private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonUpdateActionPerformed
 
     private void jButtonAssignDeliveryAgencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAssignDeliveryAgencyActionPerformed
         // TODO add your handling code here:
@@ -238,26 +165,14 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAssignDeliveryAgency;
     private javax.swing.JButton jButtonHome;
-    private javax.swing.JButton jButtonUpdate;
     private javax.swing.JComboBox<String> jComboBoxDeliveryAgency;
-    private javax.swing.JLabel jLabelPatientID;
-    private javax.swing.JLabel jLabelPatientName;
     private javax.swing.JLabel jLabelPatientName1;
-    private javax.swing.JLabel jLabelPatientName2;
     private javax.swing.JLabel jLabelTitle;
     private javax.swing.JLabel jLabelTitle2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableNewOrders;
-    private javax.swing.JTextField jTextFieldMedSupEquipName;
-    private javax.swing.JTextField jTextFieldMedSupEquipPrice;
-    private javax.swing.JTextField jTextFieldMedSupEquipQuantity;
     // End of variables declaration//GEN-END:variables
 
-    private void clearFields() {
-        jTextFieldMedSupEquipName.setText("");
-        jTextFieldMedSupEquipPrice.setText("");
-        jTextFieldMedSupEquipQuantity.setText("");
-    }
 
     private void addneworderstotable() {
         
