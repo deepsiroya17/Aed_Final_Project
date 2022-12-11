@@ -309,11 +309,35 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
             return;
         }
         
-        RequestDirectory requestList = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         DefaultTableModel model = (DefaultTableModel) jTableRequests.getModel();
         Request selectedReq = (Request) model.getValueAt(selected_row_ix, 0);
+        RequestDirectory requestDirectory = medicalServiceCentralisationEcoSystem.getRequestDirectory();
+        ArrayList<Request> requestList = requestDirectory.getRequestList();
         
         
+//        Request updateobj = requestList.UpdateReq(selectedReq.getRequestList());
+        
+        
+        for(Request request: requestList)
+            {   
+                if(request.getCustomer_name().equals(selectedReq.getCustomer_name())) {
+                    
+                    ArrayList<String> user_input = check_empty_field();
+                    
+                    model.setValueAt(user_input.get(0), selected_row_ix, 0);
+                    model.setValueAt(user_input.get(1), selected_row_ix, 1);
+                    model.setValueAt(user_input.get(2), selected_row_ix, 2);
+                    model.setValueAt(user_input.get(3), selected_row_ix, 3);
+                    model.setValueAt(user_input.get(6), selected_row_ix, 6);
+                    
+                    requestDirectory.updateReq(set_user_input_values(request, user_input));
+                }
+                    
+                
+
+            }
+        
+
 //        UserAccount select_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0); 
 //        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
 ////        ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
@@ -361,6 +385,19 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
+    private Request set_user_input_values(Request request, ArrayList<String> user_input) {
+//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
+//        userAccount.getEmployee().setEmployee_name(user_input.get(1));
+        request.setCustomer_name(user_input.get(0));
+        request.setCustomer_phone(user_input.get(1));
+        request.setCustomer_email(user_input.get(2));
+        request.setCustomer_pincode(user_input.get(3));
+        request.setRequest_description(user_input.get(6));
+        
+        return request;
+    }
+
+      
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
         int selected_row_ix = jTableRequests.getSelectedRow();
 
@@ -448,12 +485,12 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
             request_category = "MedicalEquipment";
         }
     }//GEN-LAST:event_jRadioButtonMedEquipmentActionPerformed
-    private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
-//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
-//        userAccount.getEmployee().setEmployee_name(user_input.get(1));
-        userAccount.setPassword(user_input.get(2));
-        return userAccount;
-    }
+//    private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
+////        userAccount.getEmployee().setEmployee_id(user_input.get(0));
+////        userAccount.getEmployee().setEmployee_name(user_input.get(1));
+//        userAccount.setPassword(user_input.get(2));
+//        return userAccount;
+//    }
     private void clearFields(){
         jTextFieldCustName.setText("");
         jTextFieldCustPhone.setText("");
