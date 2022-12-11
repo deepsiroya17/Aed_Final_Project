@@ -212,8 +212,17 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         jButtonDownloadPrescription1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonDownloadPrescription1.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDownloadPrescription1.setText("Download prescription");
+        jButtonDownloadPrescription1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDownloadPrescription1ActionPerformed(evt);
+            }
+        });
         add(jButtonDownloadPrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 620, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonDownloadPrescription1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDownloadPrescription1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDownloadPrescription1ActionPerformed
     /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
         
         customer.getUserAccount().setPassword(user_input.get(1));

@@ -223,7 +223,8 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         ArrayList<String> user_input = check_empty_field();
         deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
         UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        if(usersList.checkIfUserIsUnique(user_input.get(0))){
+        if(!user_input.isEmpty()) {
+            if(usersList.checkIfUserIsUnique(user_input.get(0))){
             
 //            Employee employee = new Employee(user_input.get(0),user_input.get(1),new DeliveryAgencyAdminRole());
             
@@ -239,10 +240,12 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "New DeliveryAgency Information has been added.");
             model.addRow(new Object[]{userAccount,user_input.get(1),user_input.get(2)});
             clearFields();
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "This username is not available. Please select a new one.");
+            }
         }
-        else{
-            JOptionPane.showMessageDialog(this, "This username is not available. Please select a new one.");
-        }
+        
     }//GEN-LAST:event_jButtonCreateActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
@@ -343,12 +346,13 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         }
         else if(user_password.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter a Password.");
+        } else {
+            user_input.add(user_emp_id);
+            user_input.add(user_emp_name);
+            user_input.add(user_password);
         }
         
-        
-        user_input.add(user_emp_id);
-        user_input.add(user_emp_name);
-        user_input.add(user_password);
+     
         
         return user_input;
         
