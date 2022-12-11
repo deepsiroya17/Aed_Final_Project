@@ -417,7 +417,7 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         RequestDirectory requestDirectory = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         ArrayList<Request> requestList = requestDirectory.getRequestList();
         for(Request request: requestList){
-            if(request.getRequest_status().equals("new") && request.getCustomer_pincode().equals(hospital.getHospitalpincode()) && request.getCase_id().equals(request_id)){
+            if(request.getRequest_status().equals("new") && request.getCase_id().equals(request_id)){
                 request.setRequest_status("Completed");
             }
         }
@@ -430,7 +430,7 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         RequestDirectory requestDirectory = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         ArrayList<Request> requestList = requestDirectory.getRequestList();
         for(Request request: requestList){
-            if(request.getRequest_status().equals("new") && request.getCustomer_pincode().equals(hospital.getHospitalpincode()) && request.getRequest_category().equals("MedicalEquipment")){
+            if(request.getRequest_status().equals("new") && request.getRequest_category().equals("MedicalEquipment")){
            
                 model.addRow(new Object []{request.getCustomer_name(),request.getCustomer_phone(),request.getCustomer_email(),request.getRequest_date(),request.getCase_id(),request.getRequest_description(), request.getMode()});
             }
