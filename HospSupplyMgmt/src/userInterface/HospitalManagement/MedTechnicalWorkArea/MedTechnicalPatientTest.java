@@ -337,15 +337,15 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
     }//GEN-LAST:event_jButtonHomeActionPerformed
 
     private void jButtonEmailReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmailReportActionPerformed
-//        try {
-//            // TODO add your handling code here:
-//            SendMail sendMail = new SendMail();
-//            String message = "Please find your report attached with this email";
-//            String subject = "Medical Test Report";
-//            sendMail.sendEmailWithFile(message, subject, jTextFieldPatientEmail.getText(),report_path);
-//        } catch (IOException ex) {
-//            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        try {
+            // TODO add your handling code here:
+            SendMail sendMail = new SendMail();
+            String message = "Please find your report attached with this email";
+            String subject = "Medical Test Report";
+            sendMail.sendEmailWithFile(message, subject, jTextFieldPatientEmail.getText(),report_path);
+        } catch (IOException ex) {
+            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonEmailReportActionPerformed
 
     private void jTableNewTestsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableNewTestsMouseClicked
@@ -406,13 +406,13 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
 //        populateNewRequestsTable();
         populateAllTestsTable();
         
-//        SendMail sendMail = new SendMail();
-//        String subject = "Medical Test Booked";
-//        try {
-//            sendMail.sendEmail(message, subject, user_input.get(5));
-//        } catch (IOException ex) {
-//            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        SendMail sendMail = new SendMail();
+        String subject = "Medical Test Booked";
+        try {
+            sendMail.sendEmail(message, subject, user_input.get(5));
+        } catch (IOException ex) {
+            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         clearFields();
     }//GEN-LAST:event_jButtonCreateActionPerformed
