@@ -79,12 +79,14 @@ public class MedicalInventoryAccountsPage extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 70, 169));
+        setForeground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Med Equip Warehouse");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-160, 60, 832, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 120, 840, 50));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -94,7 +96,7 @@ public class MedicalInventoryAccountsPage extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 120, 60));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, 120, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -146,6 +148,7 @@ public class MedicalInventoryAccountsPage extends javax.swing.JPanel {
         add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 90, 60));
 
         jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 322, 120, 20));
 
@@ -164,6 +167,7 @@ public class MedicalInventoryAccountsPage extends javax.swing.JPanel {
         add(jTextFieldTeamID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 351, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpID.setText("Warehouse ID:");
         add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 202, 150, 20));
 
@@ -178,6 +182,7 @@ public class MedicalInventoryAccountsPage extends javax.swing.JPanel {
         add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, 90, 60));
 
         jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmpName.setText("Warehouse Name:");
         add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 262, 210, 20));
 
@@ -190,8 +195,6 @@ public class MedicalInventoryAccountsPage extends javax.swing.JPanel {
             }
         });
         add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 100, 60));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/medequipmentwarehouse.jpg"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, -1, 1190));
     }// </editor-fold>//GEN-END:initComponents
 

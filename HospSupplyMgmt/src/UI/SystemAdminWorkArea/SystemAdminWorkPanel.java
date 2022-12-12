@@ -69,7 +69,7 @@ public class SystemAdminWorkPanel extends javax.swing.JPanel {
 
         jButtonCreateCustomerSupport.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreateCustomerSupport.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonCreateCustomerSupport.setText("Manage Customer Support");
+        jButtonCreateCustomerSupport.setText("Manage Customer Assistance");
         jButtonCreateCustomerSupport.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonCreateCustomerSupport.setMaximumSize(new java.awt.Dimension(216, 35));
         jButtonCreateCustomerSupport.setMinimumSize(new java.awt.Dimension(216, 35));
@@ -93,7 +93,7 @@ public class SystemAdminWorkPanel extends javax.swing.JPanel {
 
         jButtonCreateCustomerSupport1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreateCustomerSupport1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonCreateCustomerSupport1.setText("Manage Delivery Agency");
+        jButtonCreateCustomerSupport1.setText("Manage Carrier Agency");
         jButtonCreateCustomerSupport1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonCreateCustomerSupport1.setMaximumSize(new java.awt.Dimension(216, 35));
         jButtonCreateCustomerSupport1.setMinimumSize(new java.awt.Dimension(216, 35));
