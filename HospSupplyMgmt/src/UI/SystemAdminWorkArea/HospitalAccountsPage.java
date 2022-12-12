@@ -35,7 +35,6 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     HospitalDirectory hospitalDirectory;
-//    FrontDeskOperatorDirectory frontDeskOperatorDirectory;
     UserAccount userAccount;
     UserAccountDirectory UserAccountDirectory;
 
@@ -46,8 +45,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         initComponents();
         if(medicalServiceCentralisationEcoSystem.getHospitalDirectory()== null)
            medicalServiceCentralisationEcoSystem.setHospitalDirectory(new HospitalDirectory());
-        
-//        addRolesComboBox();
+
         
         addrecordstotable();
         
@@ -151,19 +149,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 120, 20));
-
-        jTextFieldHospPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldHospPasswordActionPerformed(evt);
-            }
-        });
         add(jTextFieldHospPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 280, -1));
-
-        jTextFieldHospID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldHospIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldHospID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 280, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -216,18 +202,10 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+   
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
             crdLyt.show(userProcessContainer,"Sysadmin");
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jTextFieldHospPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHospPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldHospPasswordActionPerformed
-
-    private void jTextFieldHospIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldHospIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldHospIDActionPerformed
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
@@ -238,20 +216,17 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         if(!user_input.isEmpty()) {
              if(usersList.checkIfUserIsUnique(user_input.get(0))){
             
-//            Employee employee = new Employee(user_input.get(0),user_input.get(1),new HospitalAdminRole());
-            
-            
-            userAccount = new UserAccount(user_input.get(0), user_input.get(3), new HospitalAdminRole());
-            
-            Hospital hospital = new Hospital(user_input.get(0), user_input.get(1), user_input.get(2));
-            userAccount.setHospital(hospital);
-            hospitalDirectory.addHospital(hospital);
-            
-            usersList.addUserAccount(userAccount);
-            
-            JOptionPane.showMessageDialog(this, "New Hospital Information has been added.");
-            model.addRow(new Object[]{userAccount,user_input.get(1),user_input.get(2),user_input.get(3)});
-            clearFields();
+                userAccount = new UserAccount(user_input.get(0), user_input.get(3), new HospitalAdminRole());
+
+                Hospital hospital = new Hospital(user_input.get(0), user_input.get(1), user_input.get(2));
+                userAccount.setHospital(hospital);
+                hospitalDirectory.addHospital(hospital);
+
+                usersList.addUserAccount(userAccount);
+
+                JOptionPane.showMessageDialog(this, "New Hospital Information has been added.");
+                model.addRow(new Object[]{userAccount,user_input.get(1),user_input.get(2),user_input.get(3)});
+                clearFields();
             }
             else{
                 JOptionPane.showMessageDialog(this, "This username is not available. Please select a new one.");
@@ -279,7 +254,6 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
             {
                 Hospital hospital = userAccount.getHospital();
                 ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
                 model.setValueAt(user_input.get(1), selected_row_ix, 1);
                 model.setValueAt(user_input.get(2), selected_row_ix, 2);
                 model.setValueAt(user_input.get(3), selected_row_ix, 3);
@@ -289,9 +263,7 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
             }
         }
         
-//        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
         JOptionPane.showMessageDialog(this, "Values updated");
-//        addrecordstotable();
         
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
@@ -328,13 +300,11 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         Hospital hospital = select_user_account_details.getHospital();
         hospitalDirectory.deleteHospital(hospital);
         UserAccountDirectory.deleteAccount(select_user_account_details);
-//        ecosystem.setRestaurantDirectory(restaurantDirectory);
         model.removeRow(selected_row_ix);
         addrecordstotable();
         clearFields();
     }//GEN-LAST:event_jButtonDelete1ActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
-//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getHospital().setHospitalName(user_input.get(1));
         userAccount.getHospital().setHospitalpincode(user_input.get(2));
         userAccount.setPassword(user_input.get(3));
@@ -407,11 +377,9 @@ public class HospitalAccountsPage extends javax.swing.JPanel {
         UserAccountDirectory userAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         addDefaultvalues();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
-//        hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
     
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         model.setRowCount(0);
-//        ArrayList<Hospital> hospitalList = hospitalDirectory.getHospitalList();
         for(UserAccount userAccount: usersList)
         {   
             if(userAccount.getRole().toString() == "HospitalAdmin"){

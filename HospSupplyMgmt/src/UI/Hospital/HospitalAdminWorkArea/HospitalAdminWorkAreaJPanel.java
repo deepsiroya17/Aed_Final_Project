@@ -26,8 +26,6 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.hospitalManagementEcoSystem = hospitalManagementEcoSystem;
         this.hospital = hospital;
         jPanel1.setVisible(false);
-        //jSplitPane.setVisible(false);
-        //jPanel2.setVisible(true);
         populateTree();
     }
     

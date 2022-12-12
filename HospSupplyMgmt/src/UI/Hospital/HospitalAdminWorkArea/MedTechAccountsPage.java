@@ -153,19 +153,7 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 130, 30));
-
-        jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPasswordActionPerformed(evt);
-            }
-        });
         add(jTextFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 290, 30));
-
-        jTextFieldEmpID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEmpIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 290, 30));
 
         jLabelRole.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -222,14 +210,6 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
             crdLyt.show(userProcessContainer,"hospitalAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jTextFieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPasswordActionPerformed
-
-    private void jTextFieldEmpIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmpIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEmpIDActionPerformed
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
