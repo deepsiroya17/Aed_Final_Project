@@ -5,8 +5,6 @@
  */
 package Hospital.Requests;
 
-import System.UserAccount;
-
 /**
  *
  * @author sarth

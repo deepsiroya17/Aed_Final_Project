@@ -9,10 +9,7 @@ package UI.Hospital.HospitalAdminWorkArea;
 import Hospital.Hospital.Hospital;
 import System.MedicalServiceCentralisationEcoSystem;
 import java.awt.CardLayout;
-import java.util.ArrayList;
 import javax.swing.JPanel;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeModel;
 
 /**
  *

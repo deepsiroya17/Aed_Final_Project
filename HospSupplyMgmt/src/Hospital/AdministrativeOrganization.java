@@ -3,7 +3,6 @@
  * and open the template in the editor.
  */
 package Hospital;
-import java.util.ArrayList;
 
 /**
  *

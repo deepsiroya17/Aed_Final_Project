@@ -5,9 +5,7 @@
  */
 package Hospital.Patient;
 
-import Hospital.LabExam.LabTest;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  *
