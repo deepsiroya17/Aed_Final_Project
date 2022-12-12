@@ -350,8 +350,6 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         clearFields();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
-//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
-//        userAccount.setEmployee_name(user_input.get(1));
         userAccount.setPassword(user_input.get(3));
         return userAccount;
     }

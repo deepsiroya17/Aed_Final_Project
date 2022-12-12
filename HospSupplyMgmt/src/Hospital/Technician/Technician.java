@@ -5,8 +5,6 @@
  */
 package Hospital.Technician;
 
-import System.UserAccount;
-
 /**
  *
  * @author sarth

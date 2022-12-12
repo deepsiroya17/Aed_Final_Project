@@ -5,8 +5,6 @@
  */
 package Hospital.Doctor;
 
-import System.UserAccount;
-
 /**
  *
  * @author animeshgiri
