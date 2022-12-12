@@ -11,8 +11,8 @@ import java.nio.file.Paths;
 
 public class HospitalManagementDB4OUtil {
 
-//    private static final String FILENAME = Paths.get("Databank.db4o").toAbsolutePath().toString();// path to the data store
-    private static final String FILENAME = Paths.get("_data.db4o").toAbsolutePath().toString();// path to the data store
+
+    private static final String FILENAME = Paths.get("_data.db4o").toAbsolutePath().toString();
     private static HospitalManagementDB4OUtil dB4OUtil;
     
     public synchronized static HospitalManagementDB4OUtil getInstance(){
@@ -60,7 +60,7 @@ public class HospitalManagementDB4OUtil {
         ObjectContainer conn = createConnection();
         ObjectSet<MedicalServiceCentralisationEcoSystem> systems = conn.query(MedicalServiceCentralisationEcoSystem.class); // Change to the object you want to save
         MedicalServiceCentralisationEcoSystem system;
-        if (systems.size() == 0){
+        if (systems.isEmpty()){
             system = ConfigureASystem.configure();  // If there's no System in the record, create a new one
         }
         else{

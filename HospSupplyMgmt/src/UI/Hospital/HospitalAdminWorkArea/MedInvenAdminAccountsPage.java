@@ -372,7 +372,6 @@ public class MedInvenAdminAccountsPage extends javax.swing.JPanel {
         UserAccountDirectory userAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
 
-//        ArrayList<Hospital> hospitalList = hospitalDirectory.getHospitalList();
         for(UserAccount userAccount: usersList)
         {   
             if(userAccount.getRole().toString() == "MedSupEquipAdmin"){

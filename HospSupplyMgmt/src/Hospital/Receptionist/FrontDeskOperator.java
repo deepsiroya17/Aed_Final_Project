@@ -5,15 +5,13 @@
  */
 package Hospital.Receptionist;
 
-import System.UserAccount;
-
 /**
  *
  * @author animeshgiri
  */
 public class FrontDeskOperator {
     
-//    UserAccount userAccount;
+
     String FrontDeskOperatorId;
     String FrontDeskOperatorName;
     

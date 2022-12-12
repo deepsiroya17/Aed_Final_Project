@@ -5,8 +5,6 @@
  */
 package Hospital.MedSupInvenAdmin;
 
-import System.UserAccount;
-
 /**
  *
  * @author animeshgiri

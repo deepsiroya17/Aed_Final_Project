@@ -5,10 +5,6 @@
  */
 package Hospital.Patient;
 
-import Hospital.LabExam.LabTest;
-import Warehouse.Orders.Order;
-import java.util.HashMap;
-
 /**
  *
  * @author sarth
