@@ -15,16 +15,16 @@ Need for an automated system for managing functionality of hospital
     •	Customer Assistance
     •	Carrier Agency
 
-2.	SIX ORGANIZATIONS:
+2.	SEVEN ORGANIZATIONS:
     •	Reception
-    •	Doctor
+    •	Operations
     •	Technical Work
     •	Medical Supplies Inventory
     •	Warehouse Administration
     •	Customer Assistance Team
     •	Carrier Agency Administrator
 
-3.	EIGHT ROLES
+3.	TEN ROLES
     •	Receptionist
     •	Hospital Admin
     •	Doctor
@@ -34,10 +34,13 @@ Need for an automated system for managing functionality of hospital
     •	Customer Assistance Admin
     •	Customer Assistance Employee
     •	Carrier Agency Admin
+    •	Carrier Agency Admin
+    
 
-The flow of the project is as follows:
+The flow of project
+![Blank diagram (1)](https://user-images.githubusercontent.com/114635170/206961865-0607ec2e-727d-426d-a650-ce3ab2170431.jpeg)
 
-![Blank diagram (1)](https://user-images.githubusercontent.com/114635170/206950680-119564e2-92a3-4c09-a7fd-12539c063442.png)
+
 UML Class Diagram:
 ![krupauml (1)](https://user-images.githubusercontent.com/114635170/206958798-46e78da0-dff3-4279-909a-1f4eab638fca.png)
 
