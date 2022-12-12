@@ -326,7 +326,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelWorkArea.removeAll();
         JPanel blankJP = new JPanel();
         jPanelWorkArea.add("blank", blankJP);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/Images/HospitalMainJFrame.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userinterface/Images/HospitalMain1.jpg"))); // NOI18N
         jLabel3.setPreferredSize(new java.awt.Dimension(1000, 800));
         jPanelWorkArea.add(jLabel3, "blank");
         CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
