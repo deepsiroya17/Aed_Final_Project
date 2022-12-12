@@ -10,11 +10,11 @@ package UI.SystemAdminWorkArea;
 import System.MedicalServiceCentralisationEcoSystem;
 
 
-import System.Role.DeliveryAgencyAdminRole;
+import System.Role.CustomerSupportTeamAdminRole;
 import System.Role.Role;
 
-import CarrierAgency.DeliveryAgency;
-import CarrierAgency.DeliveryAgencyDirectory;
+import CustomerAssistanceTeam.CustomerSupportTeam;
+import CustomerAssistanceTeam.CustomerSupportTeamDirectory;
 import System.UserAccount;
 import System.UserAccountDirectory;
 import java.awt.CardLayout;
@@ -27,29 +27,30 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author asus
  */
-public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
+public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
      */
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
-    DeliveryAgencyDirectory deliveryAgencyDirectory;
+    CustomerSupportTeamDirectory customerSupportTeamDirectory;
 //    FrontDeskOperatorDirectory frontDeskOperatorDirectory;
     UserAccount userAccount;
     UserAccountDirectory UserAccountDirectory;
 
-    public DeliveryAgencyAccountsPage(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem) {
+    public CustomerAssistanceAccountsPage(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem) {
         
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
         initComponents();
-        if(medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory()== null)
-           medicalServiceCentralisationEcoSystem.setDeliveryAgencyDirectory(new DeliveryAgencyDirectory());
+        if(medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory()== null)
+           medicalServiceCentralisationEcoSystem.setCustomerSupportTeamDirectory(new CustomerSupportTeamDirectory());
         
 //        addRolesComboBox();
         addDefaultvalues();
         addrecordstotable();
+        
     }
 
     /**
@@ -75,26 +76,25 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         jButtonDelete = new javax.swing.JButton();
         jLabelEmpName = new javax.swing.JLabel();
         jButtonRefresh = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        bgdimg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 70, 169));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Delivery Accounts");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 120, 810, -1));
+        jLabel1.setText("Customer Support Team Account");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 832, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton2.setText("HOME");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 110, 60));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 40, 120, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -104,17 +104,9 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Delivery ID", "Delivery Name", "Password"
+                "Team ID", "Team Name", "Password"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                true, false, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jTableEmployee.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableEmployeeMouseClicked(evt);
@@ -122,80 +114,77 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableEmployee);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 760, 170));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 770, 110));
 
         jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 120, 60));
-        add(jTextFieldTeamName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 351, -1));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 100, 60));
+        add(jTextFieldTeamName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 351, 30));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 120, 60));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 100, 60));
 
         jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPassword.setText("Password:");
-        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 130, -1));
+        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 30));
 
         jTextFieldTeamPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldTeamPasswordActionPerformed(evt);
             }
         });
-        add(jTextFieldTeamPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 351, -1));
+        add(jTextFieldTeamPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 350, 350, 30));
 
         jTextFieldTeamID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldTeamIDActionPerformed(evt);
             }
         });
-        add(jTextFieldTeamID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 351, -1));
+        add(jTextFieldTeamID, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 351, 30));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelEmpID.setText("Delivery ID:");
-        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 130, -1));
+        jLabelEmpID.setText("Team ID:");
+        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 140, 30));
 
         jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonDelete.setText("DELETE");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 120, 60));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 460, 100, 60));
 
         jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelEmpName.setText("Delivery Name:");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 140, -1));
+        jLabelEmpName.setText("Team Name:");
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 130, 30));
 
         jButtonRefresh.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonRefresh.setText("REFRESH");
         jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, 120, 60));
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 460, 100, 60));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/DeliveryAgencyAccountsPage_1920x1183.jpeg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1920, 1200));
+        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustomerSupport.png"))); // NOI18N
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1920, 1200));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -216,23 +205,23 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         ArrayList<String> user_input = check_empty_field();
-        deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
+        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
         UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         if(!user_input.isEmpty()) {
             if(usersList.checkIfUserIsUnique(user_input.get(0))){
             
-//            Employee employee = new Employee(user_input.get(0),user_input.get(1),new DeliveryAgencyAdminRole());
+//            Employee employee = new Employee(user_input.get(0),user_input.get(1),new CustomerSupportTeamAdminRole());
             
             
-            userAccount = new UserAccount(user_input.get(0), user_input.get(2), new DeliveryAgencyAdminRole());
+            userAccount = new UserAccount(user_input.get(0), user_input.get(2), new CustomerSupportTeamAdminRole());
             
-            DeliveryAgency deliveryAgency = new DeliveryAgency(user_input.get(0), user_input.get(1));
-            userAccount.setDeliveryAgency(deliveryAgency);
-            deliveryAgencyDirectory.addDeliveryAgency(deliveryAgency);
+            CustomerSupportTeam customerSupportTeam = new CustomerSupportTeam(user_input.get(0), user_input.get(1));
+            userAccount.setCustomerSupportTeam(customerSupportTeam);
+            customerSupportTeamDirectory.addCustomerSupportTeam(customerSupportTeam);
             
             usersList.addUserAccount(userAccount);
             
-            JOptionPane.showMessageDialog(this, "New DeliveryAgency Information has been added.");
+            JOptionPane.showMessageDialog(this, "New CustomerSupportTeam Information has been added.");
             model.addRow(new Object[]{userAccount,user_input.get(1),user_input.get(2)});
             clearFields();
             }
@@ -254,18 +243,18 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         UserAccount select_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);        
         UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
+        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
         ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
         for(UserAccount userAccount: userAccountList)
         {
             if(userAccount.getUsername().equals(select_account_details.getUsername()))
             {
-                DeliveryAgency deliveryAgency = userAccount.getDeliveryAgency();
+                CustomerSupportTeam customerSupportTeam = userAccount.getCustomerSupportTeam();
                 ArrayList<String> user_input = check_empty_field();
 //                model.setValueAt(user_input.get(1), selected_row_ix, 0);
                 model.setValueAt(user_input.get(1), selected_row_ix, 1);
                 model.setValueAt(user_input.get(2), selected_row_ix, 2);
-                deliveryAgencyDirectory.updateDeliveryAgency(user_input, deliveryAgency);
+                customerSupportTeamDirectory.updateCustomerSupportTeam(user_input, customerSupportTeam);
                 UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
                 break;
             }
@@ -287,8 +276,8 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
         UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        DeliveryAgency deliveryAgency = select_user_account_details.getDeliveryAgency();
-        deliveryAgencyDirectory.deleteDeliveryAgency(deliveryAgency);
+        CustomerSupportTeam customerSupportTeam = select_user_account_details.getCustomerSupportTeam();
+        customerSupportTeamDirectory.deleteCustomerSupportTeam(customerSupportTeam);
         UserAccountDirectory.deleteAccount(select_user_account_details);
 //        ecosystem.setRestaurantDirectory(restaurantDirectory);
         model.removeRow(selected_row_ix);
@@ -304,7 +293,7 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
         jTextFieldTeamID.setEditable(false);
         jTextFieldTeamID.setText(select_user_account_details.getUsername());
-        jTextFieldTeamName.setText(select_user_account_details.getDeliveryAgency().getDeliveryAgencyName());
+        jTextFieldTeamName.setText(select_user_account_details.getCustomerSupportTeam().getCustomerSupportTeamName());
         jTextFieldTeamPassword.setText(select_user_account_details.getPassword());
         
     }//GEN-LAST:event_jTableEmployeeMouseClicked
@@ -316,7 +305,7 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
     }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
-        userAccount.getDeliveryAgency().setDeliveryAgencyName(user_input.get(1));
+        userAccount.getCustomerSupportTeam().setCustomerSupportTeamName(user_input.get(1));
         userAccount.setPassword(user_input.get(2));
         return userAccount;
     }
@@ -341,13 +330,15 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
         }
         else if(user_password.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter a Password.");
-        } else {
+        }
+        else {
             user_input.add(user_emp_id);
             user_input.add(user_emp_name);
             user_input.add(user_password);
+
+            
         }
         
-     
         
         return user_input;
         
@@ -356,13 +347,13 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bgdimg;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCreate;
     private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonRefresh;
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelEmpID;
     private javax.swing.JLabel jLabelEmpName;
     private javax.swing.JLabel jLabelPassword;
@@ -377,15 +368,15 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
     private void addrecordstotable() {
         UserAccountDirectory userAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
-//        deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
+//        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
     
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         model.setRowCount(0);
-//        ArrayList<DeliveryAgency> deliveryAgencyList = deliveryAgencyDirectory.getDeliveryAgencyList();
+//        ArrayList<CustomerSupportTeam> customerSupportTeamList = customerSupportTeamDirectory.getCustomerSupportTeamList();
         for(UserAccount userAccount: usersList)
         {   
-            if(userAccount.getRole().toString() == "DeliveryAgencyAdmin"){
-                model.addRow(new Object[]{userAccount,userAccount.getDeliveryAgency().getDeliveryAgencyName(),userAccount.getPassword()});
+            if(userAccount.getRole().toString() == "CustomerSupportTeamAdmin"){
+                model.addRow(new Object[]{userAccount,userAccount.getCustomerSupportTeam().getCustomerSupportTeamName(),userAccount.getPassword()});
             }
             
         }
@@ -396,20 +387,20 @@ public class DeliveryAgencyAccountsPage extends javax.swing.JPanel {
     private void addDefaultvalues() {
         
         UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        userAccount = new UserAccount("deliveryagency121", "pass",new DeliveryAgencyAdminRole());
-        DeliveryAgency deliveryAgency = new DeliveryAgency("deliveryagency121","deliveryagency1");
-        deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
-        deliveryAgencyDirectory.addDeliveryAgency(deliveryAgency);
-        userAccount.setDeliveryAgency(deliveryAgency);
-        if(usersList.checkIfUserIsUnique("deliveryagency121")){
+        userAccount = new UserAccount("custsupp121", "pass",new CustomerSupportTeamAdminRole());
+        CustomerSupportTeam customerSupportTeam = new CustomerSupportTeam("custsupp121","custteam1");
+        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
+        customerSupportTeamDirectory.addCustomerSupportTeam(customerSupportTeam);
+        userAccount.setCustomerSupportTeam(customerSupportTeam);
+        if(usersList.checkIfUserIsUnique("custsupp121")){
             usersList.addUserAccount(userAccount);
         }
         
-        userAccount = new UserAccount("deliveryagency122", "pass",new DeliveryAgencyAdminRole());
-        deliveryAgency = new DeliveryAgency("deliveryagency122","deliveryagency2");
-        deliveryAgencyDirectory.addDeliveryAgency(deliveryAgency);
-        userAccount.setDeliveryAgency(deliveryAgency);
-        if(usersList.checkIfUserIsUnique("deliveryagency122")){
+        userAccount = new UserAccount("custsupp122", "pass",new CustomerSupportTeamAdminRole());
+        customerSupportTeam = new CustomerSupportTeam("custsupp122","custteam2");
+        customerSupportTeamDirectory.addCustomerSupportTeam(customerSupportTeam);
+        userAccount.setCustomerSupportTeam(customerSupportTeam);
+        if(usersList.checkIfUserIsUnique("custsupp122")){
             usersList.addUserAccount(userAccount);
         }    
     }

@@ -8,17 +8,14 @@ package Hospital.Hospital;
 import System.UserAccountDirectory;
 import Hospital.Doctor.DoctorDirectory;
 import Hospital.Nurse.NurseDirectory;
-import Hospital.Radiologist.RadiologistDirectory;
-import Hospital.Pathologist.PathologistDirectory;
+
 import Hospital.Technician.TechnicianDirectory;
 
 import Hospital.Receptionist.FrontDeskOperatorDirectory;
-import Hospital.Accountant.AccountantDirectory;
 import Hospital.Patient.PatientDirectory;
 import Hospital.LabExam.LabTestDirectory;
 import Hospital.MedSupInvenAdmin.MedSupEquipAdmin;
 import Hospital.MedSupInvenInternal.MedSupEquipInternalDirectory;
-import java.util.HashMap;
 
 /**
  *
@@ -30,20 +27,15 @@ public class Hospital {
     String hospitalName;
     String hospitalpincode;
     FrontDeskOperatorDirectory frontDeskOperatorDirectory;
-    AccountantDirectory accountantDirectory;
     DoctorDirectory doctorDirectory;
     NurseDirectory nurseDirectory;
-    RadiologistDirectory radiologistDirectory;
-    PathologistDirectory pathologistDirectory;
     TechnicianDirectory technicianDirectory;
     UserAccountDirectory UserAccountDirectory;
     PatientDirectory patientDirectory;
-//    HashMap<String, String> labTests = new HashMap<>();
     LabTestDirectory labTestDirectory;
     
     MedSupEquipAdmin medSupEquipAdmin;
     MedSupEquipInternalDirectory medSupEquipInternalDirectory;
-    //    UserAccount userAccount;
 
     
     public Hospital(String hospitalId, String hospitalName, String hospitalpincode){
@@ -76,13 +68,6 @@ public class Hospital {
         this.frontDeskOperatorDirectory = frontDeskOperatorDirectory;
     }
 
-    public AccountantDirectory getAccountantDirectory() {
-        return accountantDirectory;
-    }
-
-    public void setAccountantDirectory(AccountantDirectory accountantDirectory) {
-        this.accountantDirectory = accountantDirectory;
-    }
 
     public DoctorDirectory getDoctorDirectory() {
         return doctorDirectory;
@@ -98,22 +83,6 @@ public class Hospital {
 
     public void setNurseDirectory(NurseDirectory nurseDirectory) {
         this.nurseDirectory = nurseDirectory;
-    }
-
-    public RadiologistDirectory getRadiologistDirectory() {
-        return radiologistDirectory;
-    }
-
-    public void setRadiologistDirectory(RadiologistDirectory radiologistDirectory) {
-        this.radiologistDirectory = radiologistDirectory;
-    }
-
-    public PathologistDirectory getPathologistDirectory() {
-        return pathologistDirectory;
-    }
-
-    public void setPathologistDirectory(PathologistDirectory pathologistDirectory) {
-        this.pathologistDirectory = pathologistDirectory;
     }
 
     public TechnicianDirectory getTechnicianDirectory() {
@@ -156,20 +125,7 @@ public class Hospital {
         this.medSupEquipAdmin = medSupEquipAdmin;
     }
     
-    
-    
-    
-
-//    public UserAccountDirectory getUserAccountDirectory() {
-//        return UserAccountDirectory;
-//    }
-//
-//    public void setUserAccountDirectory(UserAccountDirectory UserAccountDirectory) {
-//        this.UserAccountDirectory = UserAccountDirectory;
-//    }
-    
-    
-    
+        
      public String getHospitalId() {
         return hospitalId;
     }

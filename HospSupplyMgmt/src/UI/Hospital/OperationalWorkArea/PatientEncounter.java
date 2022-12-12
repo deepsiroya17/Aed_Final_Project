@@ -24,19 +24,19 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import java.io.FileNotFoundException;
-import UI.Hospital.TechnicalWorkArea.MedTechnicalPatientTest;
+import UI.Hospital.TechnicalWorkArea.TechPatientTest;
 
 /**
  *
  * @author animeshgiri
  */
-public class OperationalPatientEncounter extends javax.swing.JPanel {
+public class PatientEncounter extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
      */
     JPanel userProcessContainer;
-    public OperationalPatientEncounter(JPanel userProcessContainer) {
+    public PatientEncounter(JPanel userProcessContainer) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
     }
@@ -45,7 +45,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
     UserAccount userAccount;
     Customer customer;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    public OperationalPatientEncounter(JPanel userProcessContainer , EcoSystem ecosystem) {
+    public PatientEncounter(JPanel userProcessContainer , EcoSystem ecosystem) {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
 //        this.ecosystem = dB4OUtil.retrieveSystem();
@@ -306,7 +306,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
             sendMail.sendEmail(message, subject, user_input.get(2));
             JOptionPane.showMessageDialog(this, "Emailed prescription successfully!");
         } catch (IOException ex) {
-            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TechPatientTest.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButtonEmailPrescription1ActionPerformed
 

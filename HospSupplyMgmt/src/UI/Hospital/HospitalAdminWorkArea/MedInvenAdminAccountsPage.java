@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.SystemAdminWorkArea;
-
+package UI.Hospital.HospitalAdminWorkArea;
 
 
 import System.MedicalServiceCentralisationEcoSystem;
+import Hospital.Hospital.Hospital;
+import Hospital.MedSupInvenAdmin.MedSupEquipAdmin;
 
 
-import System.Role.CustomerSupportTeamAdminRole;
-import System.Role.Role;
+import Hospital.Technician.TechnicianDirectory;
+import System.Role.MedSupEquipAdminRole;
 
-import CustomerAssistanceTeam.CustomerSupportTeam;
-import CustomerAssistanceTeam.CustomerSupportTeamDirectory;
 import System.UserAccount;
 import System.UserAccountDirectory;
 import java.awt.CardLayout;
@@ -25,32 +24,29 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author asus
+ * @author animeshgiri
  */
-public class CustomerSupportAccountsPage extends javax.swing.JPanel {
+public class MedInvenAdminAccountsPage extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
      */
     JPanel userProcessContainer;
-    MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
-    CustomerSupportTeamDirectory customerSupportTeamDirectory;
-//    FrontDeskOperatorDirectory frontDeskOperatorDirectory;
+    MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem;
+    TechnicianDirectory technicianDirectory;
     UserAccount userAccount;
     UserAccountDirectory UserAccountDirectory;
-
-    public CustomerSupportAccountsPage(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem) {
+    Hospital hospital;
+    public MedInvenAdminAccountsPage(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem, Hospital hospital) {
         
         this.userProcessContainer = userProcessContainer;
-        this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
+        this.hospitalManagementEcoSystem = hospitalManagementEcoSystem;
+        this.hospital = hospital;
         initComponents();
-        if(medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory()== null)
-           medicalServiceCentralisationEcoSystem.setCustomerSupportTeamDirectory(new CustomerSupportTeamDirectory());
+        if(hospital.getMedSupEquipAdmin()== null)
+           hospital.setMedSupEquipAdmin(new MedSupEquipAdmin());
         
-//        addRolesComboBox();
-        addDefaultvalues();
         addrecordstotable();
-        
     }
 
     /**
@@ -62,16 +58,16 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableEmployee = new javax.swing.JTable();
         jButtonCreate = new javax.swing.JButton();
-        jTextFieldTeamName = new javax.swing.JTextField();
+        jTextFieldEmpName = new javax.swing.JTextField();
         jButtonUpdate = new javax.swing.JButton();
         jLabelPassword = new javax.swing.JLabel();
-        jTextFieldTeamPassword = new javax.swing.JTextField();
-        jTextFieldTeamID = new javax.swing.JTextField();
+        jTextFieldPassword = new javax.swing.JTextField();
+        jTextFieldEmpID = new javax.swing.JTextField();
         jLabelEmpID = new javax.swing.JLabel();
         jButtonDelete = new javax.swing.JButton();
         jLabelEmpName = new javax.swing.JLabel();
@@ -81,10 +77,11 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 70, 169));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Customer Support Team Account");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 832, -1));
+        lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Medical Supplies");
+        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 706, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -94,7 +91,7 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 40, 120, 60));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 80, 110, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -104,7 +101,7 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Team ID", "Team Name", "Password"
+                "Employee ID", "Employee Name", "Password"
             }
         ));
         jTableEmployee.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -114,114 +111,120 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableEmployee);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 770, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, 540, 90));
 
         jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonCreate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 460, 100, 60));
-        add(jTextFieldTeamName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 351, 30));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 110, 60));
+        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 290, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
         jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonUpdate.setForeground(new java.awt.Color(0, 102, 102));
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 100, 60));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 110, 60));
 
-        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
-        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 30));
+        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 104, -1));
 
-        jTextFieldTeamPassword.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTeamPasswordActionPerformed(evt);
+                jTextFieldPasswordActionPerformed(evt);
             }
         });
-        add(jTextFieldTeamPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 350, 350, 30));
+        add(jTextFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 290, -1));
 
-        jTextFieldTeamID.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldEmpID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTeamIDActionPerformed(evt);
+                jTextFieldEmpIDActionPerformed(evt);
             }
         });
-        add(jTextFieldTeamID, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 351, 30));
+        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 290, -1));
 
-        jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelEmpID.setText("Team ID:");
-        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 140, 30));
+        jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabelEmpID.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabelEmpID.setText("Employee ID:");
+        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 120, -1));
 
         jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
         jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonDelete.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDelete.setText("DELETE");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 460, 100, 60));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, 110, 60));
 
-        jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelEmpName.setText("Team Name:");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 130, 30));
+        jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabelEmpName.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabelEmpName.setText("Employee Name:");
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 140, -1));
 
         jButtonRefresh.setBackground(new java.awt.Color(255, 255, 204));
         jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonRefresh.setForeground(new java.awt.Color(0, 102, 102));
         jButtonRefresh.setText("REFRESH");
         jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 460, 100, 60));
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 110, 60));
 
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/CustomerSupport.png"))); // NOI18N
-        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1920, 1200));
+        bgdimg.setBackground(new java.awt.Color(204, 204, 255));
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1920, 30, 2860, 1190));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"Sysadmin");
+            crdLyt.show(userProcessContainer,"hospitalAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextFieldTeamPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTeamPasswordActionPerformed
+    private void jTextFieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTeamPasswordActionPerformed
+    }//GEN-LAST:event_jTextFieldPasswordActionPerformed
 
-    private void jTextFieldTeamIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTeamIDActionPerformed
+    private void jTextFieldEmpIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmpIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTeamIDActionPerformed
+    }//GEN-LAST:event_jTextFieldEmpIDActionPerformed
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         ArrayList<String> user_input = check_empty_field();
-        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
-        UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
+        UserAccountDirectory usersList = hospitalManagementEcoSystem.getUserAccountDirectory();
         if(!user_input.isEmpty()) {
             if(usersList.checkIfUserIsUnique(user_input.get(0))){
+                userAccount = new UserAccount(user_input.get(0), user_input.get(2), new MedSupEquipAdminRole());
+                usersList.addUserAccount(userAccount);
+                MedSupEquipAdmin medSupEquipAdmin = new MedSupEquipAdmin();
+                medSupEquipAdmin.setMedSupEquipAdminId(user_input.get(0));
+                medSupEquipAdmin.setMedSupEquipAdminName(user_input.get(1));                
+                hospital.setMedSupEquipAdmin(medSupEquipAdmin);
+                userAccount.setHospital(hospital);
             
-//            Employee employee = new Employee(user_input.get(0),user_input.get(1),new CustomerSupportTeamAdminRole());
             
-            
-            userAccount = new UserAccount(user_input.get(0), user_input.get(2), new CustomerSupportTeamAdminRole());
-            
-            CustomerSupportTeam customerSupportTeam = new CustomerSupportTeam(user_input.get(0), user_input.get(1));
-            userAccount.setCustomerSupportTeam(customerSupportTeam);
-            customerSupportTeamDirectory.addCustomerSupportTeam(customerSupportTeam);
-            
-            usersList.addUserAccount(userAccount);
-            
-            JOptionPane.showMessageDialog(this, "New CustomerSupportTeam Information has been added.");
+            JOptionPane.showMessageDialog(this, "New Employee Information has been added.");
             model.addRow(new Object[]{userAccount,user_input.get(1),user_input.get(2)});
             clearFields();
             }
@@ -242,25 +245,23 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
         
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         UserAccount select_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);        
-        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
+        UserAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
         for(UserAccount userAccount: userAccountList)
         {
             if(userAccount.getUsername().equals(select_account_details.getUsername()))
             {
-                CustomerSupportTeam customerSupportTeam = userAccount.getCustomerSupportTeam();
+                Hospital hospital = userAccount.getHospital();
                 ArrayList<String> user_input = check_empty_field();
 //                model.setValueAt(user_input.get(1), selected_row_ix, 0);
                 model.setValueAt(user_input.get(1), selected_row_ix, 1);
                 model.setValueAt(user_input.get(2), selected_row_ix, 2);
-                customerSupportTeamDirectory.updateCustomerSupportTeam(user_input, customerSupportTeam);
                 UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
                 break;
             }
-        }
+        }   
         
-//        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
+//        hospitalManagementEcoSystem.setRestaurantDirectory(restaurantDirectory);
         JOptionPane.showMessageDialog(this, "Values updated");
 //        addrecordstotable();
         
@@ -275,9 +276,7 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
         }
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
-        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        CustomerSupportTeam customerSupportTeam = select_user_account_details.getCustomerSupportTeam();
-        customerSupportTeamDirectory.deleteCustomerSupportTeam(customerSupportTeam);
+        UserAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         UserAccountDirectory.deleteAccount(select_user_account_details);
 //        ecosystem.setRestaurantDirectory(restaurantDirectory);
         model.removeRow(selected_row_ix);
@@ -291,35 +290,37 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
         int selected_row_ix = jTableEmployee.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
-        jTextFieldTeamID.setEditable(false);
-        jTextFieldTeamID.setText(select_user_account_details.getUsername());
-        jTextFieldTeamName.setText(select_user_account_details.getCustomerSupportTeam().getCustomerSupportTeamName());
-        jTextFieldTeamPassword.setText(select_user_account_details.getPassword());
+        jTextFieldEmpID.setEditable(false);
+        jTextFieldEmpID.setText(select_user_account_details.getUsername());
+        Hospital hospital = select_user_account_details.getHospital();
+        MedSupEquipAdmin medSupEquipAdmin = hospital.getMedSupEquipAdmin();
+        jTextFieldEmpName.setText(medSupEquipAdmin.getMedSupEquipAdminName());
+        jTextFieldPassword.setText(select_user_account_details.getPassword());
         
     }//GEN-LAST:event_jTableEmployeeMouseClicked
 
     private void jButtonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshActionPerformed
+        jTextFieldEmpID.setEditable(true);
         jButtonCreate.setEnabled(true);
-        jTextFieldTeamID.setEditable(true);
         clearFields();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
-        userAccount.getCustomerSupportTeam().setCustomerSupportTeamName(user_input.get(1));
+//        userAccount.getEmployee().setEmployee_name(user_input.get(1));
         userAccount.setPassword(user_input.get(2));
         return userAccount;
     }
     private void clearFields(){
-        jTextFieldTeamID.setText("");
-        jTextFieldTeamName.setText("");
-        jTextFieldTeamPassword.setText("");
+        jTextFieldEmpID.setText("");
+        jTextFieldEmpName.setText("");
+        jTextFieldPassword.setText("");
     }
     
     public ArrayList<String> check_empty_field(){
         ArrayList<String> user_input = new ArrayList<>();
-        String user_emp_id = jTextFieldTeamID.getText();
-        String user_emp_name = jTextFieldTeamName.getText();
-        String user_password = jTextFieldTeamPassword.getText();
+        String user_emp_id = jTextFieldEmpID.getText();
+        String user_emp_name = jTextFieldEmpName.getText();
+        String user_password = jTextFieldPassword.getText();
 
         
         if(user_emp_id.isEmpty()){
@@ -330,14 +331,14 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
         }
         else if(user_password.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter a Password.");
-        }
+        } 
         else {
             user_input.add(user_emp_id);
             user_input.add(user_emp_name);
             user_input.add(user_password);
-
-            
         }
+        
+        
         
         
         return user_input;
@@ -353,56 +354,42 @@ public class CustomerSupportAccountsPage extends javax.swing.JPanel {
     private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonRefresh;
     private javax.swing.JButton jButtonUpdate;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelEmpID;
     private javax.swing.JLabel jLabelEmpName;
     private javax.swing.JLabel jLabelPassword;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableEmployee;
-    private javax.swing.JTextField jTextFieldTeamID;
-    private javax.swing.JTextField jTextFieldTeamName;
-    private javax.swing.JTextField jTextFieldTeamPassword;
+    private javax.swing.JTextField jTextFieldEmpID;
+    private javax.swing.JTextField jTextFieldEmpName;
+    private javax.swing.JTextField jTextFieldPassword;
+    private javax.swing.JLabel lblTitle;
     // End of variables declaration//GEN-END:variables
 
     
-    private void addrecordstotable() {
-        UserAccountDirectory userAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
-//        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
+
     
+
+    private void addrecordstotable() {
+        
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         model.setRowCount(0);
-//        ArrayList<CustomerSupportTeam> customerSupportTeamList = customerSupportTeamDirectory.getCustomerSupportTeamList();
+
+        UserAccountDirectory userAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
+        ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
+
+//        ArrayList<Hospital> hospitalList = hospitalDirectory.getHospitalList();
         for(UserAccount userAccount: usersList)
         {   
-            if(userAccount.getRole().toString() == "CustomerSupportTeamAdmin"){
-                model.addRow(new Object[]{userAccount,userAccount.getCustomerSupportTeam().getCustomerSupportTeamName(),userAccount.getPassword()});
+            if(userAccount.getRole().toString() == "MedSupEquipAdmin"){
+                Hospital hospital = userAccount.getHospital();
+                MedSupEquipAdmin medSupEquipAdmin = hospital.getMedSupEquipAdmin();
+                model.addRow(new Object[]{userAccount,medSupEquipAdmin.getMedSupEquipAdminName(),userAccount.getPassword()});
             }
             
         }
-        
+
         jTableEmployee.setModel(model);
     }
-
-    private void addDefaultvalues() {
-        
-        UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        userAccount = new UserAccount("custsupp121", "pass",new CustomerSupportTeamAdminRole());
-        CustomerSupportTeam customerSupportTeam = new CustomerSupportTeam("custsupp121","custteam1");
-        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
-        customerSupportTeamDirectory.addCustomerSupportTeam(customerSupportTeam);
-        userAccount.setCustomerSupportTeam(customerSupportTeam);
-        if(usersList.checkIfUserIsUnique("custsupp121")){
-            usersList.addUserAccount(userAccount);
-        }
-        
-        userAccount = new UserAccount("custsupp122", "pass",new CustomerSupportTeamAdminRole());
-        customerSupportTeam = new CustomerSupportTeam("custsupp122","custteam2");
-        customerSupportTeamDirectory.addCustomerSupportTeam(customerSupportTeam);
-        userAccount.setCustomerSupportTeam(customerSupportTeam);
-        if(usersList.checkIfUserIsUnique("custsupp122")){
-            usersList.addUserAccount(userAccount);
-        }    
-    }
+    
     
 }

@@ -39,7 +39,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sarth
  */
-public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
+public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
@@ -52,7 +52,7 @@ public class CustomerSupportMemberWorkAreaJPanel extends javax.swing.JPanel {
     Request request;
     private UserAccountDirectory UserAccountDirectory;
     private HospitalDirectory hospitalDirectory;
-    public CustomerSupportMemberWorkAreaJPanel(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem) {
+    public CustomerAssistanceRepresentativeWorkAreaJPanel(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem) {
         
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
