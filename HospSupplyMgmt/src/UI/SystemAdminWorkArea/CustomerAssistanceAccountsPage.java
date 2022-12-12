@@ -35,7 +35,6 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     CustomerSupportTeamDirectory customerSupportTeamDirectory;
-//    FrontDeskOperatorDirectory frontDeskOperatorDirectory;
     UserAccount userAccount;
     UserAccountDirectory UserAccountDirectory;
 
@@ -47,7 +46,6 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
         if(medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory()== null)
            medicalServiceCentralisationEcoSystem.setCustomerSupportTeamDirectory(new CustomerSupportTeamDirectory());
         
-//        addRolesComboBox();
         addDefaultvalues();
         addrecordstotable();
         
@@ -140,19 +138,7 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
         jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 120, 30));
-
-        jTextFieldTeamPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTeamPasswordActionPerformed(evt);
-            }
-        });
         add(jTextFieldTeamPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 350, 350, 30));
-
-        jTextFieldTeamID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTeamIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldTeamID, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 351, 30));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -193,14 +179,6 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
             crdLyt.show(userProcessContainer,"Sysadmin");
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextFieldTeamPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTeamPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTeamPasswordActionPerformed
-
-    private void jTextFieldTeamIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTeamIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTeamIDActionPerformed
-
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
@@ -209,9 +187,7 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
         UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         if(!user_input.isEmpty()) {
             if(usersList.checkIfUserIsUnique(user_input.get(0))){
-            
-//            Employee employee = new Employee(user_input.get(0),user_input.get(1),new CustomerSupportTeamAdminRole());
-            
+           
             
             userAccount = new UserAccount(user_input.get(0), user_input.get(2), new CustomerSupportTeamAdminRole());
             
@@ -251,7 +227,6 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
             {
                 CustomerSupportTeam customerSupportTeam = userAccount.getCustomerSupportTeam();
                 ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
                 model.setValueAt(user_input.get(1), selected_row_ix, 1);
                 model.setValueAt(user_input.get(2), selected_row_ix, 2);
                 customerSupportTeamDirectory.updateCustomerSupportTeam(user_input, customerSupportTeam);
@@ -260,9 +235,7 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
             }
         }
         
-//        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
         JOptionPane.showMessageDialog(this, "Values updated");
-//        addrecordstotable();
         
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
@@ -279,14 +252,13 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
         CustomerSupportTeam customerSupportTeam = select_user_account_details.getCustomerSupportTeam();
         customerSupportTeamDirectory.deleteCustomerSupportTeam(customerSupportTeam);
         UserAccountDirectory.deleteAccount(select_user_account_details);
-//        ecosystem.setRestaurantDirectory(restaurantDirectory);
         model.removeRow(selected_row_ix);
         addrecordstotable();
         clearFields();
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
     private void jTableEmployeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableEmployeeMouseClicked
-        // TODO add your handling code here:
+
         jButtonCreate.setEnabled(false);
         int selected_row_ix = jTableEmployee.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
@@ -304,7 +276,6 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
         clearFields();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
-//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getCustomerSupportTeam().setCustomerSupportTeamName(user_input.get(1));
         userAccount.setPassword(user_input.get(2));
         return userAccount;
@@ -368,11 +339,9 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
     private void addrecordstotable() {
         UserAccountDirectory userAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
-//        customerSupportTeamDirectory = medicalServiceCentralisationEcoSystem.getCustomerSupportTeamDirectory();
     
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         model.setRowCount(0);
-//        ArrayList<CustomerSupportTeam> customerSupportTeamList = customerSupportTeamDirectory.getCustomerSupportTeamList();
         for(UserAccount userAccount: usersList)
         {   
             if(userAccount.getRole().toString() == "CustomerSupportTeamAdmin"){

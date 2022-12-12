@@ -30,7 +30,6 @@ public class TechTestDatabase extends javax.swing.JPanel {
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     UserAccount userAccount;
     UserAccountDirectory userAccountDirectory;
-//    PatientTestDirectory patientTestDirectory;
     LabTestDirectory labTestDirectory;
     Hospital hospital;
     public TechTestDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
@@ -216,7 +215,6 @@ public class TechTestDatabase extends javax.swing.JPanel {
         ArrayList<LabTest> labTestList = labTestDirectory.getLabTestList();
         DefaultTableModel model = (DefaultTableModel) jTableTestDB.getModel();
         model.setRowCount(0);
-//        DefaultComboBoxModel dc = new DefaultComboBoxModel();
         
         for(LabTest labTest: labTestList)
         {

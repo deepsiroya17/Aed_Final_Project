@@ -39,7 +39,6 @@ public class MedInventoryOrderDatabase extends javax.swing.JPanel {
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     UserAccount userAccount;
     UserAccountDirectory userAccountDirectory;
-//    PatientMedSupEquipDirectory patientMedSupEquipDirectory;
     MedSupEquipDirectory medSupEquipDirectory;
     MedSupWarehouse medSupWarehouseCurrent;
     
@@ -173,7 +172,6 @@ public class MedInventoryOrderDatabase extends javax.swing.JPanel {
         ArrayList<Order> orderList = orderDirectory.getOrderList();
         DefaultTableModel model = (DefaultTableModel) jTableNewOrders.getModel();
         model.setRowCount(0);
-//        DefaultComboBoxModel dc = new DefaultComboBoxModel();
         
         for(Order order: orderList)
         {

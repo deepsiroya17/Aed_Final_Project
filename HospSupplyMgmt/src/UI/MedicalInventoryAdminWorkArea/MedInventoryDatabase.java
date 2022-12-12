@@ -33,7 +33,6 @@ public class MedInventoryDatabase extends javax.swing.JPanel {
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     UserAccount userAccount;
     UserAccountDirectory userAccountDirectory;
-//    PatientMedSupEquipDirectory patientMedSupEquipDirectory;
     MedSupEquipDirectory medSupEquipDirectory;
     MedSupWarehouse medSupWarehouseCurrent;
     public MedInventoryDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, MedSupWarehouse medSupWarehouse) {
@@ -62,8 +61,6 @@ public class MedInventoryDatabase extends javax.swing.JPanel {
         jLabelTitle = new javax.swing.JLabel();
         jButtonHome = new javax.swing.JButton();
         jButtonCreate = new javax.swing.JButton();
-        jButtonUpdate = new javax.swing.JButton();
-        jButtonDelete = new javax.swing.JButton();
         jLabelPatientID = new javax.swing.JLabel();
         jTextFieldMedSupEquipName = new javax.swing.JTextField();
         jLabelPatientName = new javax.swing.JLabel();
@@ -101,38 +98,12 @@ public class MedInventoryDatabase extends javax.swing.JPanel {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 180, 110, 60));
-
-        jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButtonUpdate.setText("UPDATE");
-        jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonUpdateActionPerformed(evt);
-            }
-        });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 260, 110, 60));
-
-        jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButtonDelete.setText("DELETE");
-        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeleteActionPerformed(evt);
-            }
-        });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 340, 110, 60));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 220, 110, 60));
 
         jLabelPatientID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientID.setText("Medical Equipment Name");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 250, 20));
-
-        jTextFieldMedSupEquipName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMedSupEquipNameActionPerformed(evt);
-            }
-        });
         add(jTextFieldMedSupEquipName, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 200, 270, -1));
 
         jLabelPatientName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -144,12 +115,6 @@ public class MedInventoryDatabase extends javax.swing.JPanel {
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Medical Inventory Equipment Database");
         add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 940, -1));
-
-        jTextFieldMedSupEquipPrice.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMedSupEquipPriceActionPerformed(evt);
-            }
-        });
         add(jTextFieldMedSupEquipPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 270, -1));
 
         jTableMedSupEquipDB.setModel(new javax.swing.table.DefaultTableModel(
@@ -179,12 +144,6 @@ public class MedInventoryDatabase extends javax.swing.JPanel {
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Medical Equipment Quantity");
         add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 260, 20));
-
-        jTextFieldMedSupEquipQuantity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldMedSupEquipQuantityActionPerformed(evt);
-            }
-        });
         add(jTextFieldMedSupEquipQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 270, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -194,14 +153,6 @@ public class MedInventoryDatabase extends javax.swing.JPanel {
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
         crdLyt.show(userProcessContainer,"medSupWarehouseAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButtonHomeActionPerformed
-
-    private void jTextFieldMedSupEquipNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMedSupEquipNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMedSupEquipNameActionPerformed
-
-    private void jTextFieldMedSupEquipPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMedSupEquipPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMedSupEquipPriceActionPerformed
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
@@ -229,24 +180,10 @@ public class MedInventoryDatabase extends javax.swing.JPanel {
         }
         
     }//GEN-LAST:event_jButtonCreateActionPerformed
-
-    private void jTextFieldMedSupEquipQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldMedSupEquipQuantityActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldMedSupEquipQuantityActionPerformed
-
-    private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonUpdateActionPerformed
-
-    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonDeleteActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCreate;
-    private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonHome;
-    private javax.swing.JButton jButtonUpdate;
     private javax.swing.JLabel jLabelPatientID;
     private javax.swing.JLabel jLabelPatientName;
     private javax.swing.JLabel jLabelPatientName1;
