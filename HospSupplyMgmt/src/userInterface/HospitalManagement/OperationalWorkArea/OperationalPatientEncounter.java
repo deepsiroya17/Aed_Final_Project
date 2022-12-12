@@ -100,6 +100,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         jButtonDownloadPrescription = new javax.swing.JButton();
         jLabelPhoneNumber1 = new javax.swing.JLabel();
         jTextFieldEmail = new javax.swing.JTextField();
+        RefreshButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setForeground(new java.awt.Color(0, 102, 102));
@@ -112,7 +113,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 706, -1));
 
         jButtonEmailPrescription1.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonEmailPrescription1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonEmailPrescription1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonEmailPrescription1.setForeground(new java.awt.Color(0, 102, 102));
         jButtonEmailPrescription1.setText("Email prescription");
         jButtonEmailPrescription1.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +121,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
                 jButtonEmailPrescription1ActionPerformed(evt);
             }
         });
-        add(jButtonEmailPrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 670, -1, -1));
+        add(jButtonEmailPrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 630, -1, -1));
 
         jButtonCreate.setText("SUBMIT");
         add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 910, 100, 30));
@@ -220,7 +221,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         add(jLabelReasonforVisit, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 120, -1));
 
         jButtonDownloadPrescription.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonDownloadPrescription.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonDownloadPrescription.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonDownloadPrescription.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDownloadPrescription.setText("Download prescription");
         jButtonDownloadPrescription.addActionListener(new java.awt.event.ActionListener() {
@@ -228,13 +229,24 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
                 jButtonDownloadPrescriptionActionPerformed(evt);
             }
         });
-        add(jButtonDownloadPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 670, -1, -1));
+        add(jButtonDownloadPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, -1, -1));
 
         jLabelPhoneNumber1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         jLabelPhoneNumber1.setForeground(new java.awt.Color(0, 102, 102));
         jLabelPhoneNumber1.setText("Email :");
         add(jLabelPhoneNumber1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
         add(jTextFieldEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 140, -1));
+
+        RefreshButton.setBackground(new java.awt.Color(255, 255, 204));
+        RefreshButton.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        RefreshButton.setForeground(new java.awt.Color(0, 102, 102));
+        RefreshButton.setText("Refresh");
+        RefreshButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RefreshButtonActionPerformed(evt);
+            }
+        });
+        add(RefreshButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 703, 100, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonDownloadPrescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDownloadPrescriptionActionPerformed
@@ -242,7 +254,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
 //       ArrayList<String> user_input = check_empty_field();
 //      try
 //      {
-//         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("D:\\PatientEncounter\\Patients.pdf"));
+//         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("\\Patients.pdf"));
 //         document.open();
 //         document.add(new Paragraph("\n\nName : " + user_input.get(1)));
 //         document.add(new Paragraph("\n\nEmail : " + user_input.get(2)));
@@ -260,6 +272,7 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
 //         document.add(new Paragraph("\n\nDiagnosis and Prescription : : " +user_input.get(14)));
 //         document.close();
 //         writer.close();
+//         JOptionPane.showMessageDialog(this, "Downloaded prescription successfully!");
 //      } catch (DocumentException e2)
 //      {
 //         e2.printStackTrace();
@@ -291,14 +304,21 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
                     
             String subject = "Medical Test Report";
             sendMail.sendEmail(message, subject, user_input.get(2));
+            JOptionPane.showMessageDialog(this, "Emailed prescription successfully!");
         } catch (IOException ex) {
             Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButtonEmailPrescription1ActionPerformed
+
+    private void RefreshButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshButtonActionPerformed
+        // TODO add your handling code here:
+        clearFields();
+    }//GEN-LAST:event_RefreshButtonActionPerformed
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton RefreshButton;
     private javax.swing.JButton jButtonCreate;
     private javax.swing.JButton jButtonDownloadPrescription;
     private javax.swing.JButton jButtonEmailPrescription1;
@@ -400,7 +420,24 @@ public class OperationalPatientEncounter extends javax.swing.JPanel {
         return user_input;
     }
     
-    
+    private void clearFields(){
+        jTextFieldPatientID.setText("");
+        jTextFieldPatientName.setText("");
+        jTextFieldEmail.setText("");
+        jTextFieldPatientID.setText("");
+        jTextFieldAge.setText("");
+        jTextFieldBloodGroup.setText("");
+        jTextFieldBloodPressure.setText("");
+        jTextFieldPulse.setText("");
+        jTextFieldGender.setText("");
+        jTextFieldPhoneNumber.setText("");
+        jTextFieldHeight.setText("");
+        jTextFieldWeight.setText("");
+        jTextFieldBMI.setText("");
+        jTextFieldTemparature.setText("");
+        jTextAreaReasonForVisit.setText("");
+        jTextAreaDiagnosisandPrescription.setText("");
+    }
     /*
     private void populateTable() {
         
