@@ -12,8 +12,7 @@ import System.MedicalServiceCentralisationEcoSystem;
 import Hospital.Hospital.Hospital;
 
 
-import System.Role.PathologistRole;
-import System.Role.RadiologistRole;
+
 import System.Role.Role;
 import System.Role.TechnicianRole;
 import Hospital.Technician.Technician;
@@ -154,19 +153,7 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 130, 30));
-
-        jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPasswordActionPerformed(evt);
-            }
-        });
         add(jTextFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 290, 30));
-
-        jTextFieldEmpID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEmpIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 290, 30));
 
         jLabelRole.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -224,14 +211,6 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
             crdLyt.show(userProcessContainer,"hospitalAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextFieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPasswordActionPerformed
-
-    private void jTextFieldEmpIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmpIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEmpIDActionPerformed
-
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
@@ -283,9 +262,7 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
             {
                 Hospital hospital = userAccount.getHospital();
                 ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
                 model.setValueAt(user_input.get(1), selected_row_ix, 1);
-//                model.setValueAt(user_input.get(2), selected_row_ix, 2);
                 model.setValueAt(user_input.get(3), selected_row_ix, 3);
                 UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
                 break;
@@ -307,7 +284,6 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
         UserAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         UserAccountDirectory.deleteAccount(select_user_account_details);
-//        ecosystem.setRestaurantDirectory(restaurantDirectory);
         model.removeRow(selected_row_ix);
         addrecordstotable();
         clearFields();
@@ -348,8 +324,6 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
         clearFields();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
-//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
-//        userAccount.getEmployee().setEmployee_name(user_input.get(1));
         userAccount.setPassword(user_input.get(3));
         return userAccount;
     }
@@ -435,7 +409,6 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
 
         
         model.setRowCount(0);
-//        ArrayList<Hospital> hospitalList = hospitalDirectory.getHospitalList();
         for(UserAccount userAccount: usersList)
         {   
             

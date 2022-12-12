@@ -1,10 +1,5 @@
 package System;
 
-import Hospital.Employee.Employee;
-import Hospital.Employee.EmployeeDirectory;
-import Hospital.Hospital.Hospital;
-import Hospital.Hospital.HospitalDirectory;
-import System.Role.HospitalAdminRole;
 import System.Role.SystemAdminRole;
 
 public class ConfigureASystem {

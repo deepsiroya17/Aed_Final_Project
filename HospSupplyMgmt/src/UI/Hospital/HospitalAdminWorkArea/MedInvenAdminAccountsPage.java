@@ -138,19 +138,7 @@ public class MedInvenAdminAccountsPage extends javax.swing.JPanel {
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 104, -1));
-
-        jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPasswordActionPerformed(evt);
-            }
-        });
         add(jTextFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 290, -1));
-
-        jTextFieldEmpID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEmpIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 290, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -194,16 +182,8 @@ public class MedInvenAdminAccountsPage extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"hospitalAdminWorkAreaJPanel");
+        crdLyt.show(userProcessContainer,"hospitalAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jTextFieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPasswordActionPerformed
-
-    private void jTextFieldEmpIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmpIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEmpIDActionPerformed
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:
@@ -250,7 +230,6 @@ public class MedInvenAdminAccountsPage extends javax.swing.JPanel {
             {
                 Hospital hospital = userAccount.getHospital();
                 ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
                 model.setValueAt(user_input.get(1), selected_row_ix, 1);
                 model.setValueAt(user_input.get(2), selected_row_ix, 2);
                 UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
@@ -274,7 +253,6 @@ public class MedInvenAdminAccountsPage extends javax.swing.JPanel {
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
         UserAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         UserAccountDirectory.deleteAccount(select_user_account_details);
-//        ecosystem.setRestaurantDirectory(restaurantDirectory);
         model.removeRow(selected_row_ix);
         addrecordstotable();
         clearFields();
@@ -372,7 +350,6 @@ public class MedInvenAdminAccountsPage extends javax.swing.JPanel {
         UserAccountDirectory userAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
 
-//        ArrayList<Hospital> hospitalList = hospitalDirectory.getHospitalList();
         for(UserAccount userAccount: usersList)
         {   
             if(userAccount.getRole().toString() == "MedSupEquipAdmin"){

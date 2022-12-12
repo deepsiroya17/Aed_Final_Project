@@ -35,7 +35,6 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     DeliveryAgencyDirectory deliveryAgencyDirectory;
-//    FrontDeskOperatorDirectory frontDeskOperatorDirectory;
     UserAccount userAccount;
     UserAccountDirectory UserAccountDirectory;
 

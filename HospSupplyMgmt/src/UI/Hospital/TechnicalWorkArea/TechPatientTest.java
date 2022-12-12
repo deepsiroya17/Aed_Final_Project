@@ -381,7 +381,7 @@ public class TechPatientTest extends javax.swing.JPanel {
         sendMessageTwilio.sendMessage(message);
         
         model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
-//        populateNewRequestsTable();
+
         populateAllTestsTable();
         
         SendMail sendMail = new SendMail();
@@ -450,7 +450,6 @@ public class TechPatientTest extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) jTableAllTests.getModel();
         Patient select_patient_details = (Patient) model.getValueAt(selected_row_ix, 0);
         PatientDirectory patientDirectory = hospital.getPatientDirectory();
-//        ArrayList<Patient> patientList = patientDirectory.getPatientList();
         
         if(jRadioButtonYes.isSelected()){
             String test_id = model.getValueAt(selected_row_ix, 2).toString();

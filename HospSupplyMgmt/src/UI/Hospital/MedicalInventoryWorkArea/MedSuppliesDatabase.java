@@ -35,7 +35,6 @@ public class MedSuppliesDatabase extends javax.swing.JPanel {
     MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem;
     UserAccount userAccount;
     UserAccountDirectory userAccountDirectory;
-//    PatientTestDirectory patientTestDirectory;
     LabTestDirectory labTestDirectory;
     Hospital hospital;
     public MedSuppliesDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem, Hospital hospital) {
@@ -117,12 +116,6 @@ public class MedSuppliesDatabase extends javax.swing.JPanel {
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientID.setText("Equipment Name");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 180, 20));
-
-        jTextFieldEquipName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEquipNameActionPerformed(evt);
-            }
-        });
         add(jTextFieldEquipName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 270, -1));
 
         jLabelPatientName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -134,12 +127,6 @@ public class MedSuppliesDatabase extends javax.swing.JPanel {
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle2.setText("Hospital Medical Supplies Database");
         add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 870, -1));
-
-        jTextFieldEquipQuantity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEquipQuantityActionPerformed(evt);
-            }
-        });
         add(jTextFieldEquipQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 270, -1));
 
         jTableTestDB.setModel(new javax.swing.table.DefaultTableModel(
@@ -167,22 +154,13 @@ public class MedSuppliesDatabase extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        // TODO add your handling code here:
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"medSupAdminWorkAreaJPanel");
+        crdLyt.show(userProcessContainer,"medSupAdminWorkAreaJPanel");
     }//GEN-LAST:event_jButtonHomeActionPerformed
-
-    private void jTextFieldEquipNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEquipNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEquipNameActionPerformed
 
     private void jButtonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonViewActionPerformed
-
-    private void jTextFieldEquipQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEquipQuantityActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEquipQuantityActionPerformed
 
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
         // TODO add your handling code here:

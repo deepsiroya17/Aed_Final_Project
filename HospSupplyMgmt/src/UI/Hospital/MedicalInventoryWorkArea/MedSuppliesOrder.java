@@ -40,7 +40,6 @@ public class MedSuppliesOrder extends javax.swing.JPanel {
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     UserAccount userAccount;
     UserAccountDirectory userAccountDirectory;
-//    PatientTestDirectory patientTestDirectory;
     LabTestDirectory labTestDirectory;
     Hospital hospital;
     Order new_order = new Order();
@@ -215,7 +214,7 @@ public class MedSuppliesOrder extends javax.swing.JPanel {
                 jTextFieldMedSupEquipOrderQuantityActionPerformed(evt);
             }
         });
-        add(jTextFieldMedSupEquipOrderQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 270, -1));
+        add(jTextFieldMedSupEquipOrderQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, 270, -1));
 
         jButtonClearCart.setBackground(new java.awt.Color(0, 0, 0));
         jButtonClearCart.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N

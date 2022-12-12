@@ -94,7 +94,6 @@ public class TechnicianWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonTestDatabaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTestDatabaseActionPerformed
-
         TechTestDatabase medTechnicalTestDatabase = new TechTestDatabase(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
         userProcessContainer.add("medTechnicalTestDatabase",medTechnicalTestDatabase);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
@@ -102,7 +101,6 @@ public class TechnicianWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButtonTestDatabaseActionPerformed
 
     private void jButtonPatientTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPatientTestActionPerformed
-        // TODO add your handling code here:
         TechPatientTest medTechnicalPatientTest = new TechPatientTest(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
         userProcessContainer.add("medTechnicalPatientTest",medTechnicalPatientTest);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
