@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author animeshgiri
  */
-public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
+public class ReceptionistAppointment extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
@@ -36,7 +36,7 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
     UserAccount userAccount;
     Hospital hospital;
     
-    public AdminstrativeReceptionistAppointment(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
+    public ReceptionistAppointment(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;     
         this.hospital = hospital;

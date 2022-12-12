@@ -41,7 +41,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author animeshgiri
  */
-public class MedSuppEquipPatient extends javax.swing.JPanel {
+public class EquipRequestPatient extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
@@ -53,7 +53,7 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
     Patient patient;
     SendMessageTwilio sendMessageTwilio;
     String report_path;
-    public MedSuppEquipPatient(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
+    public EquipRequestPatient(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
@@ -325,7 +325,7 @@ public class MedSuppEquipPatient extends javax.swing.JPanel {
         try {
             sendMail.sendEmail(message, subject, user_input.get(5));
         } catch (IOException ex) {
-            Logger.getLogger(MedSuppEquipPatient.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EquipRequestPatient.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         clearFields();

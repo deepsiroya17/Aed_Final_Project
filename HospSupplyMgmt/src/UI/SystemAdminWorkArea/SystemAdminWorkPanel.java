@@ -17,14 +17,14 @@ import javax.swing.tree.DefaultTreeModel;
  *
  * @author asus
  */
-public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
+public class SystemAdminWorkPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form SystemAdminWorkAreaJPanel
+     * Creates new form SystemAdminWorkPanel
      */
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
-    public SystemAdminWorkAreaJPanel(JPanel userProcessContainer,MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem) {
+    public SystemAdminWorkPanel(JPanel userProcessContainer,MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
@@ -150,7 +150,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButtonCreateCustomerSupportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateCustomerSupportActionPerformed
         // TODO add your handling code here:
-        CustomerSupportAccountsPage customerSupportAccountsPage = new CustomerSupportAccountsPage(userProcessContainer,medicalServiceCentralisationEcoSystem);
+        CustomerAssistanceAccountsPage customerSupportAccountsPage = new CustomerAssistanceAccountsPage(userProcessContainer,medicalServiceCentralisationEcoSystem);
         userProcessContainer.add("CustomerSupportAccountsPage",customerSupportAccountsPage);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         cardLayout.show(userProcessContainer,"CustomerSupportAccountsPage");
@@ -158,7 +158,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButtonCreateWarehouseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateWarehouseActionPerformed
         // TODO add your handling code here:
-        MedicalEquipWarehouseAccountsPage medicalEquipWarehouseAccountsPage = new MedicalEquipWarehouseAccountsPage(userProcessContainer,medicalServiceCentralisationEcoSystem);
+        MedicalInventoryAccountsPage medicalEquipWarehouseAccountsPage = new MedicalInventoryAccountsPage(userProcessContainer,medicalServiceCentralisationEcoSystem);
         userProcessContainer.add("MedicalEquipWarehouseAccountsPage",medicalEquipWarehouseAccountsPage);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         cardLayout.show(userProcessContainer,"MedicalEquipWarehouseAccountsPage");
@@ -166,7 +166,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButtonCreateCustomerSupport1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateCustomerSupport1ActionPerformed
         // TODO add your handling code here:
-        DeliveryAgencyAccountsPage deliveryAgencyAccountsPage = new DeliveryAgencyAccountsPage(userProcessContainer,medicalServiceCentralisationEcoSystem);
+        CarrierAgencyAccountsPage deliveryAgencyAccountsPage = new CarrierAgencyAccountsPage(userProcessContainer,medicalServiceCentralisationEcoSystem);
         userProcessContainer.add("DeliveryAgencyAccountsPage",deliveryAgencyAccountsPage);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         cardLayout.show(userProcessContainer,"DeliveryAgencyAccountsPage");

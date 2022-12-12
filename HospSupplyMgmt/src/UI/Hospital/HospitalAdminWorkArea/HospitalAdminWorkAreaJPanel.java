@@ -124,7 +124,7 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButtonMedTechnicalAccountsPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMedTechnicalAccountsPageActionPerformed
         // TODO add your handling code here:
-        MedTechnicalAccountsPage medTechnicalAccountsPage = new MedTechnicalAccountsPage(userProcessContainer,hospitalManagementEcoSystem, hospital);
+        MedTechAccountsPage medTechnicalAccountsPage = new MedTechAccountsPage(userProcessContainer,hospitalManagementEcoSystem, hospital);
         userProcessContainer.add("MedTechnicalAccountsPage",medTechnicalAccountsPage);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         cardLayout.show(userProcessContainer,"MedTechnicalAccountsPage");
@@ -132,7 +132,7 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButtonAdministrativeAccountsPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAdministrativeAccountsPageActionPerformed
         
-        AdministrativeAccountsPage administrativeAccountsPage = new AdministrativeAccountsPage(userProcessContainer,hospitalManagementEcoSystem, hospital);
+        ReceptionAccountsPage administrativeAccountsPage = new ReceptionAccountsPage(userProcessContainer,hospitalManagementEcoSystem, hospital);
         userProcessContainer.add("AdministrativeAccountsPage",administrativeAccountsPage);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         cardLayout.show(userProcessContainer,"AdministrativeAccountsPage");
@@ -147,7 +147,7 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButtonMedTechnicalAccountsPage1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMedTechnicalAccountsPage1ActionPerformed
         // TODO add your handling code here:
-        MedSupAdminAccountsPage medSupAdminAccountsPage = new MedSupAdminAccountsPage(userProcessContainer,hospitalManagementEcoSystem, hospital);
+        MedInvenAdminAccountsPage medSupAdminAccountsPage = new MedInvenAdminAccountsPage(userProcessContainer,hospitalManagementEcoSystem, hospital);
         userProcessContainer.add("MedSupAdminAccountsPage",medSupAdminAccountsPage);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         cardLayout.show(userProcessContainer,"MedSupAdminAccountsPage");
