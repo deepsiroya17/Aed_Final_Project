@@ -117,12 +117,6 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
 
         jButtonView.setText("VIEW");
         add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 470, 70, -1));
-
-        jTextFieldPatientID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPatientIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 198, 140, -1));
 
         jLabelPatientID.setText("Patient ID :");
@@ -133,12 +127,6 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
 
         jLabelPatientName.setText("Patient Name :");
         add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, 20));
-
-        jTextFieldDoctorName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldDoctorNameActionPerformed(evt);
-            }
-        });
         add(jTextFieldDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 140, -1));
 
         jLabelAppointmentTime.setText("Appointment Date :");
@@ -159,93 +147,76 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         add(jTextFieldAppointmentTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 140, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldPatientIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPatientIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldPatientIDActionPerformed
-
-    private void jTextFieldDoctorNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDoctorNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldDoctorNameActionPerformed
-
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
-        // TODO add your handling code here:
-        /*
+        
         DefaultTableModel model = (DefaultTableModel) jTableAppointment.getModel();
         model.setRowCount(0);
         ArrayList<String> user_input = check_empty_field();
         PatientAppointmentDirectory patientAppointmentDirectory = medicalServiceCentralisationEcoSystem.getPatientAppointmentDirectory();
         ArrayList<PatientAppointment> patientAppointmentList = patientAppointmentDirectory.getPatientAppointmentList();
+        
+        patientAppointment = new PatientAppointment();
+        
+        patientAppointment.setPatient_id(user_input.get(0));
+        patientAppointment.setPatient_name(user_input.get(1));
+        patientAppointment.setDoctor_name(user_input.get(2));
+        patientAppointment.setDepartment(user_input.get(3));
+        patientAppointment.setAppointmentDate(user_input.get(4));
+        patientAppointment.setAppointmentTime(user_input.get(5));
+        
+        
 
-        Patient newPatient = new Patient();
-        for(Patient patient: patientList){
-            if(patient.getPatient_id().equals(user_input.get(0))){
-                newPatient = patient;
-                break;
-            }
-        }
-        //        String current_timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-
-        newPatient.setPatient_id(user_input.get(0));
-        newPatient.setPatient_name(user_input.get(1));
-        newPatient.setPatient_email(user_input.get(5));
-        PatientTest patientTest = new PatientTest();
-        patientTest.setTest_date(user_input.get(4));
-        patientTest.setReport_avalaible(report_avalibility);
-        patientTest.setTest_id(user_input.get(2));
-        patientTest.setLabTest(labTestDirectory.findLabTestByName(user_input.get(3)));
-
-        ArrayList<PatientTest> patientTestList = newPatient.getPatientTestList();
-        //        HashMap<String, LabTest> patientLabTest = patientTest.getPatient_test_list();
-        //
-        //        patientLabTest.put(user_input.get(2), labTestDirectory.findLabTestByName(user_input.get(3)));
-        patientTestList.add(patientTest);
-        newPatient.setPatientTestList(patientTestList);
-        patientList.add(newPatient);
-        patientDirectory.setPatientList(patientList);
-        hospital.setPatientDirectory(patientDirectory);
-
-        model.addRow(new Object[]{newPatient,newPatient.getPatient_name(),patientTest.getTest_id(), patientTest.getLabTest().getTest_name(),patientTest.getTest_date(),patientTest.getReport_avalaible()});
-        //        populateNewRequestsTable();
-        populateTable();
+//        Patient newPatient = new Patient();
+//        for(Patient patient: patientList){
+//            if(patient.getPatient_id().equals(user_input.get(0))){
+//                newPatient = patient;
+//                break;
+//            }
+//        }
+//        //        String current_timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+//
+//        newPatient.setPatient_id(user_input.get(0));
+//        newPatient.setPatient_name(user_input.get(1));
+//        newPatient.setPatient_email(user_input.get(5));
+//        PatientTest patientTest = new PatientTest();
+//        patientTest.setTest_date(user_input.get(4));
+//        patientTest.setReport_avalaible(report_avalibility);
+//        patientTest.setTest_id(user_input.get(2));
+//        patientTest.setLabTest(labTestDirectory.findLabTestByName(user_input.get(3)));
+//
+//        ArrayList<PatientTest> patientTestList = newPatient.getPatientTestList();
+//        //        HashMap<String, LabTest> patientLabTest = patientTest.getPatient_test_list();
+//        //
+//        //        patientLabTest.put(user_input.get(2), labTestDirectory.findLabTestByName(user_input.get(3)));
+//        patientTestList.add(patientTest);
+//        newPatient.setPatientTestList(patientTestList);
+//        patientList.add(newPatient);
+//        patientDirectory.setPatientList(patientList);
+//        hospital.setPatientDirectory(patientDirectory);
+        
+        JOptionPane.showMessageDialog(this, "Appointment Booked");
+        model.addRow(new Object[]{
+            patientAppointment.getPatient_id(),
+            patientAppointment.getPatient_name(),
+            patientAppointment.getDoctor_name(),
+            patientAppointment.getDepartment(),
+            patientAppointment.getAppointmentDate(),
+            patientAppointment.getAppointmentTime()
+        });
+        
+        
 
         clearFields();
 
     }//GEN-LAST:event_jButtonCreateActionPerformed
-    /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
-        
-        customer.getUserAccount().setPassword(user_input.get(1));
-        customer.setCustomerPhone(user_input.get(2));
-        return customer;
-    }
-        private void clearFields(){
-        custUsername.setText("");
-        custPassword.setText("");
-        custContact.setText("");
-
-    }
-    public ArrayList<String> check_empty_field(){
-        ArrayList<String> user_input = new ArrayList<>();
-        String user_custName = custUsername.getText();
-        String user_custPass = custPassword.getText();
-        String user_contact = custContact.getText();
- 
-        if(user_custName.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Customer Name can't be left empty");
-        }
-        else if(user_custPass.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Please enter password");
-        }
-        
-        else if(user_contact.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Customer Contact No can't be left empty.");
-        }
-        user_input.add(user_custName);
-        user_input.add(user_custPass);
-        user_input.add(user_contact);
-        
-        return user_input;
-     */   
-    }
+//    private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
+//        
+//        customer.getUserAccount().setPassword(user_input.get(1));
+//        customer.setCustomerPhone(user_input.get(2));
+//        return customer;
+//    }
+    
+//    }
     
     
 
@@ -277,7 +248,7 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
             jTextFieldDoctorName.setText("");
             jComboBoxDepartment.setSelectedItem("");
             jTextFieldAppointmentTime.setText("");            
-        }
+    }
     
     private ArrayList<String> check_empty_field() {
         
@@ -308,16 +279,14 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         }
         else if(user_patient_time.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter a test time.");
+        } else {
+            user_input.add(user_patient_id);
+            user_input.add(user_patient_name);
+            user_input.add(user_patient_doctor);
+            user_input.add(user_patient_department);
+            user_input.add(user_patient_date);
+            user_input.add(user_patient_time);
         }
-        
-        
-        user_input.add(user_patient_id);
-        user_input.add(user_patient_name);
-        user_input.add(user_patient_doctor);
-        user_input.add(user_patient_department);
-        user_input.add(user_patient_date);
-        user_input.add(user_patient_time);
-        
         
         return user_input;
     }
@@ -331,7 +300,15 @@ public class AdminstrativeReceptionistAppointment extends javax.swing.JPanel {
         
         for(PatientAppointment a: appointments)
         {
-            model.addRow(new Object[]{a,a.getPatient_id(), a.getPatient_name(), a.getDoctor_name(), a.getDepartment(), a.getAppointmentDate(), a.getAppointmentTime()});
+            model.addRow(new Object[]{
+                a,
+                a.getPatient_id(), 
+                a.getPatient_name(), 
+                a.getDoctor_name(), 
+                a.getDepartment(), 
+                a.getAppointmentDate(), 
+                a.getAppointmentTime()
+            });
         }
         jTableAppointment.setModel(model);
 
