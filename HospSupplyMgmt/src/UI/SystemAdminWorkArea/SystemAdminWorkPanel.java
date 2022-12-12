@@ -29,16 +29,11 @@ public class SystemAdminWorkPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
         jPanel1.setVisible(false);
-        //jSplitPane.setVisible(false);
-        //jPanel2.setVisible(true);
         populateTree();
     }
     
     public void populateTree(){
-        //DefaultTreeModel model=(DefaultTreeModel)Admin.getModel();
-       // Add the code for draw your system structure shown by JTree
-       
-      //  model.reload();
+        
     }
     /**
      * This method is called from within the constructor to initialize the form.
