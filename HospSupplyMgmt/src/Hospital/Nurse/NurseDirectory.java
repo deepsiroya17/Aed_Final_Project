@@ -13,8 +13,6 @@ import java.util.HashMap;
  * @author sarth
  */
 public class NurseDirectory {
-    
-//    ArrayList<Nurse> nurseList = new ArrayList<>();
     HashMap<String, Nurse> nurseList = new HashMap<>();
 
     public HashMap<String, Nurse> getNurseList() {

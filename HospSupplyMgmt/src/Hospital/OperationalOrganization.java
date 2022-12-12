@@ -47,11 +47,6 @@ public abstract class OperationalOrganization {
         organizationID = counter;
         ++counter;
     }
-
-//    public Organization(){
-//        
-//    }
-//    public abstract ArrayList<Role> getSupportedRole();
     
     public UserAccountDirectory getUserAccountDirectory() {
         return userAccountDirectory;

@@ -87,7 +87,7 @@ public class MedInventoryOrderDatabase extends javax.swing.JPanel {
                 jButtonHomeActionPerformed(evt);
             }
         });
-        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 70, 110, 60));
+        add(jButtonHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, 110, 60));
 
         jButtonAssignDeliveryAgency.setBackground(new java.awt.Color(255, 255, 204));
         jButtonAssignDeliveryAgency.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -97,11 +97,11 @@ public class MedInventoryOrderDatabase extends javax.swing.JPanel {
                 jButtonAssignDeliveryAgencyActionPerformed(evt);
             }
         });
-        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 380, 110, 60));
+        add(jButtonAssignDeliveryAgency, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 110, 60));
 
         jLabelTitle2.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitle2.setText("Medical Supplies Order Database");
+        jLabelTitle2.setText("Medical Inventory Order Database");
         add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 920, -1));
 
         jTableNewOrders.setModel(new javax.swing.table.DefaultTableModel(

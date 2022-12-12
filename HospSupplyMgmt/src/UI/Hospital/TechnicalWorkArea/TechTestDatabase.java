@@ -26,9 +26,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TechTestDatabase extends javax.swing.JPanel {
 
-    /**
-     * Creates new form OperationalAccountsPage
-     */
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     UserAccount userAccount;
@@ -186,68 +183,11 @@ public class TechTestDatabase extends javax.swing.JPanel {
         
         DefaultTableModel model = (DefaultTableModel) jTableTestDB.getModel();
         LabTestDirectory select_account_details = (LabTestDirectory)model.getValueAt(selected_row_ix, 0);    
-        
-//        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-//        hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
-//        ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
-//               UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-//        hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
-//        A for(UserAccount userAccount: userAccountList)
-//        {
-//            if(userAccount.getUsername().equals(select_account_details.getUsername()))
-//            {
-//                Hospital hospital = userAccount.getHospital();
-//                ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
-//                model.setValueAt(user_input.get(1), selected_row_ix, 1);
-//                model.setValueAt(user_input.get(2), selected_row_ix, 2);
-//                model.setValueAt(user_input.get(3), selected_row_ix, 3);
-//                hospitalDirectory.updateHospital(user_input, hospital);
-//                UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
-//                break;
-//            }
-//        }
-        
+      
         JOptionPane.showMessageDialog(this, "Values updated");
 
     }//GEN-LAST:event_jButtonUpdateActionPerformed
-    /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
-        
-        customer.getUserAccount().setPassword(user_input.get(1));
-        customer.setCustomerPhone(user_input.get(2));
-        return customer;
-    }
-        private void clearFields(){
-        custUsername.setText("");
-        custPassword.setText("");
-        custContact.setText("");
-
-    }
-    public ArrayList<String> check_empty_field(){
-        ArrayList<String> user_input = new ArrayList<>();
-        String user_custName = custUsername.getText();
-        String user_custPass = custPassword.getText();
-        String user_contact = custContact.getText();
- 
-        if(user_custName.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Customer Name can't be left empty");
-        }
-        else if(user_custPass.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Please enter password");
-        }
-        
-        else if(user_contact.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Customer Contact No can't be left empty.");
-        }
-        user_input.add(user_custName);
-        user_input.add(user_custPass);
-        user_input.add(user_contact);
-        
-        return user_input;
-        
-    }
-    */
-    
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgdimg;

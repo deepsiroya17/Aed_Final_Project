@@ -21,13 +21,6 @@ public class Technician {
         return TechnicianId;
     }
 
-//    public UserAccount getUserAccount() {
-//        return userAccount;
-//    }
-//
-//    public void setUserAccount(UserAccount userAccount) {
-//        this.userAccount = userAccount;
-//    }
     public void setTechnicianId(String TechnicianId) {    
         this.TechnicianId = TechnicianId;
     }

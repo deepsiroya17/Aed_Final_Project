@@ -20,14 +20,6 @@ public class FrontDeskOperator {
     public String getFrontDeskOperatorId() {
         return FrontDeskOperatorId;
     }
-
-//    public UserAccount getUserAccount() {
-//        return userAccount;
-//    }
-//
-//    public void setUserAccount(UserAccount userAccount) {
-//        this.userAccount = userAccount;
-//    }
     public void setFrontDeskOperatorId(String FrontDeskOperatorId) {    
         this.FrontDeskOperatorId = FrontDeskOperatorId;
     }

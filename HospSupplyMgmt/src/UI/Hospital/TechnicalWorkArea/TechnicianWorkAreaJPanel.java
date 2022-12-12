@@ -33,16 +33,10 @@ public class TechnicianWorkAreaJPanel extends javax.swing.JPanel {
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
         this.hospital = hospital;
         jPanel1.setVisible(false);
-        //jSplitPane.setVisible(false);
-        //jPanel2.setVisible(true);
-//        populateTree();
+     
     }
     
     public void populateTree(){
-        //DefaultTreeModel model=(DefaultTreeModel)Admin.getModel();
-       // Add the code for draw your system structure shown by JTree
-       
-      //  model.reload();
     }
     /**
      * This method is called from within the constructor to initialize the form.

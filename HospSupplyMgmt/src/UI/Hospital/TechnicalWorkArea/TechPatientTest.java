@@ -358,7 +358,7 @@ public class TechPatientTest extends javax.swing.JPanel {
                 break;
             }
         }
-//        String current_timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+
 
         newPatient.setPatient_id(user_input.get(0));
         newPatient.setPatient_name(user_input.get(1));
@@ -370,9 +370,6 @@ public class TechPatientTest extends javax.swing.JPanel {
         patientTest.setLabTest(labTestDirectory.findLabTestByName(user_input.get(3)));
         
         ArrayList<PatientTest> patientTestList = newPatient.getPatientTestList();
-//        HashMap<String, LabTest> patientLabTest = patientTest.getPatient_test_list();
-//        
-//        patientLabTest.put(user_input.get(2), labTestDirectory.findLabTestByName(user_input.get(3)));
         patientTestList.add(patientTest);
         newPatient.setPatientTestList(patientTestList);
         patientList.add(newPatient);
@@ -470,10 +467,9 @@ public class TechPatientTest extends javax.swing.JPanel {
         
             JFileChooser fileChooser = new JFileChooser();
 			
-            fileChooser.setCurrentDirectory(new File(".")); //sets current directory
+            fileChooser.setCurrentDirectory(new File(".")); 
 
-            int response = fileChooser.showOpenDialog(null); //select file to open
-            //int response = fileChooser.showSaveDialog(null); //select file to save
+            int response = fileChooser.showOpenDialog(null);
 
             if(response == JFileChooser.APPROVE_OPTION) {
                     report_path = fileChooser.getSelectedFile().getAbsolutePath();

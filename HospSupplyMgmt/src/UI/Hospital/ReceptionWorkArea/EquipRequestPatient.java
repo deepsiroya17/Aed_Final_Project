@@ -110,10 +110,10 @@ public class EquipRequestPatient extends javax.swing.JPanel {
         jLabelTitle.setText("Equipment Order Request");
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 43, 706, -1));
 
-        jLabelTitle1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabelTitle1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabelTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle1.setText("All order");
-        add(jLabelTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, 706, -1));
+        add(jLabelTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, 706, -1));
 
         jTableNewTests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -145,49 +145,60 @@ public class EquipRequestPatient extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableNewTests);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 600, 570, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 570, 160));
 
+        jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, -1, -1));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 100, 40));
 
+        jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonUpdate.setText("UPDATE");
         jButtonUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, -1, -1));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 170, 100, 40));
 
+        jButtonView.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonView.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonView.setText("VIEW");
         jButtonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonViewActionPerformed(evt);
             }
         });
-        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 260, 80, -1));
+        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 240, 100, 40));
 
+        jLabelTestName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTestName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelTestName.setText(" Equipment Quantity");
-        add(jLabelTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 150, 20));
+        jLabelTestName.setText(" Equipment Quantity:");
+        add(jLabelTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 130, 20));
 
+        jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonDelete.setText("DELETE");
         jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, -1, -1));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 100, 40));
 
+        jLabelPatientID.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientID.setText("Patient ID:");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 104, -1));
         add(jTextFieldPatientId, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 270, -1));
 
+        jLabelPatientName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPatientName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName.setText("Patient Name :");
         add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 100, -1));
@@ -226,34 +237,39 @@ public class EquipRequestPatient extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTableAllTests);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 600, 540, 160));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 530, 540, 160));
 
-        jLabelTitle3.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabelTitle3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabelTitle3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle3.setText("New equipment requests");
-        add(jLabelTitle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 660, -1));
+        add(jLabelTitle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 660, -1));
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 270, -1));
 
+        jLabelTestDate1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTestDate1.setText("Order Date:");
-        add(jLabelTestDate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, 104, -1));
+        add(jLabelTestDate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 315, 80, 20));
 
+        jLabelPatientName1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPatientName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPatientName1.setText("Patient Email :");
         add(jLabelPatientName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 100, -1));
         add(jTextFieldPatientEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 270, -1));
 
+        jLabelTestName1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTestName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelTestName1.setText(" Equipment");
+        jLabelTestName1.setText(" Equipment:");
         add(jLabelTestName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 80, 20));
         add(jTextFieldQuantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 270, -1));
 
+        jLabelTestDate2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTestDate2.setText("Order ID:");
-        add(jLabelTestDate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 104, -1));
+        add(jLabelTestDate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 285, 60, 20));
         add(jTextFieldOrderID, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 270, -1));
 
+        jLabelTestName2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTestName2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabelTestName2.setText("Request Mode");
-        add(jLabelTestName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 150, 20));
+        jLabelTestName2.setText("Request Mode:");
+        add(jLabelTestName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 90, 20));
         add(jTextFieldMode, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 430, 270, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -285,7 +301,7 @@ public class EquipRequestPatient extends javax.swing.JPanel {
                 break;
             }
         }
-//        String current_timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+
 
         newPatient.setPatient_id(user_input.get(0));
         newPatient.setPatient_name(user_input.get(1));

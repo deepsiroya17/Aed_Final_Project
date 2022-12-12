@@ -3,14 +3,6 @@
  * and open the template in the editor.
  */
 package Hospital;
-
-//import Business.Customer.CustomerDirectory;
-//import Business.DeliveryMan.DeliveryManDirectory;
-//import Business.Employee.EmployeeDirectory;
-//import Business.Restaurant.RestaurantDirectory;
-//import Business.Role.Role;
-//import Business.UserAccount.UserAccountDirectory;
-//import Business.WorkQueue.WorkQueue;
 import java.util.ArrayList;
 
 /**
@@ -21,11 +13,6 @@ public abstract class AdministrativeOrganization {
 
     private String name;
     private WorkQueue workQueue;
-//    private EmployeeDirectory employeeDirectory;
-//    private UserAccountDirectory userAccountDirectory;
-//    RestaurantDirectory restaurantDirectory;
-//    DeliveryManDirectory deliveryManDirectory;
-//    CustomerDirectory customerDirectory;
     private int organizationID;
     private static int counter=0;
     
@@ -53,24 +40,10 @@ public abstract class AdministrativeOrganization {
         organizationID = counter;
         ++counter;
     }
-
-//    public Organization(){
-//        
-//    }
-//    public abstract ArrayList<Role> getSupportedRole();
-//    
-//    public UserAccountDirectory getUserAccountDirectory() {
-//        return userAccountDirectory;
-//    }
-
     public int getOrganizationID() {
         return organizationID;
     }
 
-//    public EmployeeDirectory getEmployeeDirectory() {
-//        return employeeDirectory;
-//    }
-    
     public String getName() {
         return name;
     }
