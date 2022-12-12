@@ -47,7 +47,7 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
         if(medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory()== null)
            medicalServiceCentralisationEcoSystem.setDeliveryAgencyDirectory(new DeliveryAgencyDirectory());
         
-//        addRolesComboBox();
+
         addDefaultvalues();
         addrecordstotable();
     }
@@ -149,19 +149,7 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
         jLabelPassword.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPassword.setText("Password:");
         add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, 130, -1));
-
-        jTextFieldTeamPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTeamPasswordActionPerformed(evt);
-            }
-        });
         add(jTextFieldTeamPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 351, -1));
-
-        jTextFieldTeamID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTeamIDActionPerformed(evt);
-            }
-        });
         add(jTextFieldTeamID, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 351, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -199,33 +187,19 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
-            crdLyt.show(userProcessContainer,"Sysadmin");
+        crdLyt.show(userProcessContainer,"Sysadmin");
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextFieldTeamPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTeamPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTeamPasswordActionPerformed
-
-    private void jTextFieldTeamIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTeamIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTeamIDActionPerformed
-
     private void jButtonCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateActionPerformed
-        // TODO add your handling code here:
+       
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         ArrayList<String> user_input = check_empty_field();
         deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
         UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         if(!user_input.isEmpty()) {
             if(usersList.checkIfUserIsUnique(user_input.get(0))){
-            
-//            Employee employee = new Employee(user_input.get(0),user_input.get(1),new DeliveryAgencyAdminRole());
-            
-            
-            userAccount = new UserAccount(user_input.get(0), user_input.get(2), new DeliveryAgencyAdminRole());
-            
+            userAccount = new UserAccount(user_input.get(0), user_input.get(2), new DeliveryAgencyAdminRole());            
             DeliveryAgency deliveryAgency = new DeliveryAgency(user_input.get(0), user_input.get(1));
             userAccount.setDeliveryAgency(deliveryAgency);
             deliveryAgencyDirectory.addDeliveryAgency(deliveryAgency);
@@ -262,7 +236,6 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
             {
                 DeliveryAgency deliveryAgency = userAccount.getDeliveryAgency();
                 ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
                 model.setValueAt(user_input.get(1), selected_row_ix, 1);
                 model.setValueAt(user_input.get(2), selected_row_ix, 2);
                 deliveryAgencyDirectory.updateDeliveryAgency(user_input, deliveryAgency);
@@ -271,9 +244,7 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
             }
         }
         
-//        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
         JOptionPane.showMessageDialog(this, "Values updated");
-//        addrecordstotable();
         
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
@@ -290,14 +261,13 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
         DeliveryAgency deliveryAgency = select_user_account_details.getDeliveryAgency();
         deliveryAgencyDirectory.deleteDeliveryAgency(deliveryAgency);
         UserAccountDirectory.deleteAccount(select_user_account_details);
-//        ecosystem.setRestaurantDirectory(restaurantDirectory);
         model.removeRow(selected_row_ix);
         addrecordstotable();
         clearFields();
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
     private void jTableEmployeeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableEmployeeMouseClicked
-        // TODO add your handling code here:
+        
         jButtonCreate.setEnabled(false);
         int selected_row_ix = jTableEmployee.getSelectedRow();
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
@@ -314,12 +284,13 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
         jTextFieldTeamID.setEditable(true);
         clearFields();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
+    
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
-//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
         userAccount.getDeliveryAgency().setDeliveryAgencyName(user_input.get(1));
         userAccount.setPassword(user_input.get(2));
         return userAccount;
     }
+    
     private void clearFields(){
         jTextFieldTeamID.setText("");
         jTextFieldTeamName.setText("");
@@ -346,8 +317,6 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
             user_input.add(user_emp_name);
             user_input.add(user_password);
         }
-        
-     
         
         return user_input;
         
@@ -377,41 +346,40 @@ public class CarrierAgencyAccountsPage extends javax.swing.JPanel {
     private void addrecordstotable() {
         UserAccountDirectory userAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
-//        deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
-    
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         model.setRowCount(0);
-//        ArrayList<DeliveryAgency> deliveryAgencyList = deliveryAgencyDirectory.getDeliveryAgencyList();
         for(UserAccount userAccount: usersList)
         {   
             if(userAccount.getRole().toString() == "DeliveryAgencyAdmin"){
                 model.addRow(new Object[]{userAccount,userAccount.getDeliveryAgency().getDeliveryAgencyName(),userAccount.getPassword()});
             }
-            
         }
-        
         jTableEmployee.setModel(model);
     }
 
     private void addDefaultvalues() {
         
         UserAccountDirectory usersList = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-        userAccount = new UserAccount("deliveryagency121", "pass",new DeliveryAgencyAdminRole());
-        DeliveryAgency deliveryAgency = new DeliveryAgency("deliveryagency121","deliveryagency1");
-        deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
-        deliveryAgencyDirectory.addDeliveryAgency(deliveryAgency);
-        userAccount.setDeliveryAgency(deliveryAgency);
-        if(usersList.checkIfUserIsUnique("deliveryagency121")){
-            usersList.addUserAccount(userAccount);
+        
+        if (usersList.checkIfUserIsUnique("deliveryagency121")) {
+         
+            userAccount = new UserAccount("deliveryagency121", "pass",new DeliveryAgencyAdminRole());
+            DeliveryAgency deliveryAgency = new DeliveryAgency("deliveryagency121","deliveryagency1");
+            deliveryAgencyDirectory = medicalServiceCentralisationEcoSystem.getDeliveryAgencyDirectory();
+            deliveryAgencyDirectory.addDeliveryAgency(deliveryAgency);
+            userAccount.setDeliveryAgency(deliveryAgency);
+                usersList.addUserAccount(userAccount);
         }
         
-        userAccount = new UserAccount("deliveryagency122", "pass",new DeliveryAgencyAdminRole());
-        deliveryAgency = new DeliveryAgency("deliveryagency122","deliveryagency2");
-        deliveryAgencyDirectory.addDeliveryAgency(deliveryAgency);
-        userAccount.setDeliveryAgency(deliveryAgency);
-        if(usersList.checkIfUserIsUnique("deliveryagency122")){
+        if (usersList.checkIfUserIsUnique("deliveryagency122")) {
+            userAccount = new UserAccount("deliveryagency122", "pass",new DeliveryAgencyAdminRole());
+            DeliveryAgency deliveryAgency = new DeliveryAgency("deliveryagency122","deliveryagency2");
+            deliveryAgencyDirectory.addDeliveryAgency(deliveryAgency);
+            userAccount.setDeliveryAgency(deliveryAgency);
             usersList.addUserAccount(userAccount);
-        }    
+
+        }
+        
     }
     
 }
