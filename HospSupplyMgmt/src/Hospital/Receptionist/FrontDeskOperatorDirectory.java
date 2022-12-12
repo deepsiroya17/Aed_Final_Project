@@ -13,8 +13,6 @@ import java.util.HashMap;
  * @author animeshgiri
  */
 public class FrontDeskOperatorDirectory {
-    
-//    ArrayList<FrontDeskOperator> frontDeskOperatorList = new ArrayList<>();
     HashMap<String, FrontDeskOperator> frontDeskOperatorList = new HashMap<>();
 
     public HashMap<String, FrontDeskOperator> getFrontDeskOperatorList() {

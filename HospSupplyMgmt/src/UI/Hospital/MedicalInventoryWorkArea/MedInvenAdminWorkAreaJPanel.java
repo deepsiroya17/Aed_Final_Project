@@ -33,16 +33,10 @@ public class MedInvenAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
         this.hospital = hospital;
         jPanel1.setVisible(false);
-        //jSplitPane.setVisible(false);
-        //jPanel2.setVisible(true);
-//        populateTree();
+        
     }
     
     public void populateTree(){
-        //DefaultTreeModel model=(DefaultTreeModel)Admin.getModel();
-       // Add the code for draw your system structure shown by JTree
-       
-      //  model.reload();
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -75,7 +69,7 @@ public class MedInvenAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jButtonTestDatabase.setBackground(new java.awt.Color(255, 255, 204));
         jButtonTestDatabase.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonTestDatabase.setText("Medical Supplies Database");
+        jButtonTestDatabase.setText("Medical Inventory Database");
         jButtonTestDatabase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonTestDatabaseActionPerformed(evt);

@@ -60,11 +60,8 @@ public class ReceptionistAppointment extends javax.swing.JPanel {
         jTableAppointment = new javax.swing.JTable();
         jButtonCreate = new javax.swing.JButton();
         jTextFieldPatientName = new javax.swing.JTextField();
-        jButtonUpdate = new javax.swing.JButton();
-        jButtonView = new javax.swing.JButton();
         jTextFieldPatientID = new javax.swing.JTextField();
         jLabelPatientID = new javax.swing.JLabel();
-        jButtonDelete = new javax.swing.JButton();
         jLabelPatientName = new javax.swing.JLabel();
         jTextFieldDoctorName = new javax.swing.JTextField();
         jLabelAppointmentTime = new javax.swing.JLabel();
@@ -78,10 +75,10 @@ public class ReceptionistAppointment extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabelTitle.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("APPOINTMENT MANAGEMENT");
-        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 50, 760, -1));
+        add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 50, 880, -1));
 
         jTableAppointment.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,46 +97,45 @@ public class ReceptionistAppointment extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTableAppointment);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 540, 787, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 520, 787, 160));
 
+        jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButtonCreate.setText("CREATE");
         jButtonCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, -1, -1));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 110, 40));
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 140, -1));
-
-        jButtonUpdate.setText("UPDATE");
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, -1, -1));
-
-        jButtonView.setText("VIEW");
-        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 470, 70, -1));
         add(jTextFieldPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(238, 198, 140, -1));
 
+        jLabelPatientID.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPatientID.setText("Patient ID :");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 70, 20));
 
-        jButtonDelete.setText("DELETE");
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, -1, -1));
-
+        jLabelPatientName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPatientName.setText("Patient Name :");
         add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, 20));
         add(jTextFieldDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 140, -1));
 
+        jLabelAppointmentTime.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelAppointmentTime.setText("Appointment Date :");
         add(jLabelAppointmentTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 367, 120, 20));
 
+        jLabelDepartment.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelDepartment.setText("Department :");
         add(jLabelDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 104, 20));
 
         jComboBoxDepartment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cardiology", "Radiology", "Ayurvedic", "Dermetology", "Optometry", "Genral Surgery", "Plastic Surgeon ", "Obstetrics", "Orthopedics", "Psychiatry", "Neurosurgery", "Hematology", "Pedatrics", "Oncology", "Stomatology", "Opthalmology", "Virology", "Bio-Chemistry" }));
         add(jComboBoxDepartment, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 140, -1));
 
+        jLabelDoctorName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelDoctorName.setText("Doctor Name :");
         add(jLabelDoctorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 104, 20));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Appointment Time :");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 130, 20));
         add(jDateAppointmentDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 170, 30));
@@ -162,37 +158,6 @@ public class ReceptionistAppointment extends javax.swing.JPanel {
         patientAppointment.setDepartment(user_input.get(3));
         patientAppointment.setAppointmentDate(user_input.get(4));
         patientAppointment.setAppointmentTime(user_input.get(5));
-        
-        
-
-//        Patient newPatient = new Patient();
-//        for(Patient patient: patientList){
-//            if(patient.getPatient_id().equals(user_input.get(0))){
-//                newPatient = patient;
-//                break;
-//            }
-//        }
-//        //        String current_timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-//
-//        newPatient.setPatient_id(user_input.get(0));
-//        newPatient.setPatient_name(user_input.get(1));
-//        newPatient.setPatient_email(user_input.get(5));
-//        PatientTest patientTest = new PatientTest();
-//        patientTest.setTest_date(user_input.get(4));
-//        patientTest.setReport_avalaible(report_avalibility);
-//        patientTest.setTest_id(user_input.get(2));
-//        patientTest.setLabTest(labTestDirectory.findLabTestByName(user_input.get(3)));
-//
-//        ArrayList<PatientTest> patientTestList = newPatient.getPatientTestList();
-//        //        HashMap<String, LabTest> patientLabTest = patientTest.getPatient_test_list();
-//        //
-//        //        patientLabTest.put(user_input.get(2), labTestDirectory.findLabTestByName(user_input.get(3)));
-//        patientTestList.add(patientTest);
-//        newPatient.setPatientTestList(patientTestList);
-//        patientList.add(newPatient);
-//        patientDirectory.setPatientList(patientList);
-//        hospital.setPatientDirectory(patientDirectory);
-        
         JOptionPane.showMessageDialog(this, "Appointment Booked");
         model.addRow(new Object[]{
             patientAppointment.getPatient_id(),
@@ -208,22 +173,9 @@ public class ReceptionistAppointment extends javax.swing.JPanel {
         clearFields();
 
     }//GEN-LAST:event_jButtonCreateActionPerformed
-//    private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
-//        
-//        customer.getUserAccount().setPassword(user_input.get(1));
-//        customer.setCustomerPhone(user_input.get(2));
-//        return customer;
-//    }
-    
-//    }
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCreate;
-    private javax.swing.JButton jButtonDelete;
-    private javax.swing.JButton jButtonUpdate;
-    private javax.swing.JButton jButtonView;
     private javax.swing.JComboBox<String> jComboBoxDepartment;
     private com.toedter.calendar.JDateChooser jDateAppointmentDate;
     private javax.swing.JLabel jLabel1;

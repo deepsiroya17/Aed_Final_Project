@@ -20,14 +20,6 @@ public class MedSupEquipAdmin {
     public String getMedSupEquipAdminId() {
         return MedSupEquipAdminId;
     }
-
-//    public UserAccount getUserAccount() {
-//        return userAccount;
-//    }
-//
-//    public void setUserAccount(UserAccount userAccount) {
-//        this.userAccount = userAccount;
-//    }
     public void setMedSupEquipAdminId(String MedSupEquipAdminId) {    
         this.MedSupEquipAdminId = MedSupEquipAdminId;
     }

@@ -14,8 +14,7 @@ import java.util.HashMap;
  * @author sarth
  */
 public class TechnicianDirectory {
-    
-//    ArrayList<Technician> technicianList = new ArrayList<>();
+
     HashMap<String, Technician> technicianList = new HashMap<>();
 
     public HashMap<String, Technician> getTechnicianList() {

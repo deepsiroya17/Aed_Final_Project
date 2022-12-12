@@ -40,21 +40,7 @@ public class PatientEncounter extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer = userProcessContainer;
     }
-    /*EcoSystem ecosystem;
-    CustomerDirectory customerDirectory;
-    UserAccount userAccount;
-    Customer customer;
-    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
-    public PatientEncounter(JPanel userProcessContainer , EcoSystem ecosystem) {
-        this.userProcessContainer = userProcessContainer;
-        this.ecosystem = ecosystem;
-//        this.ecosystem = dB4OUtil.retrieveSystem();
-        if(ecosystem.getCustomerDirectory() == null)
-           ecosystem.setCustomerDirectory(new CustomerDirectory());
-        initComponents();
-        populateTable();
-    }
-*/
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -66,7 +52,6 @@ public class PatientEncounter extends javax.swing.JPanel {
 
         jLabelTitle = new javax.swing.JLabel();
         jButtonEmailPrescription1 = new javax.swing.JButton();
-        jButtonCreate = new javax.swing.JButton();
         jTextFieldPatientName = new javax.swing.JTextField();
         jTextFieldPatientID = new javax.swing.JTextField();
         jLabelPatientID = new javax.swing.JLabel();
@@ -103,100 +88,82 @@ public class PatientEncounter extends javax.swing.JPanel {
         RefreshButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 255));
-        setForeground(new java.awt.Color(0, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelTitle.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabelTitle.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelTitle.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTitle.setText("Patient Encounter");
         add(jLabelTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 706, -1));
 
         jButtonEmailPrescription1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonEmailPrescription1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonEmailPrescription1.setForeground(new java.awt.Color(0, 102, 102));
         jButtonEmailPrescription1.setText("Email prescription");
         jButtonEmailPrescription1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEmailPrescription1ActionPerformed(evt);
             }
         });
-        add(jButtonEmailPrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 630, -1, -1));
-
-        jButtonCreate.setText("SUBMIT");
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 910, 100, 30));
+        add(jButtonEmailPrescription1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 600, -1, -1));
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 140, -1));
         add(jTextFieldPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 140, -1));
 
-        jLabelPatientID.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientID.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPatientID.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPatientID.setText("Patient ID:");
         add(jLabelPatientID, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 104, -1));
 
-        jLabelPatientName.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPatientName.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPatientName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPatientName.setText("Patient Name:");
         add(jLabelPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 110, 20));
         add(jTextFieldBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 140, -1));
         add(jTextFieldAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 280, 140, -1));
 
-        jLabelAge.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelAge.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelAge.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelAge.setText("Age :");
         add(jLabelAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 40, 20));
 
-        jLabelBloodGroup.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelBloodGroup.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelBloodGroup.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelBloodGroup.setText("Blood Group :");
         add(jLabelBloodGroup, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 90, 20));
         add(jTextFieldPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, 140, -1));
         add(jTextFieldBloodPressure, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 140, -1));
 
-        jLabelDiagnosisandPrescription.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelDiagnosisandPrescription.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelDiagnosisandPrescription.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelDiagnosisandPrescription.setText("Diagnosis and Prescription :");
         add(jLabelDiagnosisandPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, 190, -1));
 
-        jLabelPulse.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPulse.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPulse.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPulse.setText("Pulse :");
         add(jLabelPulse, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
         add(jTextFieldPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, 140, -1));
         add(jTextFieldGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 160, 140, -1));
 
-        jLabelGender.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelGender.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelGender.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelGender.setText("Gender :");
-        add(jLabelGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 104, -1));
+        add(jLabelGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 104, -1));
 
-        jLabelPhoneNumber.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPhoneNumber.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPhoneNumber.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPhoneNumber.setText("Phone Number :");
-        add(jLabelPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, -1, -1));
+        add(jLabelPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, -1, -1));
         add(jTextFieldWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, 140, -1));
         add(jTextFieldHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, 140, -1));
 
-        jLabelHeight.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelHeight.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelHeight.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelHeight.setText("Height :");
-        add(jLabelHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 104, -1));
+        add(jLabelHeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 104, -1));
 
-        jLabelEmpName4.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelEmpName4.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelEmpName4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelEmpName4.setText("Weight :");
-        add(jLabelEmpName4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
+        add(jLabelEmpName4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, -1, -1));
         add(jTextFieldTemparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 360, 140, -1));
         add(jTextFieldBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 140, -1));
 
-        jLabelBMI.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelBMI.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelBMI.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelBMI.setText("B.M.I. :");
-        add(jLabelBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 80, 20));
+        add(jLabelBMI, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 80, 20));
 
-        jLabelTemparature.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelTemparature.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelTemparature.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTemparature.setText("Temperature :");
-        add(jLabelTemparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, -1, -1));
+        add(jLabelTemparature, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, -1));
 
         jTextAreaDiagnosisandPrescription.setColumns(20);
         jTextAreaDiagnosisandPrescription.setRows(5);
@@ -210,76 +177,71 @@ public class PatientEncounter extends javax.swing.JPanel {
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, 420, 40));
 
-        jLabelBloodPressure.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelBloodPressure.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelBloodPressure.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelBloodPressure.setText("Blood Pressure :");
         add(jLabelBloodPressure, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 110, 20));
 
-        jLabelReasonforVisit.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelReasonforVisit.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelReasonforVisit.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelReasonforVisit.setText("Reason for Visit :");
         add(jLabelReasonforVisit, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 120, -1));
 
         jButtonDownloadPrescription.setBackground(new java.awt.Color(255, 255, 204));
         jButtonDownloadPrescription.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonDownloadPrescription.setForeground(new java.awt.Color(0, 102, 102));
         jButtonDownloadPrescription.setText("Download prescription");
         jButtonDownloadPrescription.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonDownloadPrescriptionActionPerformed(evt);
             }
         });
-        add(jButtonDownloadPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, -1, -1));
+        add(jButtonDownloadPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 600, -1, -1));
 
-        jLabelPhoneNumber1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jLabelPhoneNumber1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabelPhoneNumber1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPhoneNumber1.setText("Email :");
         add(jLabelPhoneNumber1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
         add(jTextFieldEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 140, -1));
 
         RefreshButton.setBackground(new java.awt.Color(255, 255, 204));
         RefreshButton.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        RefreshButton.setForeground(new java.awt.Color(0, 102, 102));
         RefreshButton.setText("Refresh");
         RefreshButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RefreshButtonActionPerformed(evt);
             }
         });
-        add(RefreshButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 703, 100, 40));
+        add(RefreshButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 540, 100, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonDownloadPrescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDownloadPrescriptionActionPerformed
-//       Document document = new Document();
-//       ArrayList<String> user_input = check_empty_field();
-//      try
-//      {
-//         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("\\Patients.pdf"));
-//         document.open();
-//         document.add(new Paragraph("\n\nName : " + user_input.get(1)));
-//         document.add(new Paragraph("\n\nEmail : " + user_input.get(2)));
-//         document.add(new Paragraph("\n\nPhone no : " +user_input.get(4)));
-//         document.add(new Paragraph("\n\nGender : " +user_input.get(3)));
-//         document.add(new Paragraph("\n\nAge : " +user_input.get(5)));
-//         document.add(new Paragraph("\n\nHeight : " +user_input.get(6)));
-//         document.add(new Paragraph("\n\nWeight : " +user_input.get(7)));
-//         document.add(new Paragraph("\n\nBMI : " +user_input.get(8)));
-//         document.add(new Paragraph("\n\nTemperature : " +user_input.get(9)));
-//         document.add(new Paragraph("\n\nBlood Group : " +user_input.get(10)));
-//         document.add(new Paragraph("\n\nBlood Pressure : " +user_input.get(11)));
-//         document.add(new Paragraph("\n\nPulse : " +user_input.get(12)));
-//         document.add(new Paragraph("\n\nReason for Visit : " +user_input.get(13)));
-//         document.add(new Paragraph("\n\nDiagnosis and Prescription : : " +user_input.get(14)));
-//         document.close();
-//         writer.close();
-//         JOptionPane.showMessageDialog(this, "Downloaded prescription successfully!");
-//      } catch (DocumentException e2)
-//      {
-//         e2.printStackTrace();
-//      } catch (FileNotFoundException e1)
-//      {
-//         e1.printStackTrace();
-//      }
+       Document document = new Document();
+       ArrayList<String> user_input = check_empty_field();
+      try
+      {
+         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("C:\\Patients.pdf"));
+         document.open();
+         document.add(new Paragraph("\n\nName : " + user_input.get(1)));
+         document.add(new Paragraph("\n\nEmail : " + user_input.get(2)));
+         document.add(new Paragraph("\n\nPhone no : " +user_input.get(4)));
+         document.add(new Paragraph("\n\nGender : " +user_input.get(3)));
+         document.add(new Paragraph("\n\nAge : " +user_input.get(5)));
+         document.add(new Paragraph("\n\nHeight : " +user_input.get(6)));
+         document.add(new Paragraph("\n\nWeight : " +user_input.get(7)));
+         document.add(new Paragraph("\n\nBMI : " +user_input.get(8)));
+         document.add(new Paragraph("\n\nTemperature : " +user_input.get(9)));
+         document.add(new Paragraph("\n\nBlood Group : " +user_input.get(10)));
+         document.add(new Paragraph("\n\nBlood Pressure : " +user_input.get(11)));
+         document.add(new Paragraph("\n\nPulse : " +user_input.get(12)));
+         document.add(new Paragraph("\n\nReason for Visit : " +user_input.get(13)));
+         document.add(new Paragraph("\n\nDiagnosis and Prescription : : " +user_input.get(14)));
+         document.close();
+         writer.close();
+         JOptionPane.showMessageDialog(this, "Downloaded prescription successfully!");
+      } catch (DocumentException e2)
+      {
+         e2.printStackTrace();
+      } catch (FileNotFoundException e1)
+      {
+         e1.printStackTrace();
+      }
     }//GEN-LAST:event_jButtonDownloadPrescriptionActionPerformed
 
     private void jButtonEmailPrescription1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmailPrescription1ActionPerformed
@@ -319,7 +281,6 @@ public class PatientEncounter extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton RefreshButton;
-    private javax.swing.JButton jButtonCreate;
     private javax.swing.JButton jButtonDownloadPrescription;
     private javax.swing.JButton jButtonEmailPrescription1;
     private javax.swing.JLabel jLabelAge;
@@ -438,22 +399,5 @@ public class PatientEncounter extends javax.swing.JPanel {
         jTextAreaReasonForVisit.setText("");
         jTextAreaDiagnosisandPrescription.setText("");
     }
-    /*
-    private void populateTable() {
-        
-        customerDirectory = ecosystem.getCustomerDirectory();
-        ArrayList<Customer> customers = customerDirectory.getCustomerList();
-        DefaultTableModel model = (DefaultTableModel) customersTable.getModel();
-        model.setRowCount(0);
-//        DefaultComboBoxModel dc = new DefaultComboBoxModel();
-        
-        for(Customer c: customers)
-        {
-            model.addRow(new Object[]{c,c.getUserAccount().getPassword(), c.getCustomerPhone()});
-//            dc.addElement(c.getCustomerName());
-        }
-        customersTable.setModel(model);
-//        listCustomers.setModel(dc);
-        dB4OUtil.storeSystem(ecosystem);
-    }*/
+   
 }
