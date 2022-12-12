@@ -38,5 +38,6 @@ Need for an automated system for managing functionality of hospital
 UML Class Diagram
 
 ![Blank diagram (1)](https://user-images.githubusercontent.com/114635170/206950680-119564e2-92a3-4c09-a7fd-12539c063442.png)
+![krupauml (1)](https://user-images.githubusercontent.com/114635170/206958798-46e78da0-dff3-4279-909a-1f4eab638fca.png)
 
  
