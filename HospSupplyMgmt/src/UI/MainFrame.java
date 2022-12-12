@@ -9,8 +9,7 @@ import CarrierAgency.DeliveryAgency;
 import System.MedicalServiceCentralisationEcoSystem;
 
 import UI.Hospital.HospitalAdminWorkArea.HospitalAdminWorkAreaJPanel;
-import UI.CustomerAssistanceTeam.CustomerAssistanceTeamAdminWorkArea.CustomerSupportTeamAdminWorkAreaJPanel;
-import UI.MedicalInventoryAdminWorkArea.MedSupWarehouseDatabase;
+import UI.CustomerAssistanceTeam.CustomerAssistanceTeamAdminWorkArea.CustomerAssistanceTeamAdminWorkAreaJPanel;
 import Hospital.Hospital.Hospital;
 
 
@@ -18,46 +17,38 @@ import System.UserAccount;
 import System.UserAccountDirectory;
 
 import Hospital.DB4OUtil.HospitalManagementDB4OUtil;
-import Hospital.Hospital.HospitalDirectory;
 import Warehouse.MedSupWarehouse;
 
 import java.awt.CardLayout;
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import UI.CustomerAssistanceTeam.CustomerAssistanceRepresentativeWorkArea.CustomerSupportMemberWorkAreaJPanel;
-import UI.CarrierAgency.DeliveryAgencyOrderDatabase;
-import UI.Hospital.ReceptionWorkArea.AdministrativeReceptionistWorkAreaJPanel;
-import UI.Hospital.ReceptionWorkArea.AdminstrativeReceptionistAppointment;
-import UI.Hospital.ReceptionWorkArea.MedSuppEquipPatient;
-import UI.Hospital.TechnicalWorkArea.MedTechnicalWorkAreaJPanel;
-import UI.Hospital.MedicalInventoryWorkArea.MedSupAdminWorkAreaJPanel;
-import UI.Hospital.OperationalWorkArea.OperationalPatientEncounter;
-import UI.MedicalInventoryAdminWorkArea.MedSupWarehouseAdminWorkAreaJPanel;
-import UI.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
+import UI.CustomerAssistanceTeam.CustomerAssistanceRepresentativeWorkArea.CustomerAssistanceRepresentativeWorkAreaJPanel;
+import UI.CarrierAgency.CarrierAgencyOrderDatabase;
+import UI.Hospital.ReceptionWorkArea.ReceptionistAppointment;
+import UI.Hospital.ReceptionWorkArea.EquipRequestPatient;
+import UI.Hospital.TechnicalWorkArea.TechnicianWorkAreaJPanel;
+import UI.Hospital.MedicalInventoryWorkArea.MedInvenAdminWorkAreaJPanel;
+import UI.Hospital.OperationalWorkArea.PatientEncounter;
+import UI.MedicalInventoryAdminWorkArea.MedInventoryAdminWorkAreaJPanel;
+import UI.SystemAdminWorkArea.SystemAdminWorkPanel;
 
-public class HospitalManagementMainJFrame extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame {
 
     /** 
-     * Creates new form HospitalManagementMainJFrame
+     * Creates new form MainFrame
      */
     @SuppressWarnings("unchecked")
     private MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     public HospitalManagementDB4OUtil dB4OUtil = HospitalManagementDB4OUtil.getInstance();
     UserAccount userAccountLogin;
 
-    public HospitalManagementMainJFrame() {
+    public MainFrame() {
         initComponents();
         medicalServiceCentralisationEcoSystem = dB4OUtil.retrieveSystem();
     }
@@ -229,7 +220,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             System.out.println("userAccount.getRole().toString(): "+userAccountLogin.getRole().toString());
             if(userAccountLogin.getRole().toString().equals("SystemAdmin"))
             {
-                SystemAdminWorkAreaJPanel systemAdminWorkAreaJPanel = new SystemAdminWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem);
+                SystemAdminWorkPanel systemAdminWorkAreaJPanel = new SystemAdminWorkPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem);
                 jPanelWorkArea.add("Sysadmin",systemAdminWorkAreaJPanel);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -246,7 +237,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("Technician"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                MedTechnicalWorkAreaJPanel medTechnicalWorkAreaJPanel = new MedTechnicalWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
+                TechnicianWorkAreaJPanel medTechnicalWorkAreaJPanel = new TechnicianWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
                 jPanelWorkArea.add("hospitalAdminWorkAreaJPanel",medTechnicalWorkAreaJPanel);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -254,14 +245,14 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("CustomerSupportTeamAdmin"))
             {
                 CustomerSupportTeam customerSupportTeam = userAccountLogin.getCustomerSupportTeam();
-                CustomerSupportTeamAdminWorkAreaJPanel customerSupportTeamAdminWorkAreaJPanel = new CustomerSupportTeamAdminWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, customerSupportTeam, userAccountLogin);
+                CustomerAssistanceTeamAdminWorkAreaJPanel customerSupportTeamAdminWorkAreaJPanel = new CustomerAssistanceTeamAdminWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, customerSupportTeam, userAccountLogin);
                 jPanelWorkArea.add("customerSupportTeamAdminWorkAreaJPanel",customerSupportTeamAdminWorkAreaJPanel);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
             }
             else if(userAccountLogin.getRole().toString().equals("CustomerSupportMember"))
             {
-                CustomerSupportMemberWorkAreaJPanel customerSupportMemberWorkAreaJPanel = new CustomerSupportMemberWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem);
+                CustomerAssistanceRepresentativeWorkAreaJPanel customerSupportMemberWorkAreaJPanel = new CustomerAssistanceRepresentativeWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem);
                 jPanelWorkArea.add("customerSupportMemberWorkAreaJPanel",customerSupportMemberWorkAreaJPanel);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -269,7 +260,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("MedSupWarehouseAdmin"))
             {
                 MedSupWarehouse medSupWarehouse = userAccountLogin.getMedSupWarehouse();
-                MedSupWarehouseAdminWorkAreaJPanel medSupWarehouseAdminWorkAreaJPanel = new MedSupWarehouseAdminWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, medSupWarehouse);
+                MedInventoryAdminWorkAreaJPanel medSupWarehouseAdminWorkAreaJPanel = new MedInventoryAdminWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, medSupWarehouse);
                 jPanelWorkArea.add("medSupWarehouseAdminWorkAreaJPanel",medSupWarehouseAdminWorkAreaJPanel);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -277,7 +268,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("MedSupEquipAdmin"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                MedSupAdminWorkAreaJPanel medSupAdminWorkAreaJPanel = new MedSupAdminWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
+                MedInvenAdminWorkAreaJPanel medSupAdminWorkAreaJPanel = new MedInvenAdminWorkAreaJPanel(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
                 jPanelWorkArea.add("medSupAdminWorkAreaJPanel",medSupAdminWorkAreaJPanel);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -285,7 +276,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("DeliveryAgencyAdmin"))
             {
                 DeliveryAgency deliveryAgency = userAccountLogin.getDeliveryAgency();
-                DeliveryAgencyOrderDatabase deliveryAgencyOrderDatabase = new DeliveryAgencyOrderDatabase(jPanelWorkArea, medicalServiceCentralisationEcoSystem, deliveryAgency);
+                CarrierAgencyOrderDatabase deliveryAgencyOrderDatabase = new CarrierAgencyOrderDatabase(jPanelWorkArea, medicalServiceCentralisationEcoSystem, deliveryAgency);
                 jPanelWorkArea.add("DeliveryAgencyOrderDatabase",deliveryAgencyOrderDatabase);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -293,7 +284,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("FrontDeskOperator"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                AdminstrativeReceptionistAppointment adminstrativeReceptionistAppointment = new AdminstrativeReceptionistAppointment(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
+                ReceptionistAppointment adminstrativeReceptionistAppointment = new ReceptionistAppointment(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
                 jPanelWorkArea.add("AdminstrativeReceptionistAppointment",adminstrativeReceptionistAppointment);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -301,7 +292,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("Doctor"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                OperationalPatientEncounter operationalPatientEncounter = new OperationalPatientEncounter(jPanelWorkArea);
+                PatientEncounter operationalPatientEncounter = new PatientEncounter(jPanelWorkArea);
                 jPanelWorkArea.add("operationalPatientEncounter",operationalPatientEncounter);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -309,7 +300,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
             else if(userAccountLogin.getRole().toString().equals("Nurse"))
             {
                 Hospital hospital = userAccountLogin.getHospital();
-                MedSuppEquipPatient medSuppEquipPatient = new MedSuppEquipPatient(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
+                EquipRequestPatient medSuppEquipPatient = new EquipRequestPatient(jPanelWorkArea, medicalServiceCentralisationEcoSystem, hospital);
                 jPanelWorkArea.add("EquipRequestPatient",medSuppEquipPatient);
                 CardLayout crdLyt = (CardLayout) jPanelWorkArea.getLayout();
                 crdLyt.next(jPanelWorkArea);
@@ -469,14 +460,18 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HospitalManagementMainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HospitalManagementMainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HospitalManagementMainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HospitalManagementMainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -485,7 +480,7 @@ public class HospitalManagementMainJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HospitalManagementMainJFrame().setVisible(true);
+                new MainFrame().setVisible(true);
             }
         });
     }

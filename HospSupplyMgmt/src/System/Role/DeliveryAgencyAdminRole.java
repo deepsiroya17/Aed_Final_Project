@@ -8,7 +8,7 @@ package System.Role;
 import System.MedicalServiceCentralisationEcoSystem;
 import System.UserAccount;
 import javax.swing.JPanel;
-import UI.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
+import UI.SystemAdminWorkArea.SystemAdminWorkPanel;
 
 /**
  *
@@ -17,7 +17,7 @@ import UI.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
 public class DeliveryAgencyAdminRole extends Role {
 
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount userAccount, MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem) {
-        return new SystemAdminWorkAreaJPanel(userProcessContainer, hospitalManagementEcoSystem);
+        return new SystemAdminWorkPanel(userProcessContainer, hospitalManagementEcoSystem);
     }
     
     @Override

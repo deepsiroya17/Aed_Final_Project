@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI.Hospital.MedicalInventoryWorkArea;
+package UI.Hospital.TechnicalWorkArea;
 
 import Hospital.Hospital.Hospital;
 import System.MedicalServiceCentralisationEcoSystem;
@@ -19,7 +19,7 @@ import javax.swing.tree.DefaultTreeModel;
  *
  * @author animeshgiri
  */
-public class MedSupAdminWorkAreaJPanel extends javax.swing.JPanel {
+public class TechnicianWorkAreaJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form SystemAdminWorkAreaJPanel
@@ -27,7 +27,7 @@ public class MedSupAdminWorkAreaJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     Hospital hospital;
-    public MedSupAdminWorkAreaJPanel(JPanel userProcessContainer,MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
+    public TechnicianWorkAreaJPanel(JPanel userProcessContainer,MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
@@ -57,8 +57,7 @@ public class MedSupAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jButtonTestDatabase = new javax.swing.JButton();
-        jButtonPlaceOrder = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jButtonPatientTest = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1720, 1080));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -69,58 +68,57 @@ public class MedSupAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jSplitPane.setLeftComponent(jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(0, 70, 169));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1720, 1080));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1920, 1183));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonTestDatabase.setBackground(new java.awt.Color(255, 255, 204));
+        jButtonTestDatabase.setBackground(new java.awt.Color(0, 0, 0));
         jButtonTestDatabase.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonTestDatabase.setText("Medical Supplies Database");
+        jButtonTestDatabase.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonTestDatabase.setText("Test Database");
         jButtonTestDatabase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonTestDatabaseActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonTestDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 430, 70));
+        jPanel2.add(jButtonTestDatabase, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 590, 50));
 
-        jButtonPlaceOrder.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonPlaceOrder.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButtonPlaceOrder.setText("Place Order");
-        jButtonPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPatientTest.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonPatientTest.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButtonPatientTest.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonPatientTest.setText("Patient Test");
+        jButtonPatientTest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPlaceOrderActionPerformed(evt);
+                jButtonPatientTestActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonPlaceOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, 430, 70));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/medicaltestwork1.jpg"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1140, -630, 2990, 1730));
+        jPanel2.add(jButtonPatientTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, 590, 50));
 
         jSplitPane.setRightComponent(jPanel2);
 
         add(jSplitPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1833, 1102));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlaceOrderActionPerformed
-        MedSuppliesOrder medSuppliesOrder = new MedSuppliesOrder(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
-        userProcessContainer.add("medSuppliesOrder",medSuppliesOrder);
-        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        cardLayout.show(userProcessContainer,"medSuppliesOrder");
-    }//GEN-LAST:event_jButtonPlaceOrderActionPerformed
-
     private void jButtonTestDatabaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTestDatabaseActionPerformed
 
-        MedSuppliesDatabase medSuppliesDatabase = new MedSuppliesDatabase(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
-        userProcessContainer.add("medSuppliesDatabase",medSuppliesDatabase);
+        TechTestDatabase medTechnicalTestDatabase = new TechTestDatabase(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
+        userProcessContainer.add("medTechnicalTestDatabase",medTechnicalTestDatabase);
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        cardLayout.show(userProcessContainer,"medSuppliesDatabase");
+        cardLayout.show(userProcessContainer,"medTechnicalTestDatabase");
     }//GEN-LAST:event_jButtonTestDatabaseActionPerformed
+
+    private void jButtonPatientTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPatientTestActionPerformed
+        // TODO add your handling code here:
+        TechPatientTest medTechnicalPatientTest = new TechPatientTest(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
+        userProcessContainer.add("medTechnicalPatientTest",medTechnicalPatientTest);
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        cardLayout.show(userProcessContainer,"medTechnicalPatientTest");
+    }//GEN-LAST:event_jButtonPatientTestActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonPlaceOrder;
+    private javax.swing.JButton jButtonPatientTest;
     private javax.swing.JButton jButtonTestDatabase;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane;

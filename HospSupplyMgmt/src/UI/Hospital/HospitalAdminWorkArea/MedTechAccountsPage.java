@@ -6,19 +6,12 @@
 package UI.Hospital.HospitalAdminWorkArea;
 
 
-import Hospital.Radiologist.RadiologistDirectory;
-import Hospital.Employee.Employee;
+
 import System.MedicalServiceCentralisationEcoSystem;
 
-import Hospital.Accountant.AccountantDirectory;
-import Hospital.Accountant.Accountant;
-import Hospital.Pathologist.Pathologist;
-import Hospital.Pathologist.PathologistDirectory;
-import Hospital.Radiologist.Radiologist;
 import Hospital.Hospital.Hospital;
 
 
-import System.Role.AccountantRole;
 import System.Role.PathologistRole;
 import System.Role.RadiologistRole;
 import System.Role.Role;
@@ -31,7 +24,6 @@ import System.UserAccountDirectory;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import java.util.HashMap;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -40,29 +32,24 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author animeshgiri
  */
-public class MedTechnicalAccountsPage extends javax.swing.JPanel {
+public class MedTechAccountsPage extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
      */
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem;
-    PathologistDirectory pathologistDirectory;
-    RadiologistDirectory radiologistDirectory;
     TechnicianDirectory technicianDirectory;
     UserAccount userAccount;
     UserAccountDirectory UserAccountDirectory;
     Hospital hospital;
-    public MedTechnicalAccountsPage(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem, Hospital hospital) {
+    public MedTechAccountsPage(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem, Hospital hospital) {
         
         this.userProcessContainer = userProcessContainer;
         this.hospitalManagementEcoSystem = hospitalManagementEcoSystem;
         this.hospital = hospital;
         initComponents();
-        if(hospital.getPathologistDirectory()== null)
-           hospital.setPathologistDirectory(new PathologistDirectory());
-        if(hospital.getRadiologistDirectory()== null)
-           hospital.setRadiologistDirectory(new RadiologistDirectory());
+        
         if(hospital.getTechnicianDirectory()== null)
            hospital.setTechnicianDirectory(new TechnicianDirectory());
         
@@ -254,28 +241,7 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
             if(usersList.checkIfUserIsUnique(user_input.get(0))){
             
             
-            if(user_input.get(2) == "Pathologist"){
-
-                userAccount = new UserAccount(user_input.get(0), user_input.get(3), new PathologistRole());
-                usersList.addUserAccount(userAccount);
-                Pathologist pathologist = new Pathologist();
-                pathologist.setPathologistId(user_input.get(0));
-                pathologist.setPathologistName(user_input.get(1));                
-                pathologistDirectory.addPathologist(user_input.get(0), pathologist);
-                hospital.setPathologistDirectory(pathologistDirectory);
-                userAccount.setHospital(hospital);
-            }
-            if(user_input.get(2) == "Radiologist"){
-
-                userAccount = new UserAccount(user_input.get(0), user_input.get(3), new RadiologistRole());
-                usersList.addUserAccount(userAccount);
-                Radiologist radiologist = new Radiologist();
-                radiologist.setRadiologistId(user_input.get(0));
-                radiologist.setRadiologistName(user_input.get(1));                
-                radiologistDirectory.addRadiologist(user_input.get(0), radiologist);
-                hospital.setRadiologistDirectory(radiologistDirectory);
-                userAccount.setHospital(hospital);
-            }
+            
             if(user_input.get(2) == "Technician"){
 
                 userAccount = new UserAccount(user_input.get(0), user_input.get(3), new TechnicianRole());
@@ -364,21 +330,7 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
         jComboBoxRole.setSelectedItem(role.toString()); 
         
         
-        if(role.toString().equals("Radiologist")){
-            Hospital hospital = select_user_account_details.getHospital();
-            radiologistDirectory = hospital.getRadiologistDirectory();
-            HashMap<String, Radiologist> radiologistList = radiologistDirectory.getRadiologistList();
-            Radiologist radiologist = radiologistList.get(select_user_account_details.getUsername());
-            jTextFieldEmpName.setText(radiologist.getRadiologistName());
-        }
-        else if(role.toString().equals("Pathologist")){
-            Hospital hospital = select_user_account_details.getHospital();
-            pathologistDirectory = hospital.getPathologistDirectory();
-            HashMap<String, Pathologist> pathologistList = pathologistDirectory.getPathologistList();
-            Pathologist pathologist = pathologistList.get(select_user_account_details.getUsername());
-            jTextFieldEmpName.setText(pathologist.getPathologistName());
-        }
-        else if(role.toString().equals("Technician")){
+        if(role.toString().equals("Technician")){
             Hospital hospital = select_user_account_details.getHospital();
             technicianDirectory = hospital.getTechnicianDirectory();
             HashMap<String, Technician> technicianList = technicianDirectory.getTechnicianList();
@@ -476,39 +428,20 @@ public class MedTechnicalAccountsPage extends javax.swing.JPanel {
     }
 
     private void addrecordstotable() {
-        pathologistDirectory = hospital.getPathologistDirectory();
-        radiologistDirectory = hospital.getRadiologistDirectory();
         technicianDirectory = hospital.getTechnicianDirectory();
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         model.setRowCount(0);
-//        ArrayList<Accountant> accountantList = accountantDirectory.getAccountantList();
-//        for(Accountant accountant: accountantList)
-//        {
-//            model.addRow(new Object[]{accountant.getUserAccount(),accountant.getUserAccount().getEmployee().getEmployee_name(),"Accountant",accountant.getUserAccount().getPassword()});
-//        }
+
         UserAccountDirectory userAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
-//        hospitalDirectory = hospitalManagementEcoSystem.getHospitalDirectory();
+
         
         model.setRowCount(0);
 //        ArrayList<Hospital> hospitalList = hospitalDirectory.getHospitalList();
         for(UserAccount userAccount: usersList)
         {   
-            if(userAccount.getRole().toString() == "Radiologist" && userAccount.getHospital().equals(hospital)){
-                
-                radiologistDirectory = hospital.getRadiologistDirectory();
-                HashMap<String, Radiologist> radiologistList = radiologistDirectory.getRadiologistList();
-                Radiologist radiologist = radiologistList.get(userAccount.getUsername());
-                model.addRow(new Object[]{userAccount,radiologist.getRadiologistName(),userAccount.getRole(),userAccount.getPassword()});
-            }
-            else if(userAccount.getRole().toString() == "Pathologist" && userAccount.getHospital().equals(hospital)){
-                
-                pathologistDirectory = hospital.getPathologistDirectory();
-                HashMap<String, Pathologist> pathologistList = pathologistDirectory.getPathologistList();
-                Pathologist pathologist = pathologistList.get(userAccount.getUsername());
-                model.addRow(new Object[]{userAccount,pathologist.getPathologistName(),userAccount.getRole(),userAccount.getPassword()});
-            }
-            else if(userAccount.getRole().toString() == "Technician" && userAccount.getHospital().equals(hospital)){
+            
+            if(userAccount.getRole().toString() == "Technician" && userAccount.getHospital().equals(hospital)){
                 
                 technicianDirectory = hospital.getTechnicianDirectory();
                 HashMap<String, Technician> technicianList = technicianDirectory.getTechnicianList();

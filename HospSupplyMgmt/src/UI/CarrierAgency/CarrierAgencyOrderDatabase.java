@@ -32,7 +32,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sarth
  */
-public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
+public class CarrierAgencyOrderDatabase extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
@@ -45,7 +45,7 @@ public class DeliveryAgencyOrderDatabase extends javax.swing.JPanel {
     MedSupEquipDirectory medSupEquipDirectory;
     DeliveryAgency deliveryAgencyCurrent;
     
-    public DeliveryAgencyOrderDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, DeliveryAgency deliveryAgencyCurrent) {
+    public CarrierAgencyOrderDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, DeliveryAgency deliveryAgencyCurrent) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;

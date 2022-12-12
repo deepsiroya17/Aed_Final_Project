@@ -30,7 +30,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author sarth
  */
-public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
+public class MedInventoryOrderDatabase extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
@@ -43,7 +43,7 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
     MedSupEquipDirectory medSupEquipDirectory;
     MedSupWarehouse medSupWarehouseCurrent;
     
-    public MedSupWarehouseOrderDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, MedSupWarehouse medSupWarehouse) {
+    public MedInventoryOrderDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, MedSupWarehouse medSupWarehouse) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
@@ -137,7 +137,7 @@ public class MedSupWarehouseOrderDatabase extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        MedSupWarehouseAdminWorkAreaJPanel medSupWarehouseAdminWorkAreaJPanel = new MedSupWarehouseAdminWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, medSupWarehouseCurrent);
+        MedInventoryAdminWorkAreaJPanel medSupWarehouseAdminWorkAreaJPanel = new MedInventoryAdminWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, medSupWarehouseCurrent);
         userProcessContainer.add("medSupWarehouseAdminWorkAreaJPanel",medSupWarehouseAdminWorkAreaJPanel);
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
         crdLyt.show(userProcessContainer,"medSupWarehouseAdminWorkAreaJPanel");

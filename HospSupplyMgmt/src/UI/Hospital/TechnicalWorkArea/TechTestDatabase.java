@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author animeshgiri
  */
-public class MedTechnicalTestDatabase extends javax.swing.JPanel {
+public class TechTestDatabase extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
@@ -36,7 +36,7 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
 //    PatientTestDirectory patientTestDirectory;
     LabTestDirectory labTestDirectory;
     Hospital hospital;
-    public MedTechnicalTestDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
+    public TechTestDatabase(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
@@ -154,7 +154,7 @@ public class MedTechnicalTestDatabase extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        MedTechnicalWorkAreaJPanel medTechnicalWorkAreaJPanel = new MedTechnicalWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
+        TechnicianWorkAreaJPanel medTechnicalWorkAreaJPanel = new TechnicianWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
         userProcessContainer.add("medTechnicalWorkAreaJPanel",medTechnicalWorkAreaJPanel);
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
         crdLyt.show(userProcessContainer,"medTechnicalWorkAreaJPanel");

@@ -20,13 +20,9 @@ import System.MedicalServiceCentralisationEcoSystem;
 import java.awt.CardLayout;
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -36,7 +32,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author animeshgiri
  */
-public class MedTechnicalPatientTest extends javax.swing.JPanel {
+public class TechPatientTest extends javax.swing.JPanel {
 
     /**
      * Creates new form OperationalAccountsPage
@@ -48,7 +44,7 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
     Patient patient;
     SendMessageTwilio sendMessageTwilio;
     String report_path;
-    public MedTechnicalPatientTest(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
+    public TechPatientTest(JPanel userProcessContainer , MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem, Hospital hospital) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.medicalServiceCentralisationEcoSystem = medicalServiceCentralisationEcoSystem;
@@ -315,7 +311,7 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHomeActionPerformed
-        MedTechnicalWorkAreaJPanel medTechnicalWorkAreaJPanel = new MedTechnicalWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
+        TechnicianWorkAreaJPanel medTechnicalWorkAreaJPanel = new TechnicianWorkAreaJPanel(userProcessContainer,medicalServiceCentralisationEcoSystem, hospital);
         userProcessContainer.add("medTechnicalWorkAreaJPanel",medTechnicalWorkAreaJPanel);
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
         crdLyt.show(userProcessContainer,"medTechnicalWorkAreaJPanel");
@@ -329,7 +325,7 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
             String subject = "Medical Test Report";
             sendMail.sendEmailWithFile(message, subject, jTextFieldPatientEmail.getText(),report_path);
         } catch (IOException ex) {
-            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PatientTest.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButtonEmailReportActionPerformed
 
@@ -396,7 +392,7 @@ public class MedTechnicalPatientTest extends javax.swing.JPanel {
         try {
             sendMail.sendEmail(message, subject, user_input.get(5));
         } catch (IOException ex) {
-            Logger.getLogger(MedTechnicalPatientTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PatientTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         clearFields();
