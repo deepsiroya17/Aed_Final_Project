@@ -394,8 +394,6 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
     private void addRolesComboBox() {
         jComboBoxRole.removeAllItems();
         jComboBoxRole.addItem("");
-        jComboBoxRole.addItem("Radiologist");
-        jComboBoxRole.addItem("Pathologist");
         jComboBoxRole.addItem("Technician");
     }
 
