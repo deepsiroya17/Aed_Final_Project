@@ -200,43 +200,6 @@ public class MedSuppliesDatabase extends javax.swing.JPanel {
         model.addRow(new Object[]{medSupEquipInternal,medSupEquipInternal.getMedSupEquipInternal_quantity()});
         clearFields();
     }//GEN-LAST:event_jButtonCreateActionPerformed
-    /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
-        
-        customer.getUserAccount().setPassword(user_input.get(1));
-        customer.setCustomerPhone(user_input.get(2));
-        return customer;
-    }
-        private void clearFields(){
-        custUsername.setText("");
-        custPassword.setText("");
-        custContact.setText("");
-
-    }
-    public ArrayList<String> check_empty_field(){
-        ArrayList<String> user_input = new ArrayList<>();
-        String user_custName = custUsername.getText();
-        String user_custPass = custPassword.getText();
-        String user_contact = custContact.getText();
- 
-        if(user_custName.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Customer Name can't be left empty");
-        }
-        else if(user_custPass.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Please enter password");
-        }
-        
-        else if(user_contact.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Customer Contact No can't be left empty.");
-        }
-        user_input.add(user_custName);
-        user_input.add(user_custPass);
-        user_input.add(user_contact);
-        
-        return user_input;
-        
-    }
-    */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCreate;
@@ -264,7 +227,6 @@ public class MedSuppliesDatabase extends javax.swing.JPanel {
         ArrayList<MedSupEquipInternal> medSupEquipInternalList = medSupEquipInternalDirectory.getMedSupEquipInternalList();
         DefaultTableModel model = (DefaultTableModel) jTableTestDB.getModel();
         model.setRowCount(0);
-//        DefaultComboBoxModel dc = new DefaultComboBoxModel();
         
         for(MedSupEquipInternal medSupEquipInternal: medSupEquipInternalList)
         {

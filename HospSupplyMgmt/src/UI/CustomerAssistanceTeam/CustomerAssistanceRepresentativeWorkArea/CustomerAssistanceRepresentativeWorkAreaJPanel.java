@@ -83,7 +83,6 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
         jButtonDelete = new javax.swing.JButton();
         jLabelEmpName = new javax.swing.JLabel();
         jRadioButtonMedTest = new javax.swing.JRadioButton();
-        jRadioButtonConsultation = new javax.swing.JRadioButton();
         jRadioButtonMedEquipment = new javax.swing.JRadioButton();
         jLabelEmpName1 = new javax.swing.JLabel();
         jLabelEmpName2 = new javax.swing.JLabel();
@@ -99,7 +98,7 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Customer Support Members");
+        jLabel1.setText("Customer Assistance Representatives");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1000, -1));
 
         jTableRequests.setModel(new javax.swing.table.DefaultTableModel(
@@ -187,15 +186,6 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
         });
         add(jRadioButtonMedTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, -1, -1));
 
-        jRadioButtonConsultation.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jRadioButtonConsultation.setText("Consulation");
-        jRadioButtonConsultation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButtonConsultationActionPerformed(evt);
-            }
-        });
-        add(jRadioButtonConsultation, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, -1, -1));
-
         jRadioButtonMedEquipment.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jRadioButtonMedEquipment.setText("Medical equipment");
         jRadioButtonMedEquipment.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +193,7 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
                 jRadioButtonMedEquipmentActionPerformed(evt);
             }
         });
-        add(jRadioButtonMedEquipment, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 400, -1, -1));
+        add(jRadioButtonMedEquipment, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, -1, -1));
 
         jLabelEmpName1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpName1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -298,11 +288,7 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
         Request selectedReq = (Request) model.getValueAt(selected_row_ix, 0);
         RequestDirectory requestDirectory = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         ArrayList<Request> requestList = requestDirectory.getRequestList();
-        
-        
-//        Request updateobj = requestList.UpdateReq(selectedReq.getRequestList());
-        
-        
+  
         for(Request request: requestList)
             {   
                 if(request.getCustomer_name().equals(selectedReq.getCustomer_name())) {
@@ -321,58 +307,11 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
                 
 
             }
-        
-
-//        UserAccount select_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0); 
-//        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-////        ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
-//         hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
-//         ArrayList<UserAccount> userAccountList = UserAccountDirectory.getUserAccountList();
-//         for(UserAccount userAccount: userAccountList)
-//        {
-//            if(userAccount.getUsername().equals(select_account_details.getUsername()))
-//            {
-//                Hospital hospital = userAccount.getHospital();
-//                 ArrayList<String> user_input = check_empty_field();
-////                model.setValueAt(user_input.get(1), selected_row_ix, 0);
-//                model.setValueAt(user_input.get(1), selected_row_ix, 1);
-//                model.setValueAt(user_input.get(2), selected_row_ix, 2);
-//                model.setValueAt(user_input.get(3), selected_row_ix, 3);
-//                hospitalDirectory.updateHospital(user_input, hospital);
-//                UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
-//                break;
-//            }
-//        }
-        
-//        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
         JOptionPane.showMessageDialog(this, "Values updated");
-        addrecordstotable();
-     
-//        for(UclearserAccount userAccount: userAccountList)
-//        {
-//            if(userAccount.getUsername().equals(select_account_details.getUsername()))
-//            {
-//                CustomerSupportTeam customerSupportTeam = userAccount.getCustomerSupportTeam();
-//                ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 1);
-//                model.setValueAt(user_input.get(2), selected_row_ix, 2);
-//                UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
-//                break;
-//            }
-//        }   
-        
-//        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
-//        addrecordstotable();
-    
-   
-
-    
-        
+        addrecordstotable();    
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
     private Request set_user_input_values(Request request, ArrayList<String> user_input) {
-//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
-//        userAccount.getEmployee().setEmployee_name(user_input.get(1));
         request.setCustomer_name(user_input.get(0));
         request.setCustomer_phone(user_input.get(1));
         request.setCustomer_email(user_input.get(2));
@@ -393,12 +332,6 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
         RequestDirectory requestList = medicalServiceCentralisationEcoSystem.getRequestDirectory();
         DefaultTableModel model = (DefaultTableModel) jTableRequests.getModel();
         Request selectedReq = (Request) model.getValueAt(selected_row_ix, 0);
-//        UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
-////        UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
-////        UserAccountDirectory.deleteAccount(select_user_account_details);
-////        ecosystem.setRestaurantDirectory(restaurantDirectory);
-//        model.removeRow(selected_row_ix);
-
         requestList.deleteReq(selectedReq);
         JOptionPane.showMessageDialog(this, "Data Deleted.");
         addrecordstotable();
@@ -447,26 +380,17 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
     private void jRadioButtonMedTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMedTestActionPerformed
         // TODO add your handling code here:
         if(jRadioButtonMedTest.isSelected()){
-            jRadioButtonConsultation.setSelected(false);
+            //jRadioButtonConsultation.setSelected(false);
             jRadioButtonMedEquipment.setSelected(false);
             request_category = "MedicalTest";
         }
     }//GEN-LAST:event_jRadioButtonMedTestActionPerformed
 
-    private void jRadioButtonConsultationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonConsultationActionPerformed
-        // TODO add your handling code here:
-        if(jRadioButtonConsultation.isSelected()){
-            jRadioButtonMedTest.setSelected(false);
-            jRadioButtonMedEquipment.setSelected(false);
-            request_category = "Consultation";
-        }
-    }//GEN-LAST:event_jRadioButtonConsultationActionPerformed
-
     private void jRadioButtonMedEquipmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMedEquipmentActionPerformed
         // TODO add your handling code here:
         if(jRadioButtonMedEquipment.isSelected()){
             jRadioButtonMedTest.setSelected(false);
-            jRadioButtonConsultation.setSelected(false);
+            //jRadioButtonConsultation.setSelected(false);
             request_category = "MedicalEquipment";
         }
     }//GEN-LAST:event_jRadioButtonMedEquipmentActionPerformed
@@ -549,7 +473,6 @@ public class CustomerAssistanceRepresentativeWorkAreaJPanel extends javax.swing.
     private javax.swing.JLabel jLabelEmpName3;
     private javax.swing.JLabel jLabelEmpName5;
     private javax.swing.JLabel jLabelPassword;
-    private javax.swing.JRadioButton jRadioButtonConsultation;
     private javax.swing.JRadioButton jRadioButtonMedEquipment;
     private javax.swing.JRadioButton jRadioButtonMedTest;
     private javax.swing.JScrollPane jScrollPane1;

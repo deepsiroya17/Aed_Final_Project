@@ -20,14 +20,6 @@ public class Nurse {
     public String getNurseId() {
         return NurseId;
     }
-
-//    public UserAccount getUserAccount() {
-//        return userAccount;
-//    }
-//
-//    public void setUserAccount(UserAccount userAccount) {
-//        this.userAccount = userAccount;
-//    }
     public void setNurseId(String NurseId) {    
         this.NurseId = NurseId;
     }

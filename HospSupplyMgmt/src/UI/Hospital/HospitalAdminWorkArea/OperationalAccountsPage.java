@@ -34,9 +34,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class OperationalAccountsPage extends javax.swing.JPanel {
 
-    /**
-     * Creates new form OperationalAccountsPage
-     */
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem;
     DoctorDirectory doctorDirectory;
@@ -92,7 +89,7 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Operational Accounts");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 706, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 70, 706, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -102,7 +99,7 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 80, 110, 60));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 110, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -122,7 +119,7 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTableEmployee);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 550, 580, 120));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, 580, 120));
 
         jButtonCreate.setBackground(new java.awt.Color(255, 255, 204));
         jButtonCreate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -132,8 +129,8 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
                 jButtonCreateActionPerformed(evt);
             }
         });
-        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, 120, 60));
-        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 270, -1));
+        add(jButtonCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 410, 120, 60));
+        add(jTextFieldEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 270, -1));
 
         jButtonUpdate.setBackground(new java.awt.Color(255, 255, 204));
         jButtonUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -143,41 +140,41 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 120, 60));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 120, 60));
 
         jLabelPassword.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelPassword.setText("Password:");
-        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 330, 170, -1));
+        add(jLabelPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 170, -1));
 
         jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPasswordActionPerformed(evt);
             }
         });
-        add(jTextFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 320, 270, -1));
+        add(jTextFieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 340, 270, -1));
 
         jTextFieldEmpID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldEmpIDActionPerformed(evt);
             }
         });
-        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 180, 270, -1));
+        add(jTextFieldEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 270, -1));
 
         jLabelRole.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelRole.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelRole.setText("Role:");
-        add(jLabelRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 170, -1));
+        add(jLabelRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 170, -1));
 
         jComboBoxRole.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jComboBoxRole.setForeground(new java.awt.Color(0, 102, 102));
         jComboBoxRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor", "Nurse" }));
-        add(jComboBoxRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 270, 90, -1));
+        add(jComboBoxRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 90, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpID.setText("Employee ID:");
-        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 170, -1));
+        add(jLabelEmpID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 170, -1));
 
         jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
         jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -187,12 +184,12 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
                 jButtonDeleteActionPerformed(evt);
             }
         });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 440, 120, 60));
+        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 410, 120, 60));
 
         jLabelEmpName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEmpName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelEmpName.setText("Employee Name:");
-        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 170, -1));
+        add(jLabelEmpName, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 170, -1));
 
         jButtonRefresh.setBackground(new java.awt.Color(255, 255, 204));
         jButtonRefresh.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -202,9 +199,7 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
                 jButtonRefreshActionPerformed(evt);
             }
         });
-        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 440, 120, 60));
-
-        bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/acc1.jpg"))); // NOI18N
+        add(jButtonRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 410, 120, 60));
         add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -270, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -291,10 +286,9 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
                 break;
             }
         }   
-        
-//        hospitalManagementEcoSystem.setRestaurantDirectory(restaurantDirectory);
+
         JOptionPane.showMessageDialog(this, "Values updated");
-//        addrecordstotable();
+
         
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
@@ -309,7 +303,7 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
         UserAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         UserAccountDirectory.deleteAccount(select_user_account_details);
-//        ecosystem.setRestaurantDirectory(restaurantDirectory);
+
         model.removeRow(selected_row_ix);
         addrecordstotable();
         clearFields();
@@ -438,17 +432,12 @@ public class OperationalAccountsPage extends javax.swing.JPanel {
     
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         model.setRowCount(0);
-//        ArrayList<Accountant> accountantList = accountantDirectory.getAccountantList();
-//        for(Accountant accountant: accountantList)
-//        {
-//            model.addRow(new Object[]{accountant.getUserAccount(),accountant.getUserAccount().getEmployee().getEmployee_name(),"Accountant",accountant.getUserAccount().getPassword()});
-//        }
         UserAccountDirectory userAccountDirectory = hospitalManagementEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
-//        hospitalDirectory = hospitalManagementEcoSystem.getHospitalDirectory();
+
         
         model.setRowCount(0);
-//        ArrayList<Hospital> hospitalList = hospitalDirectory.getHospitalList();
+
         for(UserAccount userAccount: usersList)
         {   
             if(userAccount.getRole().toString() == "Nurse" && userAccount.getHospital().equals(hospital)){

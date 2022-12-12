@@ -62,7 +62,7 @@
           <Font name="Times New Roman" size="56" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Delivery Agency Order Database"/>
+        <Property name="text" type="java.lang.String" value="Carrier Agency Order Database"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

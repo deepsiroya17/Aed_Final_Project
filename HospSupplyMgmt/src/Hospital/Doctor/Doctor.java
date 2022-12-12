@@ -12,8 +12,7 @@ import System.UserAccount;
  * @author animeshgiri
  */
 public class Doctor {
-    
-//    UserAccount userAccount;
+
     String DoctorId;
     String DoctorName;
     
@@ -21,13 +20,6 @@ public class Doctor {
         return DoctorId;
     }
 
-//    public UserAccount getUserAccount() {
-//        return userAccount;
-//    }
-//
-//    public void setUserAccount(UserAccount userAccount) {
-//        this.userAccount = userAccount;
-//    }
     public void setDoctorId(String DoctorId) {    
         this.DoctorId = DoctorId;
     }

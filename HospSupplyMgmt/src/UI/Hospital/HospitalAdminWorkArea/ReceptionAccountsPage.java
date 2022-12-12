@@ -88,7 +88,7 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Administrative");
+        jLabel1.setText("Reception");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 80, 810, 110));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
@@ -169,6 +169,11 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
         jComboBoxRole.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jComboBoxRole.setForeground(new java.awt.Color(0, 102, 102));
         jComboBoxRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor", "Nurse" }));
+        jComboBoxRole.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxRoleActionPerformed(evt);
+            }
+        });
         add(jComboBoxRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 190, -1));
 
         jLabelEmpID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -270,19 +275,17 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
             {
                 Hospital hospital = userAccount.getHospital();
                 ArrayList<String> user_input = check_empty_field();
-//                model.setValueAt(user_input.get(1), selected_row_ix, 0);
+
                 model.setValueAt(user_input.get(1), selected_row_ix, 1);
-//                model.setValueAt(user_input.get(2), selected_row_ix, 2);
+
                 model.setValueAt(user_input.get(3), selected_row_ix, 3);
                 UserAccountDirectory.updateAccount(set_user_input_values(userAccount, user_input));
                 break;
             }
         }   
-        
-//        medicalServiceCentralisationEcoSystem.setRestaurantDirectory(restaurantDirectory);
+   
         JOptionPane.showMessageDialog(this, "Values updated");
-//        addrecordstotable();
-        
+//        addrecordstotable();        
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
@@ -296,7 +299,7 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
         UserAccount select_user_account_details = (UserAccount)model.getValueAt(selected_row_ix, 0);
         UserAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         UserAccountDirectory.deleteAccount(select_user_account_details);
-//        ecosystem.setRestaurantDirectory(restaurantDirectory);
+
         model.removeRow(selected_row_ix);
         addrecordstotable();
         clearFields();
@@ -335,6 +338,10 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
         jComboBoxRole.setEnabled(true);
         clearFields();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
+
+    private void jComboBoxRoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxRoleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxRoleActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
 //        userAccount.getEmployee().setEmployee_id(user_input.get(0));
 //        userAccount.getEmployee().setEmployee_name(user_input.get(1));
@@ -409,7 +416,7 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
         jComboBoxRole.removeAllItems();
         jComboBoxRole.addItem("");
         jComboBoxRole.addItem("FrontDeskOperator");
-        jComboBoxRole.addItem("Accountant");
+        
     }
 
     private void addrecordstotable() {
@@ -417,17 +424,12 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
     
         DefaultTableModel model = (DefaultTableModel) jTableEmployee.getModel();
         model.setRowCount(0);
-//        ArrayList<Accountant> accountantList = accountantDirectory.getAccountantList();
-//        for(Accountant accountant: accountantList)
-//        {
-//            model.addRow(new Object[]{accountant.getUserAccount(),accountant.getUserAccount().getEmployee().getEmployee_name(),"Accountant",accountant.getUserAccount().getPassword()});
-//        }
+
         UserAccountDirectory userAccountDirectory = medicalServiceCentralisationEcoSystem.getUserAccountDirectory();
         ArrayList<UserAccount> usersList = userAccountDirectory.getUserAccountList();
-//        hospitalDirectory = medicalServiceCentralisationEcoSystem.getHospitalDirectory();
-        
+
         model.setRowCount(0);
-//        ArrayList<Hospital> hospitalList = hospitalDirectory.getHospitalList();
+
         for(UserAccount userAccount: usersList)
         {   
             System.out.println("userAccount.getRole().toString(): "+userAccount.getRole().toString());
