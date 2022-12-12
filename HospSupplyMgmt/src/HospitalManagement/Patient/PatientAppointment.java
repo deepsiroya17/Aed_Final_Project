@@ -78,6 +78,9 @@ public class PatientAppointment extends Patient{
         this.patient_email = patient_email;
     }
     
-    
+    @Override
+    public String toString(){
+        return patient_id;
+    }
     
 }
