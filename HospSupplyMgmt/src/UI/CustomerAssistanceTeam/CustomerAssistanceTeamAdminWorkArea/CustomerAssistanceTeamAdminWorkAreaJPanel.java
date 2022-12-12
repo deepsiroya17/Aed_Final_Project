@@ -54,7 +54,7 @@ public class CustomerAssistanceTeamAdminWorkAreaJPanel extends javax.swing.JPane
         initComponents();
         if(customerSupportTeam.getCustomerSupportMemberDirectory()== null)
            customerSupportTeam.setCustomerSupportMemberDirectory(new CustomerSupportMemberDirectory());
-//        addDefaultValues(userAccountLogin);
+
         addrecordstotable();
     }
 
@@ -87,8 +87,8 @@ public class CustomerAssistanceTeamAdminWorkAreaJPanel extends javax.swing.JPane
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Customer Support Members");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 710, 90));
+        jLabel1.setText("Customer Assitance Members");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 730, 90));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -298,8 +298,7 @@ public class CustomerAssistanceTeamAdminWorkAreaJPanel extends javax.swing.JPane
         clearFields();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
     private UserAccount set_user_input_values(UserAccount userAccount, ArrayList<String> user_input) {
-//        userAccount.getEmployee().setEmployee_id(user_input.get(0));
-//        userAccount.getEmployee().setEmployee_name(user_input.get(1));
+
         userAccount.setPassword(user_input.get(2));
         return userAccount;
     }

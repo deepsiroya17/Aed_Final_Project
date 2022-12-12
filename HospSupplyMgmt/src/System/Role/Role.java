@@ -16,32 +16,6 @@ import javax.swing.JPanel;
 public abstract class Role {
     
     String role;
-    /*public enum RoleType{
-        Patient("Patient"),
-        Technician("Technician"),
-        Radiologist("Radiologist"),
-        Pathologist("Pathologist"),
-        Doctor("Doctor"),
-        Nurse("Nurse"),
-        FrontDeskOperator("FrontDeskOperator"),
-        SystemAdmin("SystemAdmin");
-        
-        private String value;
-        
-        private RoleType(String value){
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        @Override
-        public String toString() {
-            return value;
-        }
-    }*/
-
     public String getRole() {
         return role;
     }

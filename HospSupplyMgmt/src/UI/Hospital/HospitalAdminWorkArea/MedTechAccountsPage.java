@@ -93,8 +93,8 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
         lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Lab Testing and Technician");
-        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 706, -1));
+        lblTitle.setText("Lab Examinations and Technician");
+        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 840, 70));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -104,7 +104,7 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 60, 110, 60));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 110, 60));
 
         jTableEmployee.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -291,11 +291,9 @@ public class MedTechAccountsPage extends javax.swing.JPanel {
                 break;
             }
         }   
-        
-//        hospitalManagementEcoSystem.setRestaurantDirectory(restaurantDirectory);
+
         JOptionPane.showMessageDialog(this, "Values updated");
-//        addrecordstotable();
-        
+
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed

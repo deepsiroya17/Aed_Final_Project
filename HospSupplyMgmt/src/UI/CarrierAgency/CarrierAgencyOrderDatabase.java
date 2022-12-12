@@ -34,9 +34,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class CarrierAgencyOrderDatabase extends javax.swing.JPanel {
 
-    /**
-     * Creates new form OperationalAccountsPage
-     */
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem medicalServiceCentralisationEcoSystem;
     UserAccount userAccount;
@@ -93,7 +90,7 @@ public class CarrierAgencyOrderDatabase extends javax.swing.JPanel {
 
         jLabelTitle2.setFont(new java.awt.Font("Times New Roman", 1, 56)); // NOI18N
         jLabelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitle2.setText("Delivery Agency Order Database");
+        jLabelTitle2.setText("Carrier Agency Order Database");
         add(jLabelTitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1000, -1));
 
         jTableAllOrders.setModel(new javax.swing.table.DefaultTableModel(
@@ -216,9 +213,7 @@ public class CarrierAgencyOrderDatabase extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void clearFields() {
-//        jTextFieldMedSupEquipName.setText("");
-//        jTextFieldMedSupEquipPrice.setText("");
-//        jTextFieldMedSupEquipQuantity.setText("");
+//        
     }
 
     private void addneworderstotable() {

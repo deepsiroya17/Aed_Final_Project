@@ -20,9 +20,6 @@ import javax.swing.tree.DefaultTreeModel;
  */
 public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form SystemAdminWorkAreaJPanel
-     */
     JPanel userProcessContainer;
     MedicalServiceCentralisationEcoSystem hospitalManagementEcoSystem;
     Hospital hospital;
@@ -38,10 +35,6 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
     }
     
     public void populateTree(){
-        //DefaultTreeModel model=(DefaultTreeModel)Admin.getModel();
-       // Add the code for draw your system structure shown by JTree
-       
-      //  model.reload();
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -72,13 +65,13 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jButtonMedTechnicalAccountsPage.setBackground(new java.awt.Color(255, 255, 204));
         jButtonMedTechnicalAccountsPage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonMedTechnicalAccountsPage.setText("Technical & Lab Testing");
+        jButtonMedTechnicalAccountsPage.setText("Technical & Lab Examinations");
         jButtonMedTechnicalAccountsPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMedTechnicalAccountsPageActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonMedTechnicalAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 430, 220, 60));
+        jPanel2.add(jButtonMedTechnicalAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 240, 60));
 
         jButtonAdministrativeAccountsPage.setBackground(new java.awt.Color(255, 255, 204));
         jButtonAdministrativeAccountsPage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -88,7 +81,7 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
                 jButtonAdministrativeAccountsPageActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonAdministrativeAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 220, 60));
+        jPanel2.add(jButtonAdministrativeAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 240, 60));
 
         jButtonOperationalAccountsPage.setBackground(new java.awt.Color(255, 255, 204));
         jButtonOperationalAccountsPage.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -98,17 +91,17 @@ public class HospitalAdminWorkAreaJPanel extends javax.swing.JPanel {
                 jButtonOperationalAccountsPageActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonOperationalAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 220, 60));
+        jPanel2.add(jButtonOperationalAccountsPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 230, 60));
 
         jButtonMedTechnicalAccountsPage1.setBackground(new java.awt.Color(255, 255, 204));
         jButtonMedTechnicalAccountsPage1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonMedTechnicalAccountsPage1.setText("Medical Supplies Admin");
+        jButtonMedTechnicalAccountsPage1.setText("Medical Inventory Admin");
         jButtonMedTechnicalAccountsPage1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMedTechnicalAccountsPage1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonMedTechnicalAccountsPage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, 220, 60));
+        jPanel2.add(jButtonMedTechnicalAccountsPage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 230, 60));
 
         bgdimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInterface/Images/OperationalAccountsPage_1920x1183.jpeg"))); // NOI18N
         jPanel2.add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1740, 1080));

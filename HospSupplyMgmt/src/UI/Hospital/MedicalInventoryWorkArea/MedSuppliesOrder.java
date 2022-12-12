@@ -51,8 +51,7 @@ public class MedSuppliesOrder extends javax.swing.JPanel {
         this.hospital = hospital;
         if(hospital.getMedSupEquipInternalDirectory()== null)
            hospital.setMedSupEquipInternalDirectory(new MedSupEquipInternalDirectory());
-        
-//        addrecordstotable();
+
     }
 
     /**
@@ -322,11 +321,7 @@ public class MedSuppliesOrder extends javax.swing.JPanel {
                 }
             }
             
-            
-
-//            MedSupEquip medSupEquipCart = (MedSupEquip) modelCart.getValueAt(selected_row_ix, 0);
-            
-        }
+            }
         else{
             JOptionPane.showMessageDialog(this, "Please enter item quantity");
         }
@@ -349,44 +344,7 @@ public class MedSuppliesOrder extends javax.swing.JPanel {
         new_order = new Order();
         
     }//GEN-LAST:event_jButtonClearCartActionPerformed
-    /*private Customer set_user_input_values(Customer customer, ArrayList<String> user_input){
-        
-        customer.getUserAccount().setPassword(user_input.get(1));
-        customer.setCustomerPhone(user_input.get(2));
-        return customer;
-    }
-        private void clearFields(){
-        custUsername.setText("");
-        custPassword.setText("");
-        custContact.setText("");
-
-    }
-    public ArrayList<String> check_empty_field(){
-        ArrayList<String> user_input = new ArrayList<>();
-        String user_custName = custUsername.getText();
-        String user_custPass = custPassword.getText();
-        String user_contact = custContact.getText();
- 
-        if(user_custName.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Customer Name can't be left empty");
-        }
-        else if(user_custPass.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Please enter password");
-        }
-        
-        else if(user_contact.isEmpty()){
-            JOptionPane.showMessageDialog(this, "Customer Contact No can't be left empty.");
-        }
-        user_input.add(user_custName);
-        user_input.add(user_custPass);
-        user_input.add(user_contact);
-        
-        return user_input;
-        
-    }
-    */
-    
-
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAddToCart;
     private javax.swing.JButton jButtonClearCart;
