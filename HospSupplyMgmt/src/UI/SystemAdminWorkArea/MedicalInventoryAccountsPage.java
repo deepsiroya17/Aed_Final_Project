@@ -297,6 +297,7 @@ public class MedicalInventoryAccountsPage extends javax.swing.JPanel {
         String user_emp_id = jTextFieldTeamID.getText();
         String user_emp_name = jTextFieldTeamName.getText();
         String user_password = jTextFieldTeamPassword.getText();
+        int passLength = String.valueOf(user_password).length();
 
         if (user_emp_id.isEmpty()) {
             JOptionPane.showMessageDialog(this, "User ID can't be left empty.");
@@ -304,7 +305,11 @@ public class MedicalInventoryAccountsPage extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "User Name can't be left empty.");
         } else if (user_password.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Please enter a Password.");
-        } else {
+        } 
+          else if (passLength < 4){
+                JOptionPane.showMessageDialog(this, "Password should be greater than 4 characters.");
+        }
+        else {
 
             user_input.add(user_emp_id);
             user_input.add(user_emp_name);

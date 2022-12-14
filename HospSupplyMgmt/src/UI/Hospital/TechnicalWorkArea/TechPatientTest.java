@@ -75,23 +75,19 @@ public class TechPatientTest extends javax.swing.JPanel {
         jTextFieldTestID = new javax.swing.JTextField();
         jLabelTestName = new javax.swing.JLabel();
         jLabelTestID = new javax.swing.JLabel();
-        jButtonDelete = new javax.swing.JButton();
         jLabelPatientID = new javax.swing.JLabel();
         jTextFieldPatientId = new javax.swing.JTextField();
         jLabelPatientName = new javax.swing.JLabel();
         jTextFieldTestDate = new javax.swing.JTextField();
         jComboBoxTestName = new javax.swing.JComboBox<>();
-        jButtonSearch = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableAllTests = new javax.swing.JTable();
         jLabelTitle3 = new javax.swing.JLabel();
         jTextFieldPatientName = new javax.swing.JTextField();
-        jLabelReportAvailability = new javax.swing.JLabel();
         jLabelTestDate1 = new javax.swing.JLabel();
         jRadioButtonYes = new javax.swing.JRadioButton();
         jRadioButtonNo = new javax.swing.JRadioButton();
         jLabelReportAvailability1 = new javax.swing.JLabel();
-        jTextFieldAvailableAt = new javax.swing.JTextField();
         jButtonEmailReport = new javax.swing.JButton();
         jButtonDownloadReport1 = new javax.swing.JButton();
         jLabelPatientName1 = new javax.swing.JLabel();
@@ -171,7 +167,7 @@ public class TechPatientTest extends javax.swing.JPanel {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 170, 110, 60));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 110, 60));
         add(jTextFieldTestID, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 260, -1));
 
         jLabelTestName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -183,11 +179,6 @@ public class TechPatientTest extends javax.swing.JPanel {
         jLabelTestID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelTestID.setText("Test ID:");
         add(jLabelTestID, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 280, 160, -1));
-
-        jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButtonDelete.setText("DELETE");
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 110, 60));
 
         jLabelPatientID.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -204,28 +195,23 @@ public class TechPatientTest extends javax.swing.JPanel {
         jComboBoxTestName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Blood Test", "Cholestrol", "CBP", "Urine test", "X-Ray", "C.T Scan", "M.R.I ", "Dental Scan", "Ultrasound", "ECG", "EEG", " " }));
         add(jComboBoxTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 110, -1));
 
-        jButtonSearch.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonSearch.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButtonSearch.setText("SEARCH");
-        add(jButtonSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 260, 110, 60));
-
         jTableAllTests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Patient ID", "Patient Name", "Test ID", "Test Name", "Test Date", "Report Available", "Available At"
+                "Patient ID", "Patient Name", "Test ID", "Test Name", "Test Date", "Report Available"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, false, false, false
+                false, false, false, true, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -246,10 +232,6 @@ public class TechPatientTest extends javax.swing.JPanel {
         jLabelTitle3.setText("NEW TEST REQUESTS");
         add(jLabelTitle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, 706, -1));
         add(jTextFieldPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 270, -1));
-
-        jLabelReportAvailability.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabelReportAvailability.setText("Available at:");
-        add(jLabelReportAvailability, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 470, 160, -1));
 
         jLabelTestDate1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelTestDate1.setText("Test Date:");
@@ -276,7 +258,6 @@ public class TechPatientTest extends javax.swing.JPanel {
         jLabelReportAvailability1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelReportAvailability1.setText("Report Availabilty :");
         add(jLabelReportAvailability1, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 430, -1, -1));
-        add(jTextFieldAvailableAt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 260, -1));
 
         jButtonEmailReport.setBackground(new java.awt.Color(0, 0, 0));
         jButtonEmailReport.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -420,7 +401,7 @@ public class TechPatientTest extends javax.swing.JPanel {
         jTextFieldPatientId.setText(select_patient_details.getPatient_id());
         jTextFieldPatientName.setText(select_patient_details.getPatient_name());
         jTextFieldPatientEmail.setText(select_patient_details.getPatient_email());
-        jTextFieldAvailableAt.setText("");  
+//        jTextFieldAvailableAt.setText("");  
             
         String test_id = model.getValueAt(selected_row_ix, 2).toString();
         ArrayList<PatientTest> patientTestList = select_patient_details.getPatientTestList();
@@ -437,7 +418,7 @@ public class TechPatientTest extends javax.swing.JPanel {
                     jRadioButtonYes.setSelected(true);
                     jRadioButtonNo.setSelected(false);
                 }
-                jTextFieldAvailableAt.setText(patientTest.getReport_availibility_time());
+//                jTextFieldAvailableAt.setText(patientTest.getReport_availibility_time());
             
             }   
         }
@@ -482,25 +463,21 @@ public class TechPatientTest extends javax.swing.JPanel {
             jTextFieldPatientName.setText("");
             jTextFieldPatientEmail.setText("");
             jTextFieldTestDate.setText("");
-            jTextFieldTestID.setText("");
-            jTextFieldAvailableAt.setText("");            
+            jTextFieldTestID.setText("");        
         }
        
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgdimg;
     private javax.swing.JButton jButtonCreate;
-    private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonDownloadReport1;
     private javax.swing.JButton jButtonEmailReport;
     private javax.swing.JButton jButtonHome;
-    private javax.swing.JButton jButtonSearch;
     private javax.swing.JButton jButtonUpdate;
     private javax.swing.JComboBox<String> jComboBoxTestName;
     private javax.swing.JLabel jLabelPatientID;
     private javax.swing.JLabel jLabelPatientName;
     private javax.swing.JLabel jLabelPatientName1;
-    private javax.swing.JLabel jLabelReportAvailability;
     private javax.swing.JLabel jLabelReportAvailability1;
     private javax.swing.JLabel jLabelTestDate1;
     private javax.swing.JLabel jLabelTestID;
@@ -514,7 +491,6 @@ public class TechPatientTest extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTableAllTests;
     private javax.swing.JTable jTableNewTests;
-    private javax.swing.JTextField jTextFieldAvailableAt;
     private javax.swing.JTextField jTextFieldPatientEmail;
     private javax.swing.JTextField jTextFieldPatientId;
     private javax.swing.JTextField jTextFieldPatientName;
@@ -612,7 +588,6 @@ public class TechPatientTest extends javax.swing.JPanel {
                     patientTest.getTest_id(), 
                     patientTest.getLabTest().getTest_name(),
                     patientTest.getTest_date(),
-                    patientTest.getReport_avalaible()
                 });
                 
             }   

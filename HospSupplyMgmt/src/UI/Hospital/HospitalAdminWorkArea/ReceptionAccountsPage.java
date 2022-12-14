@@ -341,6 +341,7 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
         String user_emp_name = jTextFieldEmpName.getText();
         String user_password = jTextFieldPassword.getText();
         String user_role = (String) jComboBoxRole.getSelectedItem();
+        int passLength = String.valueOf(user_password).length();
 
         
         if(user_emp_id.isEmpty()){
@@ -351,6 +352,9 @@ public class ReceptionAccountsPage extends javax.swing.JPanel {
         }
         else if(user_password.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter a Password.");
+        }
+        else if (passLength < 4){
+                JOptionPane.showMessageDialog(this, "Password should be greater than 4 characters.");
         }
         else if(user_role.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please select a Role.");

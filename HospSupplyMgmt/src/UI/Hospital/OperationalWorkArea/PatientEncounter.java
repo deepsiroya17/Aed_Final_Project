@@ -216,7 +216,7 @@ public class PatientEncounter extends javax.swing.JPanel {
        ArrayList<String> user_input = check_empty_field();
       try
       {
-         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("C:\\Patients.pdf"));
+         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("D:\\Patients.pdf"));
          document.open();
          document.add(new Paragraph("\n\nName : " + user_input.get(1)));
          document.add(new Paragraph("\n\nEmail : " + user_input.get(2)));
