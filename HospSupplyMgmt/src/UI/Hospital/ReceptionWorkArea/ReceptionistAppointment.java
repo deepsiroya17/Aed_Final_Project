@@ -147,8 +147,8 @@ public class ReceptionistAppointment extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) jTableAppointment.getModel();
         model.setRowCount(0);
         ArrayList<String> user_input = check_empty_field();
-        PatientAppointmentDirectory patientAppointmentDirectory = medicalServiceCentralisationEcoSystem.getPatientAppointmentDirectory();
-        ArrayList<PatientAppointment> patientAppointmentList = patientAppointmentDirectory.getPatientAppointmentList();
+        PatientAppointmentDirectory patientAppointmentList = medicalServiceCentralisationEcoSystem.getPatientAppointmentDirectory();
+//        ArrayList<PatientAppointment> patientAppointmentList = patientAppointmentDirectory.getPatientAppointmentList();
         
         patientAppointment = new PatientAppointment();
         
@@ -158,6 +158,7 @@ public class ReceptionistAppointment extends javax.swing.JPanel {
         patientAppointment.setDepartment(user_input.get(3));
         patientAppointment.setAppointmentDate(user_input.get(4));
         patientAppointment.setAppointmentTime(user_input.get(5));
+        patientAppointmentList.addPatientAppointment(patientAppointment);
         JOptionPane.showMessageDialog(this, "Appointment Booked");
         model.addRow(new Object[]{
             patientAppointment.getPatient_id(),
@@ -252,8 +253,7 @@ public class ReceptionistAppointment extends javax.swing.JPanel {
         for(PatientAppointment a: appointments)
         {
             model.addRow(new Object[]{
-                a,
-                a.getPatient_id(), 
+                a, 
                 a.getPatient_name(), 
                 a.getDoctor_name(), 
                 a.getDepartment(), 

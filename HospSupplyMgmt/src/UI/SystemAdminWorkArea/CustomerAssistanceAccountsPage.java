@@ -291,6 +291,7 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
         String user_emp_id = jTextFieldTeamID.getText();
         String user_emp_name = jTextFieldTeamName.getText();
         String user_password = jTextFieldTeamPassword.getText();
+        int passLength = String.valueOf(user_password).length();
 
         
         if(user_emp_id.isEmpty()){
@@ -301,6 +302,9 @@ public class CustomerAssistanceAccountsPage extends javax.swing.JPanel {
         }
         else if(user_password.isEmpty()){
             JOptionPane.showMessageDialog(this, "Please enter a Password.");
+        }
+        else if (passLength < 4){
+                JOptionPane.showMessageDialog(this, "Password should be greater than 4 characters.");
         }
         else {
             user_input.add(user_emp_id);

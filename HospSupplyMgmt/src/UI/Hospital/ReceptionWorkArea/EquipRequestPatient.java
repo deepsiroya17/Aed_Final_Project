@@ -80,9 +80,7 @@ public class EquipRequestPatient extends javax.swing.JPanel {
         jTableNewTests = new javax.swing.JTable();
         jButtonCreate = new javax.swing.JButton();
         jButtonUpdate = new javax.swing.JButton();
-        jButtonView = new javax.swing.JButton();
         jLabelTestName = new javax.swing.JLabel();
-        jButtonDelete = new javax.swing.JButton();
         jLabelPatientID = new javax.swing.JLabel();
         jTextFieldPatientId = new javax.swing.JTextField();
         jLabelPatientName = new javax.swing.JLabel();
@@ -165,32 +163,12 @@ public class EquipRequestPatient extends javax.swing.JPanel {
                 jButtonUpdateActionPerformed(evt);
             }
         });
-        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 170, 100, 40));
-
-        jButtonView.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonView.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonView.setText("VIEW");
-        jButtonView.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonViewActionPerformed(evt);
-            }
-        });
-        add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 240, 100, 40));
+        add(jButtonUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 100, 40));
 
         jLabelTestName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelTestName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabelTestName.setText(" Equipment Quantity:");
         add(jLabelTestName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 130, 20));
-
-        jButtonDelete.setBackground(new java.awt.Color(255, 255, 204));
-        jButtonDelete.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonDelete.setText("DELETE");
-        jButtonDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonDeleteActionPerformed(evt);
-            }
-        });
-        add(jButtonDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 240, 100, 40));
 
         jLabelPatientID.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabelPatientID.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -381,14 +359,6 @@ public class EquipRequestPatient extends javax.swing.JPanel {
         populateAllOrdersTable();
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
-    private void jButtonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonViewActionPerformed
-
-    private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonDeleteActionPerformed
-
         private void clearFields(){
             jTextFieldPatientId.setText("");
             jTextFieldPatientName.setText("");
@@ -402,9 +372,7 @@ public class EquipRequestPatient extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCreate;
-    private javax.swing.JButton jButtonDelete;
     private javax.swing.JButton jButtonUpdate;
-    private javax.swing.JButton jButtonView;
     private javax.swing.JComboBox<String> jComboBoxEquipment;
     private javax.swing.JLabel jLabelPatientID;
     private javax.swing.JLabel jLabelPatientName;
